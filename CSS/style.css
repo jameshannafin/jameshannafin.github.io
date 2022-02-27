@@ -334,6 +334,9 @@ footer {
     justify-content: center; 
 }
 
+.column_2 p{ justify-content: top; 
+}
+
 
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
