@@ -122,6 +122,27 @@
   button.innerHTML = "Go Fullscreen";
   button.onclick = requestFullscreen;
   document.body.appendChild(button);
+            
+//             
+   
+            // get the canvas and set it to the full screen dimensions
+var canvas = document.getElementById("gameCanvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// get the canvas position
+var canvasPosition = canvas.getBoundingClientRect();
+
+// update the mouse position
+document.onmousemove = function(e) {
+    mouseX = (e.clientX - canvasPosition.left) / (canvasPosition.right - canvasPosition.left) * canvas.width;
+    mouseY = (e.clientY - canvasPosition.top) / (canvasPosition.bottom - canvasPosition.top) * canvas.height;
+}
+
+            
+// 
+            
+            
 </script>
 This code adds
     </body>
