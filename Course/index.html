@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Game Maker Game</title>
-  </head>
-  <body onload="openFullscreen()">
-    <div id="gm4html5_div_id">
-      <!-- Your game content goes here -->
-    </div>
-    <script>
-      function openFullscreen() {
-        var elem = document.getElementById("gm4html5_div_id");
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-          /* Firefox */
-          elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) {
-          /* Chrome, Safari and Opera */
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-          /* IE/Edge */
-          elem.msRequestFullscreen();
-        }
+<head>
+  <meta charset="UTF-8">
+  <title>GameMaker HTML5 Export</title>
+</head>
+<body>
+  <div id="gm4html5_div_id"></div>
+  <button id="fullscreenButton">Go Fullscreen</button>
+  <script>
+    function openFullscreen() {
+      var elem = document.getElementById("gm4html5_div_id");
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else {
+        elem.mozRequestFullScreen();
+        /* Firefox */
       }
-    </script>
-  </body>
+    }
+    document.getElementById("fullscreenButton").addEventListener("click", openFullscreen);
+  </script>
+</body>
 </html>
