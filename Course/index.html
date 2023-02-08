@@ -77,9 +77,38 @@
                      <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
         </div>
+        <script>
+        function openFullscreen() {
+          var elem = document.getElementById("gm4html5_div_id");
+          if (elem.requestFullscreen) {
+elem.requestFullscreen();
+} else if (elem.mozRequestFullScreen) { /* Firefox /
+elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) { / Chrome, Safari and Opera /
+elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { / IE/Edge */
+elem.msRequestFullscreen();
+}
+}
+</script>
+<script>
+function hideAddressBar() {
+if (!window.location.hash) {
+if (document.height < window.outerHeight) {
+document.body.style.height = (window.outerHeight + 50) + 'px';
+}
+setTimeout(function() {
+window.scrollTo(0, 1);
+}, 50);
+}
+}
+window.addEventListener("load", function(){
+hideAddressBar();
+});
+window.addEventListener("orientationchange", function(){
+hideAddressBar();
+});
+</script>
+</body>
 
-        <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/Course Plot.js?ROHAC=1491808968"></script>
-        <script>window.onload = GameMaker_Init;</script>
-    </body>
-</html>
+  </html>
