@@ -101,5 +101,28 @@
               openFullscreen();
             };
         </script>
+        
+        <script>
+  // Request fullscreen mode on button click
+  function requestFullscreen() {
+    var canvas = document.getElementById("canvas");
+    if (canvas.requestFullscreen) {
+      canvas.requestFullscreen();
+    } else if (canvas.mozRequestFullScreen) {
+      canvas.mozRequestFullScreen();
+    } else if (canvas.webkitRequestFullscreen) {
+      canvas.webkitRequestFullscreen();
+    } else if (canvas.msRequestFullscreen) {
+      canvas.msRequestFullscreen();
+    }
+  }
+
+  // Add a button to the page to request fullscreen mode
+  var button = document.createElement("button");
+  button.innerHTML = "Go Fullscreen";
+  button.onclick = requestFullscreen;
+  document.body.appendChild(button);
+</script>
+This code adds
     </body>
 </html>
