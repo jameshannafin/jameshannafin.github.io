@@ -28,6 +28,11 @@
                       margin: 0px;
                       padding: 0px;
                       border: 0px;
+                  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
             }
             :-webkit-full-screen #canvas {
                  width: 100%;
@@ -83,18 +88,22 @@
 
         <script>
             // requestFullscreen function to launch fullscreen
-            function openFullscreen() {
-              var elem = document.getElementById("gm4html5_div_id");
-              if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-              } else if (elem.mozRequestFullScreen) { /* Firefox */
-                elem.mozRequestFullScreen();
-              } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                elem.webkitRequestFullscreen();
-              } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                elem.msRequestFullscreen();
-              }
-            }
+  var canvas = document.getElementById("canvas");
+
+function Fullscreen() {
+  if (canvas.requestFullscreen) {
+    canvas.requestFullscreen();
+  } else if (canvas.mozRequestFullScreen) {
+    canvas.mozRequestFullScreen();
+  } else if (canvas.webkitRequestFullscreen) {
+    canvas.webkitRequestFullscreen();
+  }
+  canvas.style.width = window.innerWidth + "px";
+  canvas.style.height = window.innerHeight + "px";
+  canvas.style.top = "0";
+  canvas.style.left = "0";
+}
+
 
             window.onload = function() {
               GameMaker_Init();
