@@ -8,20 +8,12 @@
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta charset="utf-8"/>
+
         <!-- Set the title bar of the page -->
         <title>Created with GameMaker</title>
+
         <!-- Set the background colour of the document -->
         <style>
-            body {
-              background: #0;
-              color:#cccccc;
-              margin: 0px;
-              padding: 0px;
-              border: 0px;
-            }
-
-
-
 
  .fullscreen-button {
         background-image: url(path/to/fullscreen-icon.png);
@@ -34,10 +26,13 @@
         z-index: 1;
       }
 
-
-
-
-
+            body {
+              background: #0;
+              color:#cccccc;
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
             canvas {
                       image-rendering: optimizeSpeed;
                       -webkit-interpolation-mode: nearest-neighbor;
@@ -53,22 +48,58 @@
             }
             :-webkit-full-screen #canvas {
                  width: 100%;
-@@ -83,18 +88,22 @@
+                 height: 100%;
+            }
+            div.gm4html5_div_class
+            {
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
+            /* START - Login Dialog Box */
+            div.gm4html5_login
+            {
+                 padding: 20px;
+                 position: absolute;
+                 border: solid 2px #000000;
+                 background-color: #404040;
+                 color:#00ff00;
+                 border-radius: 15px;
+                 box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button
+            {
+                 float: right;
+            }
+            div.gm4html5_login_button
+            {
+                 float: left;
+            }
+            div.gm4html5_login_header
+            {
+                 text-align: center;
+            }
+            /* END - Login Dialog Box */
+            :-webkit-full-screen {
+               width: 100%;
+               height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="gm4html5_div_class" id="gm4html5_div_id">
+            <!-- Create the canvas element the game draws to -->
+            <canvas id="canvas" width="1366" height="768" >
+                     <p>Your browser doesn't support HTML5 canvas.</p>
+           </canvas>
+        </div>
+
+        <!-- Run the game code -->
+        <script type="text/javascript" src="html5game/Course Plot.js?ROHAC=1491808968"></script>
 
         <script>
             // requestFullscreen function to launch fullscreen
-            function openFullscreen() {
-              var elem = document.getElementById("gm4html5_div_id");
-              if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-              } else if (elem.mozRequestFullScreen) { /* Firefox */
-                elem.mozRequestFullScreen();
-              } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                elem.webkitRequestFullscreen();
-              } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                elem.msRequestFullscreen();
-              }
-            }
   var canvas = document.getElementById("canvas");
 
 function Fullscreen() {
@@ -106,6 +137,7 @@ function Fullscreen() {
       canvas.msRequestFullscreen();
     }
   }
+
   // Add a button to the page to request fullscreen mode
   var button = document.createElement("button");
   button.innerHTML = "Go Fullscreen";
@@ -118,18 +150,21 @@ function Fullscreen() {
 var canvas = document.getElementById("gameCanvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 // get the canvas position
 var canvasPosition = canvas.getBoundingClientRect();
+
 // update the mouse position
 document.onmousemove = function(e) {
     mouseX = (e.clientX - canvasPosition.left) / (canvasPosition.right - canvasPosition.left) * canvas.width;
     mouseY = (e.clientY - canvasPosition.top) / (canvasPosition.bottom - canvasPosition.top) * canvas.height;
 }
+
             
 // 
             
             
 </script>
-Full Screen
+This code adds
     </body>
 </html>
