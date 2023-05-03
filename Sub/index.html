@@ -22,6 +22,18 @@
 
         <!-- Set the background colour of the document -->
         <style>
+
+ .fullscreen-button {
+        background-image: url(path/to/fullscreen-icon.png);
+        background-size: cover;
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+      }
+
             body {
                 background: #0;
                 color: #cccccc;
@@ -117,6 +129,31 @@
         
 
     </body>
+
+        <script>
+            // requestFullscreen function to launch fullscreen
+  var canvas = document.getElementById("canvas");
+
+function Fullscreen() {
+  if (canvas.requestFullscreen) {
+    canvas.requestFullscreen();
+  } else if (canvas.mozRequestFullScreen) {
+    canvas.mozRequestFullScreen();
+  } else if (canvas.webkitRequestFullscreen) {
+    canvas.webkitRequestFullscreen();
+  }
+  canvas.style.width = window.innerWidth + "px";
+  canvas.style.height = window.innerHeight + "px";
+  canvas.style.top = "0";
+  canvas.style.left = "0";
+}
+
+
+            window.onload = function() {
+              GameMaker_Init();
+              openFullscreen();
+            };
+        </script>
 
     <!-- Custom PostBody code is injected here -->
     
