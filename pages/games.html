@@ -1,216 +1,253 @@
-<!DOCTYPE html>
-<html>
-    <head><!--Basic Document Info and Links-->
-        <meta charset="UTF-8"><!--Universal charset-->
-        <meta name="viewport" content="width=device-width" /><!--Finding the viewport specs to be used later-->
-        <title>Games</title><!--Title on the top tap-->
-        <link rel="shortcut icon" type="img/jpg" href="./images/coding_icon.png">
-        <link rel="stylesheet" type="text/css" href="./CSS/style.css"><!--Linking our style sheet-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Course Plot</title>
+
+    <style>
+.text1
+{
+    font-style: impact;    
+    color: white;
 
 
-        <link rel="stylesheet" href="./CSS/game.css"> 
-    </head>
+}
 
-    <!-- Body -->
-    <body class="bg">   <!--bg = background-->
+.gray{    background-color: dimgrey;
 
-        <!-- Nav Bar -->
-        <div class="navbar"><!--Navigation Bar-->
-            <a href="../index.html">games</a>
-            <a href="./Brave/index.html">Brave Butterfly</a>
-	        <a href="./Tanks/index.html">CyberField</a>
-		<a href="./Course/index.html">Course Plot</a>
+}
 
-            <a onclick="form_open()" ondblclick="form_close()" class="contact">Contact</a><!-- This tabe performs a function to open the form as opposed to scrolling the page-->
+.dkgray{    background-color: rgb(61, 61, 61);
+
+}
+
+.blk{    background-color: rgb(16, 16, 16);
+
+}
+
+.bg{    background-image: url(./images/space.png);
+
+}
+    </style>
+  </head>
+
+  <body class="bg"> 
+    <!-- Many of the following html elements will have classes assigned to them that utilize different bootstrap functions -->
+      <div class="container">
+        <nav class="   navbar navbar-expand-lg navbar-light  blk "> 
+          <div class=" dkgray container-fluid">
+            <div class=" dkgray collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class=" gray navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link active text-light" aria-current="page" href="#id_home">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-light active" href="#id_showtimes">More Games</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-light" href="#id_signup">Contact</a>
+                </li>
+              </ul>
+              <!-- <form class="d-flex ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary text-light" type="submit">Search</button>
+              </form> -->
+            </div>
+          </div>
+        </nav>
+
+        <div id="id_home" class="jumbotron jumbotron-fluid bg-info text-center bg">
+          <div class="container">
+            <h1 class="display-4 text-light text1">Course Plot</h1>
+            <p class="lead text-light">"By venturing to the darkness, a new hope has been given."</p>
+          </div>
         </div>
-        <!-- /Nav Bar -->
 
-        <!-- Section 1 :Home-->
-        <div id="Home">
-            <video autoplay muted loop id="Coding_Video"><!--Background video settings-->
-                <source src="/Images/coding.mp4" type="video/mp4"><!--The video-->
-                <!-- Display message if video fails to run -->
-                The video failed to load; this could be because your browser does not support HTML5 video.
-            </video>
+          
+
+        <div class="container">
+
+
+
+          <div class="row"><!--This dif makes a new row in which to add collumns-->
+            <div class="col-sm"><!--A collumn with a picture of the theatre-->
+              <img class="img-fluid" src="./images/picture1.jpg" alt="">
+            </div>
+
+            <div class="col-sm"> <!--A collumn with a desciption of the theatre-->
+              <h3>Description:</h3>
+         <p>"Welcome to Course Plot, the goal of this game is to safely  send your colony ships through the cosmos. Use probes and other advanced technologies to send your rockets on viable travel routes toward a new home. "</p>
+            </div>
+
+            <div class="col-sm"><!--At third collum with showtimes-->
+              <h3>Versions</h3>
+              <ul class="list-group"> 
+                <li class="list-group-item"><!-- Making a list -->
+                  <a class="nav-link" href="#id_showtimes">PC Download</a> <!--Nav link tag so the user is brought to the specified ID tag-->
+                </li>
+                <li class="list-group-item">
+                  <a class="nav-link" href="#id_showtimes">Phone Browser</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="nav-link" href="#id_showtimes">PC Browser</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- Video text  -->
-        <div class="video_text"><!--The following text is to be overlayed on the home video -->
-            <h1 class="text_white">Game Maker Projects</h1>
-            <strong><!--Strong tag to make it bold -->
-                <p class="center">
-                    <q>  These are some of the projects I am currently working on in the Game Maker engine.
-                        <br>Most of these are still early works in progress; I like to work on multiple projects because the things I learn throughout each one help work out problems in the others
-                        <br>    It would be great to hear your feedback and suggestions; just be aware these projects still need work.
-                    </q><!--These q elements make a .quote class for CSS?-->
-       
-                    <br>
-                </p>
-            </strong>
-        </div> <!-- /Video Text -->
-        <!-- /Section 1: Home -->
 
-        <!-- Section 2: Slideshow-->
-        <div id="Slideshow">
-            <div id="Slideshow_Background"> 
-                <div id="Slideshow_Container">
-                    <!-- Slide 1 of 6 -->
-                    <div class="slide fade">
-                        <img class="slideshow_images" src="/Images/headshot.jpg" alt="Portrait">
-                        <div class="slide_text">I am ready to join your team, contact me below.</div>
-                    </div><!--/Slide 1-->
-                    <!-- Slide 2 of 6 -->
-                    <div class="slide fade">
-                        <img class="slideshow_images" src="/Images/HTML_CSS_and_JavaScript.jpeg" alt="Languages Understood"> 
-                        <div class="slide_text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
-                    </div><!--/Slide 2-->
-                    <!-- Slide 3 of 6 -->
-                    <div class="slide fade">
-                        <img class="slideshow_images" src="/Images/Python.png" alt="Languages Understood">
-                        <div class="slide_text">the popular programming language Python,</div>
-                    </div><!--/Slide 3-->
-                    <!-- Slide 4 of 6 -->
-                    <div class="slide fade">
-                        <img class="slideshow_images" src="/Images/C_Sharp_and_Dot_NET.PNG" alt="Languages Understood">
-                        <div class="slide_text">C#, .NET Framework, ASP.NET, MVC, </div>
-                    </div><!--/Slide 4-->
-                    <!-- Slide 5 of 6 -->
-                    <div class="slide fade">
-                        <img class="slideshow_images" src="/Images/SQL_and_Database.jpg" alt="SQL logo"> 
-                        <div class="slide_text">back end development, databases and SQL.</div>
-                    </div><!--/Slide 5-->
-                    <!-- Slide 6 of 6-->
-                    <div class="slide fade">
-                        <img class="slideshow_images" src="/Images/contact.jpg" alt="contact" height="120%" width="100%"> 
-                        <div class="slide_text"><a class="white-text contact" onclick="form_open()">Contact Me Here</a></div> 
-                    </div><!--/Slide 6-->
+        <!--Showtimes-->
+        <div class="card-group" id="id_showtimes">
+          
+          <div class="card">
+            <img class="card-img-top" src="./images/kongskullisland.jpg" alt="Card image cap"style="width:100%;height:250px;"> <!--Get the image and set its size-->
+            <div class="card-body"><!--Cardss are a nice way to display content vertically like 'cards'-->
+              <h4 class="card-title">Gravity Exists</h5> <!-- Heading and paragraph for the titlte and descript of the movie inside the card-->
+              <p class="card-text">Whether you like it or not, gravity exists and it should always be use to your advantage; it can pull you
+                 right where you want to go, so long as you plot the right course.</p><br>
+            </div>
+          </div>
 
-                    <!-- Previous and next buttons -->
-                    <a class="slideshow_btn_previous" onclick="slide_change(-1)">&#10094;</a>
-                    <a class="slideshow_btn_next" onclick="slide_change(1)">&#10095;</a><!--&#10095 for arrows-->
-                </div><!--/Slideshow container-->
-                <br> 
-                <!-- Slideshow nav dots  -->
-                <div style="text-align: center">
-                    <span class="dot" onclick="slide_current(1)"></span>
-                    <span class="dot" onclick="slide_current(2)"></span>
-                    <span class="dot" onclick="slide_current(3)"></span> 
-                    <span class="dot" onclick="slide_current(4)"></span> 
-                    <span class="dot" onclick="slide_current(5)"></span> 
-                    <span class="dot" onclick="slide_current(6)"></span> 
-                </div> <!--/Slideshow Nav Dots-->
-            </div> <!--/Slideshow BG-->
-        </div> <!-- /Slideshow section added -->
+          <div class="card"><!--Second Card-->
+            <img class="card-img-top" src="./images/ghostintheshell.jpg" alt="Card image cap"style="width:100%;height:250px;">
+            <div class="card-body">
+              <h5 class="card-title">Space Money</h5>
+              <p class="card-text">The goal of this game is to find a new home, NOT to lose your colony ships to the void of space. Collecting currency throughout your journey will help you build the 
+                space craft you need find your way through the stars.</p>
+            </div>
+
+          </div><!--/Second Card-->
+
+
+          <div class="card"><!--Third Card-->
+            <img class="card-img-top" src="./images/beautyandthebeast.jpg" alt="Card image cap"style="width:100%;height:250px;">
+            <div class="card-body">
+              <h5 class="card-title">Beuty and the beast </h5>
+              <p class="card-text">This is a the description to beuty and the beast  card with supporting text below as a natural lead-in to additional content. 
+                This card has even longer content than the first to show that equal height action.</p><br>
+            </div>
+              <div>
+              <span class="badge badge-info">5:00pm</span>
+              <span class="badge badge-info">6:30pm</span>
+              <span class="badge badge-info">8:00pm</span>
+              <span class="badge badge-info">9:30pm</span>
+            </div>
+            <div>
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div><!--/Third Card-->
+
+        </div><!--/Showtimes-->
+
+        <!-- JumboTron Heading -->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center"><!--Jumbotron displays across the screen-->
+          <div class="container">
+            <h1 class="display-4 hidden-sm-down" style="color: #fff; font-family:roboto; font-weight:900; text-transform:uppercase;">Movie Deals</h1><!--Used inner CSS to style this text -->
+            <p class="lead">Check out our monthly deals...</p>
+            <!-- Movie Deals when clicked this text will open the modal, when hovered over it will show a tool tip-->
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"  data-toggle="tooltip" data-placement="top" title="Click to sign up" >See our monthly deals</button>
+            <!-- End Movie Deals -->
+          </div>
+        </div>
+        <!-- End Jumbotron Heading -->
         
+        <!-- Begin Sign Up -->
+        <div id="id_signup" class="text-center my-5">
+          <form>
+            <h1 class="text-primary"> Sign up for updates today!</h1>
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Sumbit your email for great movie rewards!">
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- End Sign up-->
 
-        <!-- About section -->
-        <div class="row" id="About">
-            <!-- Left column -->
-            <div class="column_2">
-                <img src="/Images/labtop.jpg" alt="Labtop Picture">
-            </div><!--/Left Collumn-->
-            <!-- Right column -->
-            <div class="column_1">
-                <h1>About</h1>
-                <p>
-                    I am a full-stack computer programmmer and a continuous student of software development and design.
-                    I am fluid with HTML, CSS, JavaScript, and Python along with various frameworks libraries, and extentions such as 
-                    SQL, Django, and Ajax;
-                    I have  a background as an English major, but have been programming for over five years and am a  graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s 
-                    Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#,Github,GML,VS Code and more.  
-                    I am a full-stack developer currently working indepently and would love to work with you on your project. You can find my <a href="#Contact">contact</a> information below!
-                </p>
-            </div><!--/Right Collumn-->
-        </div><!--ABout Section-->
+      <!--Footer-->
+      <div class="container my-5">
+        <ul class="=list-inline ">
+          <li class="list-inline-item">
+            <small><a class="nav-link active" href="#">Movie Rewards</a></small>
+          </li>
+          <li class="list-inline-item">
+            <small><a class="nav-link" href="#">Movie@news.org</a></small>
+          </li>
+          <li class="list-inline-item">
+            <small><a class="nav-link" href="#">Info@acedemycinemas.com</a></small>
+          </li>
+          <li class="list-inline-item">
+            <small><a class="nav-link"> &copy; 2021 Kid Flid&reg;</a></small>
+          </li>
+        </ul>
+      </div>
+      <!--/Footer-->
 
-        <!-- GitHub section -->
-        <div class="row" id="Github">
-            <!-- Left column -->
-            <div class="column_1">
-                <h1>GitHub</h1>
-                <p>You can view a larger sample of my work from my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/jameshannafin" target="_blank">Github</a></p>
-                </p>
-            </div><!--/Left Collumn-->
-            <!-- Right column -->
-            <div class="column_2">
-                <a href="https://github.com/jameshannafin" target="_blank"><img src="/Images/GitHub.png"></a>
-            </div><!--/Right Collumn-->
-        </div><!--/GitHub Section-->
+      
+      <!-- form modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
 
-
-
-        <!-- GitHub section -->
-        <!-- ////////////////////////////////////////////////// -->
-        <!-- <div class="row"> -->
-            <!-- Left column -->
-            <!-- <div class="column_2">
-                <h1>TicTacToe</h1>
-                <div>
-                    <div > -->
-                        <!-- Note: canvas height and width must be set within the element -->
-                        <!-- <canvas id="win-lines" width="304" height="304"></canvas>
-                        <table id="game" >
-                            <tr>
-                                <td id="0" onclick='placeXOrO("0")'></td>
-                                <td id="1" onclick='placeXOrO("1")'></td>
-                                <td id="2" onclick='placeXOrO("2")'></td>
-                            </tr>
-                            <tr>
-                                <td id="3" onclick='placeXOrO("3")'></td>
-                                <td id="4" onclick='placeXOrO("4")'></td>
-                                <td id="5" onclick='placeXOrO("5")'></td>
-                            </tr>
-                            <tr>
-                                <td id="6" onclick='placeXOrO("6")'></td>
-                                <td id="7" onclick='placeXOrO("7")'></td>
-                                <td id="8" onclick='placeXOrO("8")'></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div> -->
-            <!-- </div>/Left Collumn -->
-            <!-- Right column -->
-            <!-- <div class="column_1">
-                <a href="https://github.com/jameshannafin" target="_blank"><img src="/Images/GitHub.png"></a>
-            </div>/Right Collumn -->
-        <!-- </div>/GitHub Section -->
-        <!-- //////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-        <!-- Contact form -->
-        <div id="Contact">
-           <button onclick="form_open()" class="btn_popup">CONTACT</button> <!--Opens the contact form-->
-           <div class="form_popup" id="Form">
-                <form action="https://formspree.io/f/moqygrzy" method="POST" class="form_container"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <h1>Contact</h1>
-                    <label for="name"><b>Name</b></label>
-                      <input type="text" placeholder="Name" name="name" required>
-                    <label for="phone"><b>Phone</b></label>
-                      <input type="text" placeholder="Phone" name="phone">
-                    <label for="email"><b>Email</b></label>		
-                      <input type="text" placeholder="Email" name="email" required>
-                    <label for="message"><b>Message</b></label>
-                      <input type="text" placeholder="Message" name="message">
-         
-                    <button type="submit" class="btn">SUBMIT</button>
-                    <button type="button" class="btn cancel" onclick="form_close()">CLOSE</button><!--Closes the popup form-->
+      <!-- Modal -->
+      <div class="modal fade" id="register">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Register to get movie deals</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form><!--The following builds the form for users to register theri information-->
+                    <fieldset class="form-group"> <!--Field Sets to put a box around this set of related content-->
+                      <label for="firstname" >First Name</label> <!--Used to caption the field-->
+                      <input type="text" class="form-control" id="firstname" placeholder="John"><!--Input fields-->
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="lastname" >Last Name</label>
+                      <input type="text" class="form-control" id="lastname" placeholder="Smith">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="email" >Email</label>
+                      <input type="text" class="form-control" id="email" placeholder="jsmith@123.com">
+                    </fieldset>
+                    <fieldset class="form-group">
+                      <label for="password" >Password</label>
+                      <input type="text" class="form-control" id="password" placeholder="91eg5!go">
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
                 </form>
-           </div>
-        </div><!--/Contact Form-->
-        
-        <!-- Footer section -->
-        <footer>
-                <p class="center">James Hannafin : 2021 : <a href="https://github.com/jameshannafin" target="_blank">My Github</a></p><br>
-        </footer><!--End Footer-->
-        <script src="./JS/main.js"></script>
-    </body>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /form modal -->
+
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <!-- Retrieving the libraries -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+            $('.popover-dismiss').popover({//This is using jQuery to make hide the popover when it loses focus
+                trigger:'focus'
+                })
+      </script>
+  </body>
 </html>
-<!-- test -->
-<!-- test -->
-<!-- Test Addition -->
