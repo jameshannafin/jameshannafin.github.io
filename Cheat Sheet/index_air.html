@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<!-- Header -->
+
+<head>
+  <title> Mallory Index </title>
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<!-- Body -->
+
+<body>
+
+  <!------------------------>
+  <!------Begin Navbar------>
+  <!------------------------>
+
+  <div class="bs sticky">
+
+    <ul class="rownav">
+
+      <!-- Back to Home -->
+      <li><a href="index.html">Back Home</a></li>
+
+      <!-- Delivery -->
+      <!-- <li><a href="#deliv">Delivery</a></li> -->
+
+      <!-- Pay -->
+      <!-- <li><a href="#pay">Pay</a></li> -->
+
+      <!-- Other -->
+      <!-- <li><a href="#otr">Other</a></li> -->
+
+    </ul>
+
+  </div>
+
+  <br id="terminals">
+
+  <h1 class=" m-4 ">Air Terminals</h1>
+  <div class="bs box m-4 ">
+    <div class="centered_container">
+      <table id="tbl_terminals" class='text-center box table table-info  table-hover table-bordered table-centered'>
+        <tr>
+          <th onclick="ft_sortTerminals(0)">Airline Name</th>
+          <th onclick="ft_sortTerminals(1)">AWS Code</th>
+          <th onclick="ft_sortTerminals(3)"> Website</th>
+          <th onclick="ft_sortTerminals(3)">Region</th>
+        </tr>
+
+        <tr>
+          <td>ABSA Cargo Airline</td>
+          <td class="awsCode">M3 549</td>
+          <td><a target="_blank" href="http://absacargo.com.br/latam/en/">https://www.absacargo.com.br/en/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>ABX Air</td>
+          <td class="awsCode">GB 832</td>
+          <td><a target="_blank" href="https://www.abxair.com/">https://www.abxair.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>ACTC</td>
+          <td class="awsCode">MR 711</td>
+          <td><a target="_blank" href="http://www.actc-cameroun.com/">http://www.actc-cameroun.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Aegean Airlines</td>
+          <td class="awsCode">A3 390</td>
+          <td><a target="_blank" href="https://en.aegeanair.com/">https://en.aegeanair.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Aer Lingus Cargo</td>
+          <td class="awsCode">EI 053 / 125</td>
+          <td><a target="_blank"
+              href="https://www.aerlingus.com/careers/careers-on-the-ground/cargo/">https://www.aerlinguscargo.com/</a>
+          </td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Aeroflot</td>
+          <td class="awsCode">SU 555</td>
+          <td><a target="_blank" href="https://www.aeroflot.ru/">https://www.aeroflot.ru/</a></td>
+          <td>Europe/Asia</td>
+        </tr>
+
+        <tr>
+          <td>Aerolinea Del Caribe / Aercaribe</td>
+          <td class="awsCode">JK 543</td>
+          <td><a target="_blank" href="https://aerocaribe.aero/">https://www.aerocaribe.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Aerolineas Argentinas</td>
+          <td class="awsCode">AR 044</td>
+          <td><a target="_blank" href="https://www.aerolineas.com.ar/">https://www.aerolineas.com.ar/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Aeromexico Cargo</td>
+          <td class="awsCode">AM 139</td>
+          <td><a target="_blank" href="https://www.aeromexicocargo.com/">https://www.aeromexicocargo.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>AeroUnion</td>
+          <td class="awsCode">6R 873</td>
+          <td><a target="_blank" href="http://www.aerounion.com.mx/">http://www.aerounion.com.mx/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Aigle Azur</td>
+          <td class="awsCode">ZI 439</td>
+          <td><a target="_blank" href="https://www.aigle-azur.com/">https://www.aigle-azur.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Algerie</td>
+          <td class="awsCode">AH 124</td>
+          <td><a target="_blank" href="http://www.airalgerie.dz/">http://www.airalgerie.dz/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Air Arabia</td>
+          <td class="awsCode">G9 514</td>
+          <td><a target="_blank" href="https://www.airarabia.com/">https://www.airarabia.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>AirAsia</td>
+          <td class="awsCode">D7 843</td>
+          <td><a target="_blank" href="https://www.airasia.com/">https://www.airasia.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>AirAsia Berhad</td>
+          <td class="awsCode">AK 807</td>
+          <td><a target="_blank" href="https://www.airasia.com/">https://www.airasia.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>AirAsia India</td>
+          <td class="awsCode">I5 091</td>
+          <td><a target="_blank" href="https://www.airasia.co.in/">https://www.airasia.co.in/</a></td>
+          <td>India</td>
+        </tr>
+
+        <tr>
+          <td>Air Astana</td>
+          <td class="awsCode">KC 465</td>
+          <td><a target="_blank" href="https://airastana.com/">https://airastana.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Air Baltic</td>
+          <td class="awsCode">BT 657</td>
+          <td><a target="_blank" href="https://www.airbaltic.com/">https://www.airbaltic.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Belgium</td>
+          <td class="awsCode">KF 142</td>
+          <td><a target="_blank" href="https://www.airbelgium.com/">https://www.airbelgium.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Botswana</td>
+          <td class="awsCode">BP 636</td>
+          <td><a target="_blank" href="https://www.airbotswana.co.bw/">https://www.airbotswana.co.bw/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>AirBridge Cargo</td>
+          <td class="awsCode">RU 580</td>
+          <td><a target="_blank" href="https://airbridgecargo.com/">https://airbridgecargo.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Canada</td>
+          <td class="awsCode">AC 014</td>
+          <td><a target="_blank" href="https://www.aircanada.com/ca/en/aco/home.html">https://www.aircanada.com/</a>
+          </td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Air China</td>
+          <td class="awsCode">CA 999</td>
+          <td><a target="_blank" href="https://www.airchina.com/">https://www.airchina.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Airclass Lineas Aereas</td>
+          <td class="awsCode">VZ 510</td>
+          <td><a target="_blank" href="https://www.flyairclass.com/">https://www.flyairclass.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Air Europa Cargo</td>
+          <td class="awsCode">UX 996</td>
+          <td><a target="_blank" href="https://www.aireuropa.com/en/home">https://www.aireuropa.com/</a></td>
+          <td>Europe</td>
+        </tr>
+        
+        <tr>
+          <td>Air France</td>
+          <td class="awsCode">AF 057</td>
+          <td><a target="_blank" href="https://www.airfrance.us/">https://www.airfrance.us/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Greenland</td>
+          <td class="awsCode">GL 631</td>
+          <td><a target="_blank" href="https://www.airgreenland.com/">https://www.airgreenland.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Air Hong Kong</td>
+          <td class="awsCode">LD 288</td>
+          <td><a target="_blank" href="https://www.airhongkong.com.hk/">https://www.airhongkong.com.hk/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Air Incheon</td>
+          <td class="awsCode">KJ 994</td>
+          <td><a target="_blank" href="https://www.airincheon.co.kr/">https://www.airincheon.co.kr/</a></td>
+          <td>Asia</td>
+        </tr>
+        
+        <tr>
+          <td>Air India</td>
+          <td class="awsCode">AI 098</td>
+          <td><a target="_blank" href="https://www.airindia.in/">https://www.airindia.in/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Air Italy</td>
+          <td class="awsCode">IG 191</td>
+          <td><a target="_blank" href="https://www.airitaly.com/">https://www.airitaly.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Macau</td>
+          <td class="awsCode">NX 675</td>
+          <td><a target="_blank" href="https://www.airmacau.com.mo/en/index.html">https://www.airmacau.com.mo/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Air Madagascar</td>
+          <td class="awsCode">MD 258</td>
+          <td><a target="_blank" href="https://www.airmadagascar.com/">https://www.airmadagascar.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Air Malta</td>
+          <td class="awsCode">KM 643</td>
+          <td><a target="_blank" href="https://www.airmalta.com/">https://www.airmalta.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Mauritius</td>
+          <td class="awsCode">MK 239</td>
+          <td><a target="_blank" href="https://www.airmauritius.com/">https://www.airmauritius.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Airmax Cargo</td>
+          <td class="awsCode">X8 658</td>
+          <td><a target="_blank" href="https://www.airmaxcargo.com/">https://www.airmaxcargo.com/</a></td>
+          <td>Global</td>
+        </tr>
+
+        <tr>
+          <td>Air Moldova</td>
+          <td class="awsCode">9U 572</td>
+          <td><a target="_blank" href="https://www.airmoldova.md/en">https://www.airmoldova.md/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Namibia</td>
+          <td class="awsCode">SW 186</td>
+          <td><a target="_blank" href="https://www.airnamibia.com.na/">https://www.airnamibia.com.na/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Air New Zealand</td>
+          <td class="awsCode">NZ 086</td>
+          <td><a target="_blank" href="https://www.airnewzealand.com/">https://www.airnewzealand.com/</a></td>
+          <td>Pacific</td>
+        </tr>
+
+        <tr>
+          <td>Air Niugini</td>
+          <td class="awsCode">PX 656</td>
+          <td><a target="_blank" href="https://www.airniugini.com.pg/">https://www.airniugini.com.pg/</a></td>
+          <td>Pacific</td>
+        </tr>
+
+        <tr>
+          <td>Air Premia</td>
+          <td class="awsCode">350 YP</td>
+          <td><a target="_blank" href="https://www.airpremia.com/">https://www.airpremia.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Air Serbia (JAT)</td>
+          <td class="awsCode">JU 115</td>
+          <td><a target="_blank" href="https://www.airserbia.com/en/home">https://www.airserbia.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Air Seychelles</td>
+          <td class="awsCode">HM 061</td>
+          <td><a target="_blank" href="https://www.airseychelles.com/">https://www.airseychelles.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Air Tahiti Nui</td>
+          <td class="awsCode">TN 244</td>
+          <td><a target="_blank" href="https://www.airtahitinui.com/us-en">https://www.airtahitinui.com/</a></td>
+          <td>Oceania</td>
+        </tr>
+
+        <tr>
+          <td>Air Transat</td>
+          <td class="awsCode">TS 649</td>
+          <td><a target="_blank" href="https://www.airtransat.com/">https://www.airtransat.com/</a></td>
+          <td>North America</td>
+        </tr>
+        <tr>
+          <td>Alaska Airlines</td>
+          <td class="awsCode">AS 027</td>
+          <td><a target="_blank" href="https://www.alaskaair.com/">https://www.alaskaair.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Alitalia</td>
+          <td class="awsCode">AZ 055</td>
+          <td><a target="_blank" href="https://www.alitalia.com/">https://www.alitalia.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Allied Air</td>
+          <td class="awsCode">4W 574</td>
+          <td><a target="_blank" href="http://www.alliedairng.com/">http://www.alliedairng.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Aloha Air Cargo</td>
+          <td class="awsCode">KH 687</td>
+          <td><a target="_blank" href="https://www.alohaaircargo.com/">https://www.alohaaircargo.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>American Airlines</td>
+          <td class="awsCode">AA 001</td>
+          <td><a target="_blank" href="https://www.aa.com/">https://www.aa.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Amerijet International</td>
+          <td class="awsCode">M6 810</td>
+          <td><a target="_blank" href="https://www.amerijet.com/">https://www.amerijet.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>ANA All Nippon Cargo</td>
+          <td class="awsCode">NH 205</td>
+          <td><a target="_blank" href="https://www.ana.co.jp/">https://www.ana.co.jp/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Asiana Airlines</td>
+          <td class="awsCode">OZ 988</td>
+          <td><a target="_blank" href="https://flyasiana.com/">https://flyasiana.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>ASL Airlines Belgium</td>
+          <td class="awsCode">3V 756</td>
+          <td><a target="_blank" href="https://www.aslairlines.be/en">https://www.aslairlines.be/en</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Astral Aviation</td>
+          <td class="awsCode">8V 485</td>
+          <td><a target="_blank" href="https://www.astral-aviation.com/">https://www.astral-aviation.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Atlas Air</td>
+          <td class="awsCode">5Y 369</td>
+          <td><a target="_blank" href="https://www.atlasair.com/">https://www.atlasair.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Avianca Cargo</td>
+          <td class="awsCode">AV 134</td>
+          <td><a target="_blank" href="https://www.aviancacargo.com/">https://www.aviancacargo.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Azerbaijan Airlines</td>
+          <td class="awsCode">J2 771</td>
+          <td><a target="_blank" href="https://www.azal.az/en">https://www.azal.az/en</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Azul Cargo</td>
+          <td class="awsCode">AD 577</td>
+          <td><a target="_blank" href="https://www.azulcargoexpress.com.br/Rastreio/Rastreio">azulcargoexpress</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Bahamasair</td>
+          <td class="awsCode">UP 111</td>
+          <td><a target="_blank" href="https://www.bahamasair.com/">https://www.bahamasair.com/</a></td>
+          <td>Caribbean</td>
+        </tr>
+
+        <tr>
+          <td>Bangkok Airways</td>
+          <td class="awsCode">PG 829</td>
+          <td><a target="_blank" href="https://www.bangkokair.com/">https://www.bangkokair.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Belavia Belarusian Airlines</td>
+          <td class="awsCode">B2 628</td>
+          <td><a target="_blank" href="https://en.belavia.by/">https://en.belavia.by/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Biman Bangladesh</td>
+          <td class="awsCode">BG 997</td>
+          <td><a target="_blank" href="https://www.biman-airlines.com/">https://www.biman-airlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Bringer Air Cargo</td>
+          <td class="awsCode">E6 417</td>
+          <td><a target="_blank" href="https://www.bringercargo.com/">https://www.bringercargo.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>British Airways</td>
+          <td class="awsCode">BA 125</td>
+          <td><a target="_blank" href="https://www.britishairways.com/">https://www.britishairways.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Brussels Airlines</td>
+          <td class="awsCode">SN 082</td>
+          <td><a target="_blank" href="https://www.brusselsairlines.com/">https://www.brusselsairlines.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Bulgaria Air</td>
+          <td class="awsCode">FB 623</td>
+          <td><a target="_blank" href="https://www.air.bg/en">https://www.air.bg/en</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>CAL Cargo Air Lines</td>
+          <td class="awsCode">5C 700</td>
+          <td><a target="_blank" href="#">https://www.calcargo.com/</a></td>
+          <td>International</td>
+        </tr>
+
+        <tr>
+          <td>Calm Air</td>
+          <td class="awsCode">MO 622</td>
+          <td><a target="_blank" href="https://www.calmair.com/">https://www.calmair.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Camair-Co</td>
+          <td class="awsCode">QC 040</td>
+          <td><a target="_blank" href="https://www.camair-co.cm/">https://www.camair-co.cm/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Canadian Airlines Int´l</td>
+          <td class="awsCode">CP 018</td>
+          <td><a target="_blank" href="#">N/A</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Cargojet Airways</td>
+          <td class="awsCode">W8 489</td>
+          <td><a target="_blank" href="https://www.cargojet.com/">https://www.cargojet.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Cargologicair</td>
+          <td class="awsCode">P3 560</td>
+          <td><a target="_blank" href="https://www.cargologicair.co.uk/">https://www.cargologicair.co.uk/</a></td>
+          <td>International</td>
+        </tr>
+
+        <tr>
+          <td>Cargolux Airlines</td>
+          <td class="awsCode">CV 172</td>
+          <td><a target="_blank" href="https://www.cargolux.com/">https://www.cargolux.com/</a></td>
+          <td>International</td>
+        </tr>
+
+        <tr>
+          <td>Cargolux Italia</td>
+          <td class="awsCode">C8 356</td>
+          <td><a target="_blank" href="https://www.cargoluxitalia.com/">https://www.cargoluxitalia.com/</a></td>
+          <td>International</td>
+        </tr>
+
+        <tr>
+          <td>Caribbean Airlines</td>
+          <td class="awsCode">BW 106</td>
+          <td><a target="_blank" href="https://www.caribbean-airlines.com/">https://www.caribbean-airlines.com/</a></td>
+          <td>Caribbean</td>
+        </tr>
+
+        <tr>
+          <td>Cathay Pacific Airways</td>
+          <td class="awsCode">CX 160</td>
+          <td><a target="_blank" href="https://www.cathaypacific.com/cx/en_US.html">https://www.cathaypacific.com/</a>
+          </td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Cayman Airways</td>
+          <td class="awsCode">KX 378</td>
+          <td><a target="_blank" href="https://www.caymanairways.com/home">https://www.caymanairways.com/</a></td>
+          <td>Caribbean</td>
+        </tr>
+
+        <tr>
+          <td>Cebu Air</td>
+          <td class="awsCode">5J 203</td>
+          <td><a target="_blank" href="https://www.cebupacificair.com/">https://www.cebupacificair.com/</a></td>
+          <td>Philippines</td>
+        </tr>
+
+        <tr>
+          <td>Charterlines</td>
+          <td class="awsCode">CQ 976</td>
+          <td><a target="_blank" href="http://charterlines.com/">http://charterlines.com/</a></td>
+          <td>United States</td>
+        </tr>
+
+        <tr>
+          <td>China Airlines</td>
+          <td class="awsCode">CI 297</td>
+          <td><a target="_blank" href="https://www.china-airlines.com/us/en">https://www.china-airlines.com/</a></td>
+          <td>Taiwan</td>
+        </tr>
+
+        <tr>
+          <td>China Cargo Airlines</td>
+          <td class="awsCode">CK 112</td>
+          <td><a target="_blank" href="http://www.chinacargoair.com/en/">http://www.chinacargoair.com/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>China Eastern Airlines</td>
+          <td class="awsCode">MU 781</td>
+          <td><a target="_blank" href="https://en.ceair.com/">https://en.ceair.com/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>China Southern Airlines</td>
+          <td class="awsCode">CZ 784</td>
+          <td><a target="_blank" href="https://www.csair.com/en/">https://www.csair.com/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>CMA CGM Air Cargo</td>
+          <td class="awsCode">2C 003</td>
+          <td><a target="_blank" href="https://cmacgm-group.com/">https://cmacgm-group.com/</a></td>
+          <td>France</td>
+        </tr>
+
+        <tr>
+          <td>Cobaltair</td>
+          <td class="awsCode">CO 354</td>
+          <td><a target="_blank" href="http://www.cobalt.aero/">http://www.cobalt.aero/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Condor Flugdienst</td>
+          <td class="awsCode">DE 881</td>
+          <td><a target="_blank" href="https://www.condor.com/">https://www.condor.com/</a></td>
+          <td>Europe</td>
+        </tr>
+        
+        <tr>
+          <td>Copa Airlines Cargo</td>
+          <td class="awsCode">CM 230</td>
+          <td><a target="_blank"
+              href="https://www.copaair.com/en/web/us/cargo">https://www.copaair.com/en/web/us/cargo</a></td>
+          <td>Central America</td>
+        </tr>
+
+        <tr>
+          <td>Corsair</td>
+          <td class="awsCode">SS 923</td>
+          <td><a target="_blank" href="https://www.corsair.fr/">https://www.corsair.fr/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Coyne Airways</td>
+          <td class="awsCode">7C 575</td>
+          <td><a target="_blank" href="https://www.coyneair.com/">https://www.coyneair.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Croatia Airlines</td>
+          <td class="awsCode">OU 831</td>
+          <td><a target="_blank" href="https://www.croatiaairlines.com/">https://www.croatiaairlines.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Cubana de Aviacion</td>
+          <td class="awsCode">CU 136</td>
+          <td><a target="_blank" href="https://www.cubana.cu/en">https://www.cubana.cu/en</a></td>
+          <td>Central America</td>
+        </tr>
+
+        <tr>
+          <td>Cyprus Airways</td>
+          <td class="awsCode">CY 048</td>
+          <td><a target="_blank" href="https://www.cyprusairways.com/">https://www.cyprusairways.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Czech Airlines</td>
+          <td class="awsCode">OK 064</td>
+          <td><a target="_blank" href="https://www.czechairlines.com/">https://www.czechairlines.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+
+        <tr>
+          <td>Delta Air Lines</td>
+          <td class="awsCode">DL 006</td>
+          <td><a target="_blank" href="https://www.delta.com">https://www.delta.com</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>DHL Aero Expreso</td>
+          <td class="awsCode">992 D5</td>
+          <td><a target="_blank" href="http://www.dhl.com">http://www.dhl.com</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>DHL Aviation/DHL Airways</td>
+          <td class="awsCode">ER 423</td>
+          <td><a target="_blank" href="http://www.dhl.com">http://www.dhl.com</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>DHL Aviation / European Air Transport</td>
+          <td class="awsCode">QY 615</td>
+          <td><a target="_blank" href="http://www.dhl.com">http://www.dhl.com</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Dragonair</td>
+          <td class="awsCode">KA 043</td>
+          <td><a target="_blank" href="https://www.dragonair.com">https://www.dragonair.com</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Egyptair</td>
+          <td class="awsCode">MS 077</td>
+          <td><a target="_blank" href="http://www.egyptair.com">http://www.egyptair.com</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>EL AL</td>
+          <td class="awsCode">LY 114</td>
+          <td><a target="_blank" href="https://www.elal.com">https://www.elal.com</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Emirates</td>
+          <td class="awsCode">EK 176</td>
+          <td><a target="_blank" href="https://www.emirates.com">https://www.emirates.com</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Estafeta Carga Aerea</td>
+          <td class="awsCode">E7 355</td>
+          <td><a target="_blank" href="https://www.estafeta.com">https://www.estafeta.com</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Estonian Air</td>
+          <td class="awsCode">OV 960</td>
+          <td><a target="_blank" href="https://www.estonian-air.ee">https://www.estonian-air.ee</a></td>
+          <td>Europe</td>
+        </tr>
+
+
+
+        <tr>
+          <td>Ethiopian Airlines</td>
+          <td class="awsCode">ET 071</td>
+          <td><a target="_blank" href="https://www.ethiopianairlines.com/aa/">https://www.ethiopianairlines.com/</a>
+          </td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>ETIHAD Airways</td>
+          <td class="awsCode">EY 607</td>
+          <td><a target="_blank" href="https://www.etihadcargo.com/en-ae/">https://www.etihadcargo.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Eva Airways</td>
+          <td class="awsCode">BR 695</td>
+          <td><a target="_blank" href="https://www.evacargo.com/index.html">https://www.evacargo.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Fedex</td>
+          <td class="awsCode">FX 023</td>
+          <td><a target="_blank" href="https://www.fedex.com/en-us/home.html">https://www.fedex.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Fiji Airways</td>
+          <td class="awsCode">FJ 260</td>
+          <td><a target="_blank" href="https://www.fijiairways.com/en-ca/">https://www.fijiairways.com/</a></td>
+          <td>Australia</td>
+        </tr>
+
+        <tr>
+          <td>Finnair</td>
+          <td class="awsCode">AY 105</td>
+          <td><a target="_blank" href="https://www.finnair.com/int/gb/">https://www.finnair.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>flydubai cargo</td>
+          <td class="awsCode">FZ 141</td>
+          <td><a target="_blank" href="https://www.flydubai.com/en/cargo">https://www.flydubai.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Fly One</td>
+          <td class="awsCode">5F 130</td>
+          <td><a target="_blank" href="https://www.flyone.md/en/">https://www.flyone.md/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Gabon Airlines</td>
+          <td class="awsCode">GY 013</td>
+          <td><a target="_blank" href="http://www.gabonairlines.com/">http://www.gabonairlines.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Garuda Indonesia</td>
+          <td class="awsCode">GA 126</td>
+          <td><a target="_blank" href="https://www.garuda-indonesia.com/">https://www.garuda-indonesia.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Global Aviation and Services</td>
+          <td class="awsCode">5S 301</td>
+          <td><a target="_blank" href="https://www.globalaviation.aero/">https://www.globalaviation.aero/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Gol Airlines (VRG Linhas Aéreas)</td>
+          <td class="awsCode">G3 127</td>
+          <td><a target="_blank" href="https://www.voegol.com.br/en">https://www.voegol.com.br/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Gulf Air</td>
+          <td class="awsCode">GF 072</td>
+          <td><a target="_blank" href="https://www.gulfair.com/">https://www.gulfair.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Hainan Airlines</td>
+          <td class="awsCode">HU 880</td>
+          <td><a target="_blank" href="https://www.hainanairlines.com/">https://www.hainanairlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Hawaiian Airlines</td>
+          <td class="awsCode">HA 173</td>
+          <td><a target="_blank" href="https://www.hawaiianairlines.com/">https://www.hawaiianairlines.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Hong Kong Air Cargo</td>
+          <td class="awsCode">RH 828</td>
+          <td><a target="_blank" href="https://www.hkaircargo.com/">https://www.hkaircargo.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Hong Kong Airlines</td>
+          <td class="awsCode">HX 851</td>
+          <td><a target="_blank" href="https://www.hongkongairlines.com/">https://www.hongkongairlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Hong Kong Express</td>
+          <td class="awsCode">UO 128</td>
+          <td><a target="_blank" href="https://www.hkexpress.com/en-hk">https://www.hkexpress.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Iberia</td>
+          <td class="awsCode">IB 075</td>
+          <td><a target="_blank" href="https://www.iberia.com/us/">https://www.iberia.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Icelandair</td>
+          <td class="awsCode">FI 108</td>
+          <td><a target="_blank" href="https://www.icelandair.com/">https://www.icelandair.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>IndiGo CarGo</td>
+          <td class="awsCode">6E 312</td>
+          <td><a target="_blank" href="https://www.goindigo.in/">https://www.goindigo.in/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Insel Air Cargo</td>
+          <td class="awsCode">7I 958</td>
+          <td><a target="_blank" href="https://www.fly-inselair.com/">https://www.fly-inselair.com/</a></td>
+          <td>Caribbean</td>
+        </tr>
+
+        <tr>
+          <td>Iran Air</td>
+          <td class="awsCode">IR 096</td>
+          <td><a target="_blank" href="https://www.iranair.com/">https://www.iranair.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Japan Airlines</td>
+          <td class="awsCode">JL 131</td>
+          <td><a target="_blank" href="https://www.jal.co.jp/en/">https://www.jal.co.jp/en/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Jeju Air</td>
+          <td class="awsCode">7C 806</td>
+          <td><a target="_blank" href="https://www.jejuair.net/en/main.do">https://www.jejuair.net/en/main.do</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Jet Airways</td>
+          <td class="awsCode">9W 589</td>
+          <td><a target="_blank" href="https://www.jetairways.com/">https://www.jetairways.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Jet Airways Inc. (US)</td>
+          <td class="awsCode">QJ 508</td>
+          <td><a target="_blank"
+              href="https://www.jetairways.com/us/en/home.aspx">https://www.jetairways.com/us/en/home.aspx</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Jetairfly</td>
+          <td class="awsCode">TB 754</td>
+          <td><a target="_blank" href="https://www.tuifly.be/en">https://www.tuifly.be/en</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Jet Club</td>
+          <td class="awsCode">0J 254</td>
+          <td><a target="_blank" href="http://www.jetclub.fr/">http://www.jetclub.fr/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Jetstar Asia Airways</td>
+          <td class="awsCode">3K 375</td>
+          <td><a target="_blank" href="https://www.jetstar.com/sg/en/home">https://www.jetstar.com/sg/en/home</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Jubba Airways</td>
+          <td class="awsCode">3J 535</td>
+          <td><a target="_blank" href="https://www.jubbaairways.com/">https://www.jubbaairways.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Kalitta Air</td>
+          <td class="awsCode">K4 272</td>
+          <td><a target="_blank" href="https://www.kalittaair.com/">https://www.kalittaair.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Kenya Airways</td>
+          <td class="awsCode">KQ 706</td>
+          <td><a target="_blank" href="https://www.kenya-airways.com/global/">https://www.kenya-airways.com/</a></td>
+          <td>Africa</td>
+        </tr>
+        <tr>
+          <td>KLM Cargo</td>
+          <td class="awsCode">KL 074</td>
+          <td><a target="_blank" href="https://www.klm.com/home/us/en">https://www.klm.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Korean Air</td>
+          <td class="awsCode">KE 180</td>
+          <td><a target="_blank" href="https://www.koreanair.com/global/en.html">https://www.koreanair.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Kuwait Airways</td>
+          <td class="awsCode">KU 229</td>
+          <td><a target="_blank" href="https://www.kuwaitairways.com/">https://www.kuwaitairways.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>LACSA Airlines of Costa Rica</td>
+          <td class="awsCode">LR 133</td>
+          <td><a target="_blank" href="https://www.lacsa.com/">https://www.lacsa.com/</a></td>
+          <td>Central America</td>
+        </tr>
+
+        <tr>
+          <td>LAN Airlines (LATAM)</td>
+          <td class="awsCode">LA 045</td>
+          <td><a target="_blank" href="https://www.latam.com/">https://www.latam.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>LAN Chile Cargo</td>
+          <td class="awsCode">UC 145</td>
+          <td><a target="_blank" href="https://www.latamcargo.com/en_us/">https://www.latamcargo.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>LAN Ecuador</td>
+          <td class="awsCode">XL 462</td>
+          <td><a target="_blank" href="https://www.latam.com/">https://www.latam.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>LAS Cargo</td>
+          <td class="awsCode">4L 174</td>
+          <td><a target="_blank" href="http://www.lascargo.com/">http://www.lascargo.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>LATAM Airlines Brasil / TAM Linhas Aereas</td>
+          <td class="awsCode">JJ 957</td>
+          <td><a target="_blank" href="https://www.latam.com/">https://www.latam.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+
+        <tr>
+          <td>LATAM CARGO Colombia</td>
+          <td class="awsCode">L7 985</td>
+          <td><a target="_blank" href="https://www.latamcargo.com/en_us/">https://www.latamcargo.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>LIAT Airlines</td>
+          <td class="awsCode">LI 140</td>
+          <td><a target="_blank" href="https://www.liat.com/">https://www.liat.com/</a></td>
+          <td>Caribbean</td>
+        </tr>
+
+        <tr>
+          <td>LOT Polish Airlines</td>
+          <td class="awsCode">LO 080</td>
+          <td><a target="_blank" href="https://www.lot.com/">https://www.lot.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Lufthansa Cargo AG</td>
+          <td class="awsCode">LH 020</td>
+          <td><a target="_blank" href="https://lufthansa-cargo.com/">https://lufthansa-cargo.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Mahan Airlines</td>
+          <td class="awsCode">W5 537</td>
+          <td><a target="_blank" href="http://www.mahan.aero/">http://www.mahan.aero/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Malaysian Airline System</td>
+          <td class="awsCode">MH 232</td>
+          <td><a target="_blank" href="https://www.malaysiaairlines.com/">https://www.malaysiaairlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Malindo Airways</td>
+          <td class="awsCode">OD 816</td>
+          <td><a target="_blank" href="https://www.malindoair.com/">https://www.malindoair.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Mandarin Airlines</td>
+          <td class="awsCode">AE 803</td>
+          <td><a target="_blank" href="https://www.mandarin-airlines.com/">https://www.mandarin-airlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Martinair Cargo</td>
+          <td class="awsCode">MP 129</td>
+          <td><a target="_blank" href="https://www.martinaircargo.com/">https://www.martinaircargo.com/</a></td>
+          <td>Europe</td>
+        </tr>
+        <tr>
+          <td>MASAir</td>
+          <td class="awsCode">M7 865</td>
+          <td><a target="_blank" href="https://masair.com.mx/">https://masair.com.mx/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>MCS Aerocarga de Mexico</td>
+          <td class="awsCode">T8 137</td>
+          <td><a target="_blank" href="#">N/A</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Mercury Americas</td>
+          <td class="awsCode">4X 805</td>
+          <td><a target="_blank" href="#">N/A</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Middle East Airlines</td>
+          <td class="awsCode">ME 076</td>
+          <td><a target="_blank" href="https://www.mea.com.lb/">https://www.mea.com.lb/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>MNG Airlines</td>
+          <td class="awsCode">MB 716</td>
+          <td><a target="_blank" href="https://www.mngairlines.com/">https://www.mngairlines.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>My Indo Airlines</td>
+          <td class="awsCode">2Y 585</td>
+          <td><a target="_blank" href="#">N/A</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>National Air Cargo</td>
+          <td class="awsCode">N8 416</td>
+          <td><a target="_blank" href="https://www.nationalaircargo.com/">https://www.nationalaircargo.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Neos SPA</td>
+          <td class="awsCode">NO 703</td>
+          <td><a target="_blank" href="https://www.neosair.it/">https://www.neosair.it/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Niger Air Cargo</td>
+          <td class="awsCode">NO 519</td>
+          <td><a target="_blank" href="#">N/A</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Nippon Cargo Airlines</td>
+          <td class="awsCode">KZ 933</td>
+          <td><a target="_blank" href="https://www.nca.aero/en/index.html">https://www.nca.aero/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Nok Air</td>
+          <td class="awsCode">DD 596</td>
+          <td><a target="_blank" href="https://www.nokair.com/">https://www.nokair.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Norse Atlantic Airways</td>
+          <td>N0 506</td>
+          <td><a target="_blank" href="https://www.flynorse.com/">https://www.flynorse.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Northern Air Cargo / Stratair</td>
+          <td>NC 345</td>
+          <td><a target="_blank" href="https://www.nac.aero/">https://www.nac.aero/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Norwegian Air Shuttle</td>
+          <td>DY 328</td>
+          <td><a target="_blank" href="https://www.norwegian.com/">https://www.norwegian.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Norwegian Air UK</td>
+          <td>DI 762</td>
+          <td><a target="_blank" href="https://www.norwegian.com/uk/">https://www.norwegian.com/uk/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Olympic Airways</td>
+          <td>OA 050</td>
+          <td><a target="_blank" href="https://www.olympicair.com/">https://www.olympicair.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Oman Air</td>
+          <td>WY 910</td>
+          <td><a target="_blank" href="https://www.omanair.com/">https://www.omanair.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>Pakistan Int´l Airlines</td>
+          <td>PK 214</td>
+          <td><a target="_blank" href="https://www.piac.com.pk/">https://www.piac.com.pk/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Pegasus Cargo</td>
+          <td>PC 624</td>
+          <td><a target="_blank" href="https://www.flypgs.com/">https://www.flypgs.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Philippine Airlines</td>
+          <td>PR 079</td>
+          <td><a target="_blank" href="https://www.philippineairlines.com/">https://www.philippineairlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Polar Air Cargo</td>
+          <td>PO 403</td>
+          <td><a target="_blank" href="https://www.polaraircargo.com/">https://www.polaraircargo.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Raya Airways</td>
+          <td class="awsCode">TH 539</td>
+          <td><a target="_blank" href="https://www.rayaairways.com/">https://www.rayaairways.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Royal Air Maroc</td>
+          <td class="awsCode">AT 147</td>
+          <td><a target="_blank" href="https://www.royalairmaroc.com/int-en/">https://www.royalairmaroc.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Royal Brunei Airlines</td>
+          <td class="awsCode">BI 672</td>
+          <td><a target="_blank" href="https://www.flyroyalbrunei.com/">https://www.flyroyalbrunei.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Royal Jordanian</td>
+          <td class="awsCode">RJ 512</td>
+          <td><a target="_blank" href="https://www.rj.com/">https://www.rj.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>RUS (Reliable Unique Services) Aviation</td>
+          <td class="awsCode">R4 827</td>
+          <td><a target="_blank" href="http://rusaviation.com/">http://rusaviation.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>RwandAir</td>
+          <td class="awsCode">WB 459</td>
+          <td><a target="_blank" href="https://www.rwandair.com/">https://www.rwandair.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Ryan Air Arctic Transportation Services </td>
+          <td class="awsCode">?? ???</td>
+          <td><a target="_blank" href="https://apps6.tflite.com/Public/RYN/Freight/Tracking/" </a></td>
+          <td>?? ?? ?? </td>
+        </tr>
+
+        <tr>
+          <td>SAC South American Airways</td>
+          <td class="awsCode">S6 817</td>
+          <td><a target="_blank" href="http://www.flysac.com/">http://www.flysac.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>SAS-Scandinavian Airlines System</td>
+          <td class="awsCode">SK 117</td>
+          <td><a target="_blank" href="https://www.flysas.com/">https://www.flysas.com/</a></td>
+          <td>Europe</td>
+        </tr>
+        <tr>
+
+          <td>SATA Air Acores</td>
+          <td class="awsCode">SP 737</td>
+          <td><a target="_blank" href="https://www.azoresairlines.pt/en">https://www.azoresairlines.pt/en</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>SATA International</td>
+          <td class="awsCode">S4 331</td>
+          <td><a target="_blank" href="https://www.azoresairlines.pt/en">https://www.azoresairlines.pt/en</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Saudi Arabian Airlines</td>
+          <td class="awsCode">SV 065</td>
+          <td><a target="_blank" href="https://www.saudia.com/">https://www.saudia.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>SF Airlines</td>
+          <td class="awsCode">O3 921</td>
+          <td><a target="_blank" href="http://www.sf-airlines.com/">http://www.sf-airlines.com/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>Shandong Airlines</td>
+          <td class="awsCode">SC 324</td>
+          <td><a target="_blank" href="http://www.sda.cn/">http://www.sda.cn/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>Shanghai Airlines</td>
+          <td class="awsCode">FM 774</td>
+          <td><a target="_blank" href="https://www.shanghai-air.com/">https://www.shanghai-air.com/</a></td>
+          <td>China</td>
+        </tr>
+        <tr>
+          <td>Shenzhen Airlines</td>
+          <td class="awsCode">ZH 479</td>
+          <td><a target="_blank" href="http://www.shenzhenair.com/">http://www.shenzhenair.com/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>Siberia Airlines</td>
+          <td class="awsCode">S7 421</td>
+          <td><a target="_blank" href="https://www.s7.ru/en/">https://www.s7.ru/</a></td>
+          <td>Russia</td>
+        </tr>
+
+        <tr>
+          <td>Sichuan Airlines</td>
+          <td class="awsCode">3U 876</td>
+          <td><a target="_blank" href="http://global.sichuanair.com/ECITP_SS/">http://global.sichuanair.com/</a></td>
+          <td>China</td>
+        </tr>
+
+        <tr>
+          <td>Silk Air</td>
+          <td class="awsCode">MI 629</td>
+          <td><a target="_blank" href="https://www.silkair.com/en_UK/sg/home">https://www.silkair.com/</a></td>
+          <td>Singapore</td>
+        </tr>
+        <tr>
+          <td>Silk Way Airlines</td>
+          <td class="awsCode">ZP 463</td>
+          <td><a target="_blank" href="https://www.silkwaywest.com/">https://www.silkwaywest.com/</a></td>
+          <td>Azerbaijan</td>
+        </tr>
+        
+        <tr>
+          <td>Silk Way West Airlines</td>
+          <td class="awsCode">7L 501</td>
+          <td><a target="_blank" href="https://www.silkwaywest.com/">https://www.silkwaywest.com/</a></td>
+          <td>Azerbaijan</td>
+        </tr>
+
+        <tr>
+          <td>Singapore Airlines</td>
+          <td class="awsCode">SQ 618</td>
+          <td><a target="_blank" href="https://www.singaporeair.com/">https://www.singaporeair.com/</a></td>
+          <td>Singapore</td>
+        </tr>
+
+        <tr>
+          <td>Skygreece Airlines</td>
+          <td class="awsCode">GW 358</td>
+          <td><a target="_blank" href="https://www.skygreece.com/">https://www.skygreece.com/</a></td>
+          <td>Greece</td>
+        </tr>
+
+        <tr>
+          <td>Skylease Cargo</td>
+          <td class="awsCode">KY 576</td>
+          <td><a target="_blank" href="https://www.skyleasecargo.com/">https://www.skyleasecargo.com/</a></td>
+          <td>United States</td>
+        </tr>
+
+        <tr>
+          <td>Sky West Airlines</td>
+          <td class="awsCode">OO 302</td>
+          <td><a target="_blank" href="https://www.skywest.com/">https://www.skywest.com/</a></td>
+          <td>United States</td>
+        </tr>
+
+        <tr>
+          <td>Solar Cargo</td>
+          <td class="awsCode">4S 644</td>
+          <td><a target="_blank" href="https://www.solarcargo.com/">https://www.solarcargo.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>South African Airways</td>
+          <td class="awsCode">SA 083</td>
+          <td><a target="_blank" href="https://www.flysaa.com/">https://www.flysaa.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Southwest Airlines</td>
+          <td class="awsCode">WN 526</td>
+          <td><a target="_blank" href="https://www.southwest.com/">https://www.southwest.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>SpiceJet</td>
+          <td class="awsCode">SG 775</td>
+          <td><a target="_blank" href="https://www.spicejet.com/">https://www.spicejet.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>SriLankan Cargo</td>
+          <td class="awsCode">UL 603</td>
+          <td><a target="_blank" href="https://www.srilankancargo.com/">https://www.srilankancargo.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Stabo Air</td>
+          <td class="awsCode">4E 242</td>
+          <td><a target="_blank" href="https://www.staboair.com/">https://www.staboair.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Starlight Airlines</td>
+          <td class="awsCode">QP 321</td>
+          <td><a target="_blank" href="https://www.starlightairlines.com/">https://www.starlightairlines.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Starlux Cargo</td>
+          <td class="awsCode">JX 189</td>
+          <td><a target="_blank" href="https://www.starlux-airlines.com/">https://www.starlux-airlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Sunclass Airlines</td>
+          <td class="awsCode">DK 630</td>
+          <td><a target="_blank" href="https://www.sunclassairlines.com/">https://www.sunclassairlines.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Swiss</td>
+          <td>LX 724</td>
+          <td><a target="_blank" href="https://www.swiss.com/">https://www.swiss.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Syrian Arab Airlines</td>
+          <td>RB 070</td>
+          <td><a target="_blank" href="https://www.syriaair.com/">https://www.syriaair.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+        <tr>
+          <td>TAAG-Angola Airlines</td>
+          <td>DT 118</td>
+          <td><a target="_blank" href="https://www.taag.com/en_us/">https://www.taag.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>TAB Transportes Aereos Bolivianos</td>
+          <td>B1 901</td>
+          <td><a target="_blank" href="https://www.tabairlines.com/">https://www.tabairlines.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>TACA</td>
+          <td>TA 202</td>
+          <td><a target="_blank" href="https://www.avianca.com/us/en/">https://www.avianca.com/</a></td>
+          <td>Central America</td>
+        </tr>
+
+        <tr>
+          <td>Tampa Airlines</td>
+          <td>QT 729</td>
+          <td><a target="_blank" href="http://tampa-cargo.com/">http://tampa-cargo.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>TAP Air Portugal</td>
+          <td>TP 047</td>
+          <td><a target="_blank" href="https://www.flytap.com/en-pt/">https://www.flytap.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Tarom</td>
+          <td>281 RO</td>
+          <td><a target="_blank" href="https://www.tarom.ro/en/">https://www.tarom.ro/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>TATA SIA Airlines/Vistara Cargo</td>
+          <td>UK 228</td>
+          <td><a target="_blank" href="https://www.airvistara.com/">https://www.airvistara.com/</a></td>
+          <td>Asia</td>
+        </tr>
+        <tr>
+          <td>Thai Airways</td>
+          <td>TG 217</td>
+          <td><a target="_blank" href="https://www.thaiairways.com/">https://www.thaiairways.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>TianJin Airlines</td>
+          <td>GS 826</td>
+          <td><a target="_blank" href="https://global.tianjin-air.com/">https://global.tianjin-air.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>TNT Airways</td>
+          <td>3V 756 (see ASL Airlines Belgium)</td>
+          <td><a target="_blank" href="https://www.aslairlines.be/">https://www.aslairlines.be/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Trans American Airways/TACA Peru</td>
+          <td>T0 530</td>
+          <td><a target="_blank" href="https://www.avianca.com/">https://www.avianca.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>TUI Airlines</td>
+          <td>TB 612</td>
+          <td><a target="_blank" href="https://www.tui.com/">https://www.tui.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Tunisair</td>
+          <td>TU 199</td>
+          <td><a target="_blank" href="https://www.tunisair.com/">https://www.tunisair.com/</a></td>
+          <td>Africa</td>
+        </tr>
+
+        <tr>
+          <td>Turkish Airlines</td>
+          <td>TK 235</td>
+          <td><a target="_blank" href="https://www.turkishairlines.com/">https://www.turkishairlines.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Ukraine Int'l Airlines</td>
+          <td>PS 566</td>
+          <td><a target="_blank" href="https://www.flyuia.com/">https://www.flyuia.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Uni Airways</td>
+          <td>B7 525</td>
+          <td><a target="_blank" href="http://www.flyunia.com.tw/">http://www.flyunia.com.tw/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>United Airlines Cargo</td>
+          <td>UA 016</td>
+          <td><a target="_blank" href="https://www.unitedcargo.com/">https://www.unitedcargo.com/</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Uni-Top Airlines</td>
+          <td>UW 699</td>
+          <td><a target="_blank"
+              href="http://www.uni-top.com.cn/English/Index.asp">http://www.uni-top.com.cn/English/Index.asp</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>UPS Air Cargo</td>
+          <td>5X 406</td>
+          <td><a target="_blank"
+              href="https://www.ups.com/us/en/services/global-freight/air-cargo.page">https://www.ups.com/us/en/services/global-freight/air-cargo.page</a>
+          </td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>Ural Airlines Cargo</td>
+          <td>U6 262</td>
+          <td><a target="_blank" href="https://www.uralairlines.com/">https://www.uralairlines.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Uzbekistan Airways</td>
+          <td>HY 250</td>
+          <td><a target="_blank" href="https://www.uzairways.com/en">https://www.uzairways.com/en</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>VARIG</td>
+          <td>RG 042/183</td>
+          <td><a target="_blank"
+              href="https://www.voegol.com.br/en/informacoes/viagens-aereas/empresas-aereas-parceiras-varig">https://www.voegol.com.br/en/informacoes/viagens-aereas/empresas-aereas-parceiras-varig</a>
+          </td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Vietjet</td>
+          <td>VJ 978</td>
+          <td><a target="_blank"
+              href="https://www.vietjetair.com/Sites/Web/en-US/Home">https://www.vietjetair.com/Sites/Web/en-US/Home</a>
+          </td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Vietnam Airlines</td>
+          <td>VN 738</td>
+          <td><a target="_blank" href="https://www.vietnamairlines.com/">https://www.vietnamairlines.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Vensecar Internacional</td>
+          <td>V4 946</td>
+          <td><a target="_blank" href="http://www.vensecar.com/">http://www.vensecar.com/</a></td>
+          <td>South America</td>
+        </tr>
+
+        <tr>
+          <td>Virgin Atlantic</td>
+          <td>VS 932</td>
+          <td><a target="_blank" href="https://www.virginatlantic.com/">https://www.virginatlantic.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Westjet Cargo</td>
+          <td>WS 838</td>
+          <td><a target="_blank"
+              href="https://www.westjet.com/en-ca/cargo/index">https://www.westjet.com/en-ca/cargo/index</a></td>
+          <td>North America</td>
+        </tr>
+
+        <tr>
+          <td>WOW Air</td>
+          <td>WW 377</td>
+          <td><a target="_blank" href="https://wowair.com/">https://wowair.com/</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>XiamenAir</td>
+          <td>MF 731</td>
+          <td><a target="_blank" href="https://www.xiamenair.com/">https://www.xiamenair.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>XL Airways France</td>
+          <td>SE 473</td>
+          <td><a target="_blank" href="https://www.xl.com/us">https://www.xl.com/us</a></td>
+          <td>Europe</td>
+        </tr>
+
+        <tr>
+          <td>Suparana / Jinpeng / Yangtze River Express Airlines</td>
+          <td>Y8 871</td>
+          <td><a target="_blank" href="https://en.jipengair.com/">https://en.jipengair.com/</a></td>
+          <td>Asia</td>
+        </tr>
+
+        <tr>
+          <td>Yemenia Yemen Airways</td>
+          <td>IY 635</td>
+          <td><a target="_blank" href="https://www.yemenia.com/">https://www.yemenia.com/</a></td>
+          <td>Middle East</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</body>
