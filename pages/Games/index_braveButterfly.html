@@ -131,12 +131,30 @@
 
         <!-- JumboTron Heading -->
         <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center"><!--Jumbotron displays across the screen-->
-          <div class="container">
+          <div  id="Contact" class="container">
             <h1 class="display-4 hidden-sm-down" style="color: #fff; font-family:roboto; font-weight:900; text-transform:uppercase;">Movie Deals</h1><!--Used inner CSS to style this text -->
-            <p class="lead">Check out our monthly deals...</p>
+            <p class="lead">Contact</p>
             <!-- Movie Deals when clicked this text will open the modal, when hovered over it will show a tool tip-->
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"  data-toggle="tooltip" data-placement="top" title="Click to sign up" >See our monthly deals</button>
-            <!-- End Movie Deals -->
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"  data-toggle="tooltip" data-placement="top" title="Click to sign up" >Let me know what you think!</button>
+            <button onclick="form_open()" class="btn_popup">CONTACT</button> <!--Opens the contact form-->
+            <div class="form_popup" id="Form">
+              <form action="https://formspree.io/f/moqygrzy" method="POST" class="form_container"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="Name" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                  <input type="text" placeholder="Phone" name="phone">
+                <label for="email"><b>Email</b></label>		
+                  <input type="text" placeholder="Email" name="email" required>
+                <label for="message"><b>Message</b></label>
+                  <input type="text" placeholder="Message" name="message">
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="form_close()">CLOSE</button><!--Closes the popup form-->
+             </form>
+        </div>
+     </div><!--/Contact Form-->
+
+
           </div>
         </div>
         <!-- End Jumbotron Heading -->
@@ -160,7 +178,7 @@
       <div class="container my-5">
         <ul class="=list-inline ">
           <li class="list-inline-item">
-            <small><a class="nav-link active" href="/index.html">Home</a></small>
+            <small><a class="nav-link active" href="//index.html">Home</a></small>
           </li>
           <li class="list-inline-item">
             <small><a class="nav-link" href="/pages/allGames.html">All Games</a></small>
