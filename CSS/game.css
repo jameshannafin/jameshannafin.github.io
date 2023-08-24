@@ -1,3 +1,31 @@
+
+.text1
+{
+    font-style: impact;    
+    color: white;
+
+
+}
+
+.gray{    background-color: dimgrey;
+
+}
+
+.dkgray{    background-color: rgb(61, 61, 61);
+
+}
+
+.blk{    background-color: rgb(16, 16, 16);
+
+}
+
+.bg{    background-image: url(../images/space.png);
+
+}
+    
+
+
+
 /* This container includes our table and the canvas */
 .center-container{
     /* This property sets the width of our container */
