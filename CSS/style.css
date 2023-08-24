@@ -2,10 +2,11 @@
 
 html {
     scroll-behavior: smooth; /*Ensures  the page scrolls smoothly when the navbar is used*/
+	background-color: red;
 }
 
 body {
-    margin: 0%; /* The content will have the indicated margin between itself and the edge of the window */
+    margin: 4em; /* The content will have the indicated margin between itself and the edge of the window */
     opacity: 1; /* This and transition affect the page loading fade in effect */
     transition: 1s opacity; /* This causes the opaccidty to fade in in the indicated time */
     letter-spacing: .2vw; /* use vw(1% of viewport widh) to have relative spacing of the indicated amount */
