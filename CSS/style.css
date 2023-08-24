@@ -13,6 +13,7 @@ body {
     font-size: 1.5vw; 
     overflow-x: hidden; /* This prevents the horizontal(x) scroll bar from showing when the quote is hovered over */
     user-select: none; /* This prevents the text on the webpage from being highlighted by the user */
+	background-color: black;
 }
 
 /* This section contributes to the fade effect for the page that occurs when the page is loaded */
@@ -26,7 +27,7 @@ h1 {
     font-family: "Trebuchet MS", Optima; /* Sets the font family of  h1 elements */
     text-align: center; /* centers h1 elements */
     margin-top: 2%; /* Adds the indicated margin above h1 elements */
-    color: #1a1a1a; /* Sets font color to h1 elements*/
+    color: #fff; /* Sets font color to h1 elements*/
 }
 
 /* Heading 1 (hovered over)*/
@@ -111,7 +112,7 @@ footer {
 /***** Navbar Styling *****/
 .navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
+    background-color: blue; /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -389,6 +390,7 @@ footer {
     padding: 1vw; /* Adds padding between the form-popup and the form-container */
     background-color: white; 
     box-shadow: -12px -12px 20em 20em rgba(122, 122, 155, 0.5);
+color: white;
 }
 
 /* Input fields */
