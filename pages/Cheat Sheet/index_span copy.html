@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FIRMS CODES App</title>
+  <!-- <title>Spanish Vocabulary App</title> -->
+
+  <link rel="stylesheet" type="text/css" href="CSS/span.css">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 33%;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .marked {
+      background-color: red;
+    }
+
+
+
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      width: 33%;
+    }
+
+    #wordTable {
+      margin-top: 20px;
+      table-layout: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div>
+      <h1>Firms Codes
+      </h1>
+      <table id="wordTable">
+        <thead>
+          <tr>
+            <th>Word</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="buttons">
+      <div class="controls-container">
+        <div id="controls"></div>
+          <H3>Controls</H3>
+          <p>Right Click to Flag a Cell.</p>
+          <p>Left Click to translate a cell.</p>
+          <button onclick="flipAllToEnglish()">Flip all to Spanish</button>
+          <button onclick="flipAllToSpanish()">Flip all to English</button>
+        </div>
+      </div>
+
+      <div id="filters"></div>
+      <H3>FILTERS</H3>
+
+      <button onclick="filterWordsByCategory('greetings')">Greetings</button>
+      <button onclick="filterWordsByCategory('places')">Places</button>
+      <button onclick="filterWordsByCategory('animals')">Animals</button>
+
+      <br>
+
+      <button onclick="filterWordsByCategory('nature')">Nature</button>
+      <button onclick="filterWordsByCategory('clothing')">Clothing</button>
+      <button onclick="filterWordsByCategory('places')">Places</button>
+
+      <br>
+
+      <button onclick="filterWordsByCategory('objects')">Objects</button>
+      <button onclick="filterWordsByCategory('sports')">Sports</button>
+      <button onclick="filterWordsByCategory('transportation')">Transportation</button>
+
+      <br>
+
+      <button onclick="filterWordsByCategory('adjectives')">Adjectives</button>
+      <button onclick="filterWordsByCategory('body parts')">Body</button>
+      <button onclick="filterWordsByCategory('colors')">Colors</button>
+
+      <button onclick="filterWordsByCategory('office')">Office</button>
+
+      <button onclick="showAllWords()">All Words</button>
+    </div>
+
+  </div>
+  </div>
+  <br>
+
+
+  <!-- TRANSLATION GAME -->
+  <div>
+
+    <div id="translationGame">
+      <h2>Translation Game</h2>
+      <p>Translate the following English word into Spanish:</p>
+      <p id="englishWord"></p>
+      <input type="text" id="userTranslation" placeholder="Enter your translation">
+      <button onclick="checkTranslation()">Check Translation</button>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- <script src="script.js"> -->
+  <script src="JS/span.js"></script>
+
+</body>
+
+</html>

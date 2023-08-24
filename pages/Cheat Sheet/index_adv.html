@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Adventure Game</title>
+  <link rel="stylesheet" href="CSS/adv.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="stats">
+      <h2>Player Stats</h2>
+      <p><strong>Name:</strong> <span id="player-name">Player</span></p>
+      <p><strong>Health:</strong> <span id="player-health">100</span></p>
+      <p><strong>Attack:</strong> <span id="player-attack">20</span></p>
+      <p><strong>Defense:</strong> <span id="player-defense">10</span></p>
+    </div>
+    <div class="inventory">
+      <h2>Inventory</h2>
+      <p><strong>Equipped Weapon:</strong> <span id="equipped-weapon">Fists</span></p>
+      <ul id="inventory-list"></ul>
+    </div>
+      
+    <div class="story">
+      <p id="story-text">You wake up in a dark forest. There are two paths ahead. Which way do you choose?</p>
+      <div id="choices">
+        <button onclick="handleChoice(0)">Go left</button>
+        <button onclick="handleChoice(1)">Go right</button>
+      </div>
+    </div>
+
+    <!-- Add the element to display the monster's health -->
+    <div class="combat">
+      <p>Monster Health: <span id="monster-health">50</span></p>
+    </div>
+
+  </div>
+  <script src="JS/adv.js"></script>
+</body>
+</html>

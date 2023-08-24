@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<!-- Header -->
+
+<head>
+  <title> Mallory Index </title>
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<!-- Body -->
+
+<body>
+
+  <!------------------------>
+  <!------Begin Navbar------>
+  <!------------------------>
+
+  <div class="bs sticky">
+
+    <ul class="rownav">
+
+      <!-- Back to Home -->
+      <li><a href="index.html">Back Home</a></li>
+
+
+      <!-- Back to Top -->
+      <li><a href="#top">Top</a></li>
+
+      <!-- Delivery -->
+      <li><a href="#more">Additonal Terminal Resources</a></li>
+
+      <!-- Pay -->
+      <!-- <li><a href="#pay">Pay</a></li> -->
+
+      <!-- Other -->
+      <!-- <li><a href="#otr">Other</a></li> -->
+
+    </ul>
+
+  </div>
+
+
+  <h1 id="top" class=" m-4 ">Terminals</h1>
+  <div class="bs box m-4 ">
+
+    <div class="centered_container">
+      <table id="tbl_terminals" class='text-center box table table-info  table-hover table-bordered table-centered'>
+
+
+        <tr>
+          <th onclick="ft_sortTerminals(0)">Terminal</th>
+          <th onclick="ft_sortTerminals(1)">Firms Code</th>
+          <th onclick="ft_sortTerminals(3)"> Website</th>
+          <th onclick="ft_sortTerminals(3)">Region</th>
+          <th>User ID</th>
+          <th>User PW</th>
+        </tr>
+
+        <tr>
+          <td>APM PORT ELIZABETH</td>
+          <td class="firmsCode">E425</td>
+          <td><a target="_blank" href="https://www.apmterminals.com/en/port-elizabeth"> APM </a> </td>
+          <td>New York / EWR</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>Ben E. Nutter Terminal</td>
+          <td class="firmsCode">Y738</td>
+          <td><a target="_blank" href="https://www.etslink.com/"> Ben E. Nutter </a></td>
+          <td>Oakland</td>
+          <td>michael.ye@mallorygroup.com</td>
+          <td>Mallory777#</td>
+        </tr>
+
+        <tr>
+          <td>Garden City Terminal (Savannah)</td>
+          <td class="firmsCode">L737</td>
+          <td><a target="_blank" href="http://webaccess.gaports.com/express/index.jsp"> GCT SAVANNAH </a></td>
+          <td> Georgia</td>
+          <td>UserID</td>
+          <td>UserPW</td>
+        </tr>
+
+        <tr>
+          <td>GCT Bayonne</td>
+          <td class="firmsCode">E364</td>
+          <td><a target="_blank" href="https://payments.gcterminals.com/GlobalTerminal/globalSearch.do"> GCT Bayonne
+            </a></td>
+          <td>New York / EWR</td>
+          <td>UserID</td>
+          <td>UserPW</td>
+        </tr>
+
+
+        <tr>
+          <td>GCT New York</td>
+          <td class="firmsCode">E005</td>
+          <td><a target="_blank" href="https://globalterminalsnewyork.com/"> GCT NY </a></td>
+          <td>New York</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+        <tr>
+          <td>ETS Link LAX OAK </td>
+          <td class="firmsCode">Y738 </td>
+          <td><a target="_blank" href="https://www.etslink.com/"> ETS Link </a> </td>
+          <td>Los Angelos / San Pedro</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+        <tr>
+          <td>Evergreen America - Terminal Island Berth 233</td>
+          <td class="firmsCode">1515</td>
+          <td><a target="_blank" href="https://www.evergreenforestproductsinc.com/terminals"> Evergreen </a> </td>
+          <td>Los Angelos / San Pedro</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+        <tr>
+          <td>Fenix Eagle Marine Services</td>
+          <td class="firmsCode">Y257</td>
+          <td><a target="_blank" href="https://fenixmarine.voyagecontrol.com/dashboard/welcome/"> Fenix Eagle </a> </td>
+          <td>Los Angelos / San Pedro</td>
+          <td>None</td>
+          <td>None</td>
+
+        </tr>
+
+        <tr>
+          <td>ITS</td>
+          <td class="firmsCode">Y309</td>
+          <td><a target="_blank" href="https://tms.itslb.com/tms2/Import/ContainerAvailability"> International </a>
+          </td>
+          <td>Los Angelos / San Pedro</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>Long Beach Container Terminal</td>
+          <td class="firmsCode">**W183**</td>
+          <td><a target="_blank" href="https://www.lbct.com/Home/Default"> Long Beach CT </a> </td>
+          <td>Los Angelos / San Pedro</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+
+        <tr>
+          <td>Evergreen America - Tacoma</td>
+          <td class="firmsCode">X215</td>
+          <td><a target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=EGA_PCT"> Evergreen </a> </td>
+          <td>New York</td>
+          <td>C72818</td>
+          <td>Lynbrook</td>
+
+
+
+        <tr>
+          <td>Maher NY 6</td>
+          <td class="firmsCode">E416</td>
+          <td><a target="_blank" href="https://www.maherterminals.com/"> Maher </a> </td>
+          <td>New York / EWR</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>New Orleans Terminal</td>
+          <td class="firmsCode">Q795</td>
+          <td><a target="_blank" href="https://nol.tideworks.com/fc-NOL/default.do"> New Orleans </a> </td>
+          <td>New Orleans</td>
+          <td>Michael.ye@mallorygroup.com</td>
+          <td>Mallory777</td>
+        </tr>
+
+
+        <tr>
+          <td>NIT</td>
+          <td class="firmsCode">N195</td>
+          <td><a target="_blank" href="https://www.propassva.com/Account/Register.aspx"> NIT </a> </td>
+          <td>Norfolk</td>
+          <td>MALLORY01</td>
+          <td>MALLORY777</td>
+        </tr>
+
+
+
+        <tr>
+          <td>Pacific Container Terminal Pier J</td>
+          <td class="firmsCode">W182</td>
+          <td><a target="_blank" href="http://pct.tideworks.com/fc/default.do"> Pacific Container Terminal </a></td>
+          <td>New York</td>
+          <td>calvin.wu@mallorygroup.com</td>
+          <td>Lynbrook</td>
+        </tr>
+
+        <tr>
+          <td>Ports of America - Oakland </td>
+          <td class="firmsCode">W297</td>
+          <td><a target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=PAO_OAK"> PORTS AMERICA </a></td>
+          <td>Oakland</td>
+          <td>C72818</td>
+          <td>Lynbrook</td>
+        </tr>
+
+        <tr>
+          <td>Port Newark CT</td>
+          <td class="firmsCode">F577</td>
+          <td><a target="_blank" href="https://www.pnct.net/">PNCT</a> </td>
+          <td>New Jersey / NYC</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+
+        <tr>
+          <td>Port of Portland - Terminal 6</td>
+          <td class="firmsCode">X005</td>
+          <td><a target="_blank" href="https://pop.tideworks.com/fc-POP/default.do"> Portland </a> </td>
+          <td>Portland</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+        <tr>
+          <td>SSA TERMINAL 18</td>
+          <td class="firmsCode">X117</td>
+          <td><a target="_blank" href="https://t18.tideworks.com/fc-T18/default.do"> SSA </a> </td>
+          <td>Oakland</td>
+          <td>calvin.wu@mallorygroup.com</td>
+          <td>Lynbrook</td>
+        </tr>
+
+        <tr>
+          <td>Total Terminals Hanjin - Oakland </td>
+          <td class="firmsCode">Z855</td>
+          <td><a target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=TTI_OAK"> Hanjin </a></td>
+          <td>Oakland</td>
+          <td>C72818</td>
+          <td>Lynbrook</td>
+        </tr>
+
+        <tr>
+          <td>TRAPAC (OAKLAND)</td>
+          <td class="firmsCode">Y549
+          <td><a target="_blank" href="http://www.trapac.com/"> Trapac OAK</a></td>
+          <td>Oakland</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+
+
+        <tr>
+          <td>TRAPAC (LOS ANGELES)</td>
+          <td class="firmsCode">Y258</td>
+          <td><a target="_blank" href="http://www.trapac.com/ "> Trapac LA </a></td>
+          <td>Los Angelos / San Pedro</td>
+          <td>UserID</td>
+          <td>UserPW</td>
+        </tr>
+
+        <tr>
+          <td>Total Terminals</td>
+          <td class="firmsCode">Z952</td>
+          <td><a target="_blank" href="https://www.totalterminals.com/"> Total Terminals </a> </td>
+          <td>Los Angelos / San Pedro </td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>OCT - Tacoma</td>
+          <td class="firmsCode">Y316</td>
+          <td><a target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=OCT_TAC"> OCT </a> </td>
+          <td>OAKLAND</td>
+          <td>C72818</td>
+          <td>Lynbrook</td>
+        </tr>
+
+        <tr>
+          <td>OAKLAND INTERNATIONAL</td>
+          <td class="firmsCode">Y773</td>
+          <td><a target="_blank" href="https://b58.tideworks.com/fc-OICT/import/default.do">OICT</a> </td>
+          <td>OAKLAND</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>Virginia Int'l Terminal</td>
+          <td class="firmsCode">N195</td>
+          <td><a target="_blank" href="http://www.vit.org/WebReports/ACT_Console.aspx "> Virginia Int'l Terminal </a>
+          </td>
+          <td>Virginia</td>
+          <td>robert.iny</td>
+          <td>mallny777</td>
+        </tr>
+
+
+        <tr>
+          <td>WANDA WELCH</td>
+          <td class="firmsCode">N598</td>
+          <td><a target="_blank" href="https://goport.scspa.com/scspa/"> Wanda (SOUTH CARALINA PORTS) </a> </td>
+          <td>Oakland</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+
+        <tr>
+          <td>West Basin</td>
+          <td class="firmsCode">Y773</td>
+          <td><a target="_blank" href="https://voyagertrack.portsamerica.com/?_=637951051920667123"> West Basin </a>
+          </td>
+          <td>Oakland</td>
+          <td>None</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>WEST BASIN CONTAINER TERMINAL</td>
+          <td class="firmsCode">Y773</td>
+          <td><a target="_blank" href="https://voyagertrack.portsamerica.com/logon?siteId=WBCT_LA&_=637981525682400447">
+              West Basin </a></td>
+          <td> Oakland </td>
+          <td>C72818</td>
+          <td>Mallory777</td>
+        </tr>
+
+        <tr>
+          <td>Yusen</td>
+          <td class="firmsCode">Y790</td>
+          <td><a target="_blank" href="https://yti.com/">Yusen</a></td>
+          <td> Oakland </td>
+          <td>MALYNYC</td>
+          <td>Maly777*</td>
+        </tr>
+
+
+
+
+
+
+        
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-------------------------->
+  <!----End Terminals--------->
+  <!-------------------------->
+
+
+
+
+  <h1 id="more" class=" m-4 ">Additonal Resources</h1>
+
+  <div class="bs box m-4 ">
+    <div class="centered_container">
+
+      <ul>
+
+        <li><a href="https://www.searates.com/maritime/united_states"> Sea Rates (All Sea Ports on a Map)</a></li>
+
+        <li><a href="https://www.marinetraffic.com/en/ais/home/centerx:-73.7/centery:39.8/zoom:10"> Marine Traffic (All
+            Vessels on a Map)</a></li>
+
+        <li><a href="  https://www.utopiax.org/containertracking.html">UtopiaX (General Freight Resources)</a></li>
+
+        <li><a href="https://sea-seek.com/en/"> Sea Seek (Map with a Sea Route Simulator/Calculator)</a></li>
+
+      </ul>
+
+    </div>
+  </div>
+
+
+
+
+</body>
