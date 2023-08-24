@@ -110,6 +110,10 @@ footer {
 }
 /***** End of General Styling *****/
 
+.navbar-container {
+    overflow: hidden; /* Prevents content from overflowing */
+    width: 100%; /* Set the container width to match the page width */
+}
 /***** Navbar Styling *****/
 .navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
