@@ -169,7 +169,7 @@ footer p {
 
 /* Navbar home button */
 .navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: red;
+    background-color: dark-gray;
 }
 /***** End of Navbar Styling *****/
 
@@ -182,6 +182,7 @@ footer p {
     min-width: 100%; /* This ensures the video is displayed across the full width of the page */
     z-index: -1; /* This places the video behind the other elements on the page */
     /* width: 100vh; */
+	height:8 em; /* TEST */
 }
 
 /* Screens that are 576px and smaller will not display the background video */
@@ -196,7 +197,7 @@ footer p {
     background: rgba(143, 68, 68, 0.25); /* This provides a semi-transparents background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
-    height: 70vh; /* 100  This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
+    height: 100vh; /* 100  This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
     padding-top: 4vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: movevideo_text 2.75s; /* Animation for Safari 4.0 - 8.0 */
