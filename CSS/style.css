@@ -108,6 +108,11 @@ footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: white;
 }
+
+footer p {
+    margin: 5px 0; /* Adjust the margin values as needed */
+    /* You can also use padding instead of margin if you prefer */
+}
 /***** End of General Styling *****/
 
 .navbar-container {
