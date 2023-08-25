@@ -14,7 +14,7 @@ body {
     font-size: 1.5vw; 
     overflow-x: hidden; /* This prevents the horizontal(x) scroll bar from showing when the quote is hovered over */
     user-select: none; /* This prevents the text on the webpage from being highlighted by the user */
-	background-color: black;
+
 }
 
 /* This section contributes to the fade effect for the page that occurs when the page is loaded */
@@ -61,7 +61,7 @@ p {
 
 /* Paragraph element hover effect */
 p:hover {
-    transition: transform 1s; /* This makes the transform effect last 1 second */
+    transition: transform .5s; /* This makes the transform effect last 1 second */
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
 }
 
