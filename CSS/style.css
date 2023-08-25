@@ -169,7 +169,7 @@ footer p {
 
 /* Navbar home button */
 .navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
+    background-color: red;
 }
 /***** End of Navbar Styling *****/
 
