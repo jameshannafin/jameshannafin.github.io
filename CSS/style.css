@@ -110,7 +110,7 @@ footer {
 }
 
 footer p {
-    margin: 5px 0; /* Adjust the margin values as needed */
+    margin: 2px 0; /* Adjust the margin values as needed */
     /* You can also use padding instead of margin if you prefer */
 }
 /***** End of General Styling *****/
@@ -347,13 +347,13 @@ footer p {
 
 .bg_black {
 
-	  background-color: #black;
+	  background-color: black;
 
 }
 
 .bg_gray {
 
-	  background-color: #gray;
+	  background-color: gray;
 
 }
 
