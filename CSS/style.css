@@ -125,7 +125,7 @@ footer p {
     background-color: black; /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
-    width: 90%; /* This makes the navbar span the entire width of the page */
+    width: 87%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
     animation: moveNav 1s; /* This makes the moveNav animation last 5 seconds */
