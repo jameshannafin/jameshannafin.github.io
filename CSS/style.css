@@ -125,7 +125,7 @@ footer p {
     background-color: black; /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
-    width: 89%; /* This makes the navbar span the entire width of the page */
+    width: 88.5%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
     animation: moveNav 1s; /* This makes the moveNav animation last 5 seconds */
@@ -196,7 +196,7 @@ footer p {
     background: rgba(143, 68, 68, 0.25); /* This provides a semi-transparents background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
-    height: 100vh; /* This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
+    height: 70vh; /* 100  This ensures the video-text container fills the height of the viewport so that the slideshow is not partially displayed */
     padding-top: 4vh; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: movevideo_text 2.75s; /* Animation for Safari 4.0 - 8.0 */
