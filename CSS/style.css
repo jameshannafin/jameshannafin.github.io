@@ -48,6 +48,11 @@ h1:hover {
     padding-top: 10vh;
 }
 
+.row p 	
+	{
+		color: white;
+	}
+
 /* Paragraphs 8*/
 p {
     font-family: Perpetua, Rockwell Extra Bold;
