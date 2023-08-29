@@ -187,7 +187,7 @@ footer p {
     min-width: 100%; /* This ensures the video is displayed across the full width of the page */
     z-index: -1; /* This places the video behind the other elements on the page */
     /* width: 100vh; */
-	height:8 em; /* TEST */
+	height:2 em; /* TEST */
 }
 
 /* Screens that are 576px and smaller will not display the background video */
