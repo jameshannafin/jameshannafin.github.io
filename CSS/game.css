@@ -20,9 +20,11 @@
 }
 
 html{
-    back
+	background-color: red;
 }
-
+body{
+	background-color: black;
+}
 
 /* This container includes our table and the canvas */
 .center-container{
