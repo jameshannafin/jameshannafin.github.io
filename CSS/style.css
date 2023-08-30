@@ -113,11 +113,12 @@ footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: white;
 	box-shadow: inset 0em 0em .5em .25em black;
+	
 box-shadow: inset 0em 0em 1em .5em black;
 	
-box-shadow: inset 0em 0em 1em 1em black;
-box-shadow: inset 0em 0em 1.5em 1.5em black;
-box-shadow: inset 0em 0em 2em 2em black;
+box-shadow: inset 0em 0em 1em 1em green;
+box-shadow: inset 0em 0em 1.5em 1.5em blue;
+box-shadow: inset 0em 0em 2em 2em red;
 }
 
 footer p {
