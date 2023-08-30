@@ -9,13 +9,6 @@
 
 
 
-html{
-	background-color: red;
-}
-body{
-	background-color: black;
-}
-
 /* This container includes our table and the canvas */
 .center-container{
     /* This property sets the width of our container */
