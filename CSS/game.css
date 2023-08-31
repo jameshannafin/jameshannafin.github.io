@@ -70,8 +70,11 @@ body{
   	background-size: cover;
 }
 
-p	{
+.txtWht	{
 	color: white;
+}
+.txtWht	{
+	color: black;
 }
 
 #game{
