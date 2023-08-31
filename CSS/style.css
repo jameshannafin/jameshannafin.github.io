@@ -195,7 +195,7 @@ footer p {
 
 }
 
-#.boxShad1 {
+.boxShad1 {
 	
 	box-shadow: inset 0em 0em 1em 1em blue, inset 0em 0em .5em .5em blue ;
 	}
