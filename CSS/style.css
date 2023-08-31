@@ -192,10 +192,10 @@ footer p {
     z-index: -1; /* This places the video behind the other elements on the page */
     /* width: 100vh; */
 
-	box-shadow: inset 0em 0em 1em 1em black, inset 0em 0em .5em .5em black ;
+
 }
 
-#home {
+#id_top {
 	
 	box-shadow: inset 0em 0em 1em 1em black, inset 0em 0em .5em .5em black ;
 	}
