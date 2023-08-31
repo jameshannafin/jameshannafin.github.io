@@ -196,8 +196,13 @@ footer p {
 }
 
 .boxShad1 {
-	
-	box-shadow: inset 0em 0em 1em 1em blue, inset 0em 0em .5em .5em blue ;
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 36px 36px rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+}
 	}
 
 /* Screens that are 576px and smaller will not display the background video */
