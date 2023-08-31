@@ -1,5 +1,10 @@
 /*Main Stylesheet for Portfolio site.*/
 
+
+.txtShadWht{
+text-shadow: white 1px 0 10px;
+}
+
 html {
     scroll-behavior: smooth; /*Ensures  the page scrolls smoothly when the navbar is used*/
 	background-color: black;
