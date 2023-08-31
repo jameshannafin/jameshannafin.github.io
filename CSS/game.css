@@ -8,7 +8,7 @@
 }
 
 .boxShad {
-    box-shadow: inset 0px 0px .5em .5em blue, inset 0px 0px 1em 1em red;
+    box-shadow: inset 0px 0px .5em .5em black, inset 0px 0px 1em 1em black;
 	}
 
 /* This container includes our table and the canvas */
