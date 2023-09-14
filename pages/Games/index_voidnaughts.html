@@ -252,7 +252,20 @@
       </script>
   </body>
 
+
 <script type="text/javascript" src="https://static.itch.io/api.js"></script>
+  
+<script type="text/javascript">
+  Itch.getGameData({
+    user: "leafo",
+    game: "x-moon",
+    onComplete: function(data) {
+      console.log(data)
+    }
+  })
+</script>
+  
+
 <script type="text/javascript">
   Itch.attachBuyButton(document.getElementById("buy_button"), {
     // replace the following with the correct information about your game
