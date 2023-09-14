@@ -56,7 +56,7 @@ h1
 html{
     background-color: darkgray;
 
-  background-image: url("../images/stars_tile.png");
+  background-image: url("../Images/stars_tile.png");
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
@@ -64,7 +64,7 @@ html{
 }
 body{
 	background-color: black;
-  	background-image: url("../images/stars_tile.png");
+  	background-image: url("./Images/stars_tile.png");
  	background-repeat: repeat;
 	background-position: center;
   	background-size: cover;
