@@ -74,6 +74,8 @@
             <h1 class="display-4 text-light text1">BRave Aquanauts</h1>
             <p class="lead text-light">"By venturing to the darkness, a new hope has been given."</p>
             <button id="buy_button">Buy My Game!</button>
+                       <button id="buy_button2">Buy My Game!</button>
+                       <button id="buy_button3">Buy My Game!</button>
           </div>
         </div>
 
@@ -283,12 +285,28 @@
 </script>
 
       <script type="text/javascript">
+        
   Itch.attachBuyButton(document.getElementById("buy_button"), {
     // replace the following with the correct information about your game
     user: "kidflid",
     game: "brave-aquanauts"
   });
+
+
+        Itch.attachBuyButton(document.getElementById("buy_button2"), {
+  user: "leafo",
+  game: "x-moon"
+});
+
+Itch.attachBuyButton(document.getElementById("buy_button3"), {
+  user: "kidflid",
+  game: "sirens-abyss"
+});
+
+        
 </script>
 
+
+  
 
 </html>
