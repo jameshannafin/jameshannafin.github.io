@@ -112,6 +112,7 @@ table {
   border-collapse: collapse;
   border: 1px solid #ddd; /* Border color for table cells */
   font-family: Arial, sans-serif; /* Choose your preferred font */
+	  background-color: white; /* Background color for table headers */
 }
 
 th, td {
@@ -124,7 +125,7 @@ th {
   background-color: #f2f2f2; /* Background color for table headers */
 }
 
-tr:hover {
+td:hover {
   background-color: #f5f5f5; /* Background color when hovering over rows */
 }
 
