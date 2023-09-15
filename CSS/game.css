@@ -103,6 +103,8 @@ background-image: url("../../Images/bannerGames.png");
 	  display: flex;
   justify-content: center;
   align-items: center;
+	  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
 }
 
 table {
