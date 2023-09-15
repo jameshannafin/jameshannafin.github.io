@@ -94,7 +94,7 @@ background-image: url("../../Images/bannerGames.png");
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd; /* Border color for table cells */
+
   font-family: Arial, sans-serif; /* Choose your preferred font */
 	  background-color: white; /* Background color for table headers */
 		  margin: 0; /* Remove margin */
@@ -104,7 +104,7 @@ table {
 th, td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid black; /* Border color for table rows */
+  border: 1px solid black; /* Border color for table rows */
 
 	  margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
