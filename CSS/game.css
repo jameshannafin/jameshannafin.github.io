@@ -119,9 +119,14 @@ th, td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd; /* Border color for table rows */
-color: black;
+
 	  margin: .5em; /* Remove margin */
   padding: .5em; /* Remove padding */
+}
+
+
+td a {
+	color: black;
 }
 
 th {
