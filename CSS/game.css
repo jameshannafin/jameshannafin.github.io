@@ -121,6 +121,7 @@ th, td {
 
 th {
   background-color: #f2f2f2; /* Background color for table headers */
+color: black;
 }
 
 td:hover {
