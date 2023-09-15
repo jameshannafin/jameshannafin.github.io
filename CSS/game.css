@@ -80,7 +80,7 @@ body{
 
 
 /* Assuming your containing div has a class "badge-container" */
-.badge-container {
+.badges {
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
