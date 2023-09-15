@@ -97,6 +97,8 @@ table {
   border: 1px solid #ddd; /* Border color for table cells */
   font-family: Arial, sans-serif; /* Choose your preferred font */
 	  background-color: white; /* Background color for table headers */
+		  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
 }
 
 th, td {
@@ -104,8 +106,8 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd; /* Border color for table rows */
 
-	  margin: .5em; /* Remove margin */
-  padding: .5em; /* Remove padding */
+	  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
 }
 
 
