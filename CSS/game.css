@@ -112,7 +112,13 @@ th, td {
 
 #id_gamesList a.tabItem {
   color: black !important; /* Change the link text color to black */
+  font-family: Impact, sans-serif; /* Set the font to Impact */
+  text-align: center; /* Center the text horizontally */
+  display: block; /* Make the links behave as block-level elements for centering */
+  margin: 0 auto; /* Center the block-level elements horizontally */
+  text-decoration: none; /* Remove underlines from links if needed */
 }
+
 
 th {
   background-color: #f2f2f2; /* Background color for table headers */
