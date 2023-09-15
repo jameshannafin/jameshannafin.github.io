@@ -103,8 +103,6 @@ background-image: url("../../Images/bannerGames.png");
 	  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Makes the container take up the whole viewport height */
-	
 }
 
 table {
