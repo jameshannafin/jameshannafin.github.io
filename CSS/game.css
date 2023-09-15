@@ -77,6 +77,18 @@ body{
 	color: black;
 }
 
+
+
+/* Assuming your containing div has a class "badge-container" */
+.badge-container {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100%; /* Optional: Set a height if needed */
+}
+
+
+
 #game{
 margin: auto;
 }
