@@ -1,1 +1,4 @@
 
+.boxShad {
+    box-shadow: inset 0px 0px .5em .5em black, inset 0px 0px 1em .5em black;
+	}
