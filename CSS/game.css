@@ -108,12 +108,10 @@ th, td {
 }
 
 
-a .tabItem{
-	color: red;
+#id_gamesList a.tabItem {
+  color: black !important; /* Change the link text color to black */
 }
-.tabItem{
-	color: red;
-}
+
 th {
   background-color: #f2f2f2; /* Background color for table headers */
 
