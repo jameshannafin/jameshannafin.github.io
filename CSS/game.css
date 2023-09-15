@@ -108,10 +108,12 @@ th, td {
 }
 
 
-td .tabItem{
-	color: black;
+a .tabItem{
+	color: red;
 }
-
+.tabItem{
+	color: red;
+}
 th {
   background-color: #f2f2f2; /* Background color for table headers */
 
