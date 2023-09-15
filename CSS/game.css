@@ -66,8 +66,8 @@ body{
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
   height: 100%; /* Optional: Set a height if needed */
- margin-left: 1em;
-	margin-right: 1em;
+ margin: 1em;
+	margin: 1em;
 }
 
 
