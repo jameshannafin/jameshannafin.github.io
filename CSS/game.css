@@ -120,8 +120,8 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd; /* Border color for table rows */
 color: black;
-	  margin: 1; /* Remove margin */
-  padding: 1; /* Remove padding */
+	  margin: .5em; /* Remove margin */
+  padding: .5em; /* Remove padding */
 }
 
 th {
