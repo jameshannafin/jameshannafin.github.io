@@ -1,1 +1,343 @@
 
+<!DOCTYPE html>
+<html>
+
+<head><!--Basic Document Info and Links-->
+    <meta charset="UTF-8"><!--Universal charset-->
+    <meta name="viewport" content="width=device-width" /><!--Finding the viewport specs to be used later-->
+    <title>James Hannafin</title><!--Title on the top tap-->
+    <link rel="shortcut icon" type="img/jpg" href="./images/coding_icon.png">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css"><!--Linking our style sheet-->
+
+</head>
+
+<!-- Body -->
+
+<body class="bg"> <!--bg = background-->
+
+    <!-- Nav Bar -->
+    <div class="navbar-container"><!--Navigation Bar-->
+        <div class="navbar"><!--Navigation Bar-->
+            <a class="active" href="#Home">Home</a><!--IDs are capitalized classes are not-->
+            <a
+                href="#Slideshow">Gallery</a><!--These will appear as tabs that hyper link to a a specified spot on the page-->
+            <a href="#About">About Me</a>
+            <a href="./pages/allGames.html">Games</a>
+            <a href="./pages/Freight Sheet/freight.html">Freight Fowarding</a>
+            <a href="./pages/Freight Sheet/freight.html">Vocab App</a>
+            <a href="#Github">GitHub</a>
+            <!--            // <a href="https://www.linkedin.com/in/hannafin/">Linkedin</a>  -->
+            <a
+                href="https://docs.google.com/document/d/e/2PACX-1vRJD6j16VKEaYek-LI65qjnLfvYKASKGb08E4mYcA9yNUR8IZYA7GSIo2W4h2cXksBwFwHgqt6dgX8C/pub">Resume</a>
+            <a onclick="form_open()" ondblclick="form_close()"
+                class="contact">Contact</a><!-- This tabe performs a function to open the form as opposed to scrolling the page-->
+        </div>
+    </div>
+    <!-- /Nav Bar -->
+
+
+    <!-- Section 1 :Home-->
+    <div id="id_top">
+        <div id="Home">
+            <video autoplay muted loop id="Coding_Video"><!--Background video settings-->
+                <source src="./Images/coding.mp4" type="video/mp4"><!--The video-->
+                <!-- Display message if video fails to run -->
+                The video failed to load; this could be because your browser does not support HTML5 video.
+            </video>
+            <div class="boxShad1">
+            </div>
+        </div>
+        <!-- Video text  -->
+        <div class="video_text"><!--The following text is to be overlayed on the home video -->
+            <h1 class="text_white">James Hannafin : Programming Portfolio </h1>
+            <strong><!--Strong tag to make it bold -->
+                <p class="center">
+                    <q>Prgrammer, Designer, Artist
+                        <br>
+                        <br>
+                    </q><!--These q elements make a .quote class for CSS?-->
+                    <br>
+                    <br>
+                    <br>Welcome! This page is a directory to many finished and ongoing projects I have worked on in the
+                    past
+                    few
+                    years; I hope you enjot what you find!
+                    <br>
+                    <br> Enjoy!
+                    <br>
+                </p>
+            </strong>
+        </div> <!-- /Video Text -->
+        <div>
+            <!--                 <div class="boxShad1"> -->
+        </div>
+    </div> <!-- /ID ToP -->
+    <!-- /Section 1: Home -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Section 2: Slideshow-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of 6 -->
+                <div class="slide fade">
+                    <img class="slideshow_images" src="./Images/headshot.jpg" alt="Portrait">
+                    <div class="slide_text">I am ready to join your team, contact me below.</div>
+                </div><!--/Slide 1-->
+                <!-- Slide 2 of 6 -->
+                <div class="slide fade">
+                    <img class="slideshow_images" src="./Images/HTML_CSS_and_JavaScript.jpeg"
+                        alt="Languages Understood">
+                    <div class="slide_text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS,
+                        JavaScript,</div>
+                </div><!--/Slide 2-->
+                <!-- Slide 3 of 6 -->
+                <div class="slide fade">
+                    <img class="slideshow_images" src="./Images/Python.png" alt="Languages Understood">
+                    <div class="slide_text">the popular programming language Python,</div>
+                </div><!--/Slide 3-->
+                <!-- Slide 4 of 6 -->
+                <div class="slide fade">
+                    <img class="slideshow_images" src="./Images/C_Sharp_and_Dot_NET.PNG" alt="Languages Understood">
+                    <div class="slide_text">C#, .NET Framework, ASP.NET, MVC, </div>
+                </div><!--/Slide 4-->
+                <!-- Slide 5 of 6 -->
+                <div class="slide fade">
+                    <img class="slideshow_images" src="./Images/SQL_and_Database.jpg" alt="SQL logo">
+                    <div class="slide_text">back end development, databases and SQL.</div>
+                </div><!--/Slide 5-->
+                <!-- Slide 6 of 6-->
+                <div class="slide fade">
+                    <img class="slideshow_images" src="./Images/contact.jpg" alt="contact" height="120%" width="100%">
+                    <div class="slide_text"><a class="white-text contact" onclick="form_open()">Contact Me Here</a>
+                    </div>
+                </div><!--/Slide 6-->
+
+                <!-- Previous and next buttons -->
+                <a class="slideshow_btn_previous" onclick="slide_change(-1)">&#10094;</a>
+                <a class="slideshow_btn_next" onclick="slide_change(1)">&#10095;</a><!--&#10095 for arrows-->
+            </div><!--/Slideshow container-->
+            <br>
+            <!-- Slideshow nav dots  -->
+            <div style="text-align: center">
+                <span class="dot" onclick="slide_current(1)"></span>
+                <span class="dot" onclick="slide_current(2)"></span>
+                <span class="dot" onclick="slide_current(3)"></span>
+                <span class="dot" onclick="slide_current(4)"></span>
+                <span class="dot" onclick="slide_current(5)"></span>
+                <span class="dot" onclick="slide_current(6)"></span>
+            </div> <!--/Slideshow Nav Dots-->
+
+
+
+        </div> <!--/Slideshow BG-->
+
+    </div> <!-- /Slideshow section END -->
+
+
+    <!-- About section -->
+    <div class="row" id="About">
+        <!-- Left column -->
+        <div class="column_1 bg_black">
+            <img src="./Images/labtop.jpg" alt="Labtop Picture">
+        </div><!--/Left Collumn-->
+        <!-- Right column -->
+        <div class="column_2 bg_black">
+            <h1>Who Am I?</h1>
+            <p>
+                I'm just a simple man trying to make my way in the universe; Based out of Nassau County, New York, when
+                I'm not camping, playing flag football, or enjoying a board game, I'm usually on my computer learning
+                how to do something cool.
+                I'm well versesd in Python, HTML, CSS, JS, and jQuery for full stack web developemnt; but my true
+                expereince is where I started my creative journey: game development.
+            </p>
+        </div><!--/Right Collumn-->
+    </div><!--ABout Section-->
+
+    <!-- About section -->
+    <div class="row">
+        <!-- Left column -->
+        <div class="column_1 bg_black">
+
+            <h1>Goals</h1>
+            <p>
+                I am looking to make the best possible games I can; I have been working on this stuff for a longtime and
+                now that everything feels like its starting to click, I am also starting to understand what I want to
+                achieve.
+                I want to make good cool things and work with people that have similar goals.
+
+            </p>
+
+        </div><!--/Left Collumn-->
+        <!-- Right column -->
+        <div class="column_2 bg_black">
+            <img src="./Images/labtop.jpg" alt="Labtop Picture">
+        </div><!--/Right Collumn-->
+    </div><!--ABout Section-->
+
+
+
+    <!-- GX GAMES section -->
+    <div class="row" id="gxGames">
+
+        <!-- Left column -->
+        <div class="column_1 bg_black">
+
+            <a href="https://gx.games/" target="_blank"><img src="./Images/gxc.png"></a>
+
+        </div>
+
+        <!-- Right column -->
+        <div class="column_2 bg_black">
+            <h1>Games</h1>
+            <p> I make games under the moniker Kid Flid; You can see more information about my games <a
+                    href".pages/allGames.html" target"_blank">here</a>, but the easiest way to play is on the website GX
+                games.
+                <br>
+            <p class="center"><a href="https://gx.games/" target="_blank">gx.games</a></p>
+            </p>
+        </div>
+
+    </div><!--/GC GAMES Section-->
+
+    <!-- Freight  section -->
+    <div class="row" id="freight">
+
+        <!-- Left column -->
+        <div class="column_1 bg_black">
+
+
+            <h1>Freight Index</h1>
+            <p> The freight index is a web-program I made to help freight fowarders manage and link themselves to the
+                many sites required for work.
+                <br>
+            <p class="center"><a href="./pages/Freight Sheet/freight.html" target="_blank">Try Now!</a></p>
+            </p>
+
+
+        </div>
+
+        <!-- Right column -->
+        <div class="column_2 bg_black">
+            <a href="./pages/Freight Sheet/freight.html" target="_blank"><img src="./Images/freight.png"></a>
+        </div>
+
+    </div><!--/FREIGHT Section-->
+
+    <!-- Spanish  section -->
+    <div class="row" id="id_spanish">
+        <!-- Left column -->
+        <div class="column_1 bg_black">
+            <a href="./pages/Freight Sheet/freight.html" target="_blank"><img src="./Images/span.png"></a>
+        </div>
+
+        <!-- Right column -->
+        <div class="column_2 bg_black">
+            <h1> Spanish Vocab </h1>
+            <p>
+                This is a simple vocabulary/memory app that allows you to translate a list of words and flag certain
+                words to take note of.
+                <br>
+            <p class="center"><a href="./pages/Freight Sheet/freight.html" target="_blank">Try Now!</a></p>
+            </p>
+        </div>
+
+    </div><!--/Spanish Section-->
+
+
+    <!-- GitHub section -->
+    <div class="row" id="Github">
+        <!-- Left column -->
+        <div class="column_1  bg_black">
+            <h1>GitHub</h1>
+            <p>You can view a larger sample of my work from my GitHub profile here:
+                <br>
+            <p class="center"><a href="https://github.com/jameshannafin" target="_blank">Github</a></p>
+            </p>
+        </div><!--/Left Collumn-->
+        <!-- Right column -->
+        <div class="column_2 bg_black">
+            <a href="https://github.com/jameshannafin" target="_blank"><img src="./Images/GitHub.png"></a>
+        </div><!--/Right Collumn-->
+    </div><!--/GitHub Section-->
+
+
+
+
+
+    <!-- 3d section -->
+    <div class="row" id="3d">
+        <!-- Left column -->
+        <div class="column_1  bg_black">
+            <h1>3D Models</h1>
+            <p>Check out some 3d models and prints here:
+                <br>
+            <p class="center"><a href="https://github.com/jameshannafin" target="_blank">3D Modeling</a></p>
+            </p>
+        </div><!--/Left Collumn-->
+        <!-- Right column -->
+<div class="column_2 bg_black sketchfab-embed-wrapper ">
+    <div style="position: relative; padding-bottom: 50%; height: 0; ">
+        <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+        <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
+        <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+        <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+    </p>
+</div>
+
+
+
+</div>
+    
+
+    <!-- Contact form -->
+    <div id="Contact">
+        <button onclick="form_open()" class="btn_popup">CONTACT</button> <!--Opens the contact form-->
+        <div class="form_popup" id="Form">
+            <form action="https://formspree.io/f/moqygrzy" method="POST" class="form_container">
+                <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Name" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Phone" name="phone">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Email" name="email" required>
+                <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Message" name="message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel"
+                    onclick="form_close()">CLOSE</button><!--Closes the popup form-->
+            </form>
+        </div>
+    </div><!--/Contact Form-->
+
+    <!-- Footer section -->
+    <footer>
+        <br>
+        <p class="center"><a href="https://twitter.com/kidflid" target="_blank">Kid Flid on Twitter </a></p>
+        <p class="center"> <a href="https://www.instagram.com/kidflid/" target="_blank">Kid Flid - Instagram </a></p>
+        <p class="center"> <a href="https://www.youtube.com/channel/UCtI4fO6e9QgIu1XYbZbukuw" target="_blank">Kid Flid -
+                YouTube </a></p>
+        <p class="center"> <a href="https://kidflid.itch.io/" target="_blank">Kid Flid - Itch </a></p>
+        <p class="center"> <a href="https://twitter.com/kidflid" target="_blank">Kid Flid - GX Games</a></p>
+        <p class="center"> <a href="https://github.com/jameshannafin" target="_blank">My Github Porfolio</a></p>
+
+
+        <br>
+        <p class="center">James Hannafin : Created 2021 : Last Updated SEP 2023 </p>
+        <br>
+    </footer><!--End Footer-->
+
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>
