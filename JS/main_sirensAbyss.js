@@ -31,7 +31,7 @@ function show_slide(n) {
 }
 
 console.log("slideIndex:", slideIndex);
-console.log("slides:", slides);
+console.log("slides:", slide);
 
 // Check if slides[slideIndex - 1] exists
 if (slides[slideIndex - 1]) {
