@@ -90,27 +90,24 @@
     .active, .dot:hover {
         background-color: black; /* Sets the color of the dots when active or hovered over */
     }
-    
-    /* Fading animation for slideshow */
-    .fade {
-        animation-name: fade; /* Fade animation is defined below */
-        animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
-        -webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
-        -webkit-animation-duration: 1;
-    }
-    
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; /* Fade animation is defined below */
+    animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
+    -webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+    -webkit-animation-duration: 1s;
+}
 
-    
-    @-webkit-keyframes fade {
-        from {opacity: .4;} /* Image starts transparent */
-        to {opacity: 1;} /* Image ends opaque */
-    }
-    
-    @keyframes fade {
-        from {opacity: .4;} /* Image starts transparent */
-        to {opacity: 1;} /* Image ends opaque */
-    }
-    /***** End Slideshow Styling *****/
+@-webkit-keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+
+@keyframes fade {
+    from {opacity: .4;} /* Image starts transparent */
+    to {opacity: 1;} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
     
     /***** Table Styling -  this section covers the styling of the columns and rows within the table *****/
     * { /*The asterisk is a universal selector that applies this effect to all elements on the page */
