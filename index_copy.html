@@ -1,18 +1,221 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<head><!--Basic Document Info and Links-->
-    <meta charset="UTF-8"><!--Universal charset-->
-    <meta name="viewport" content="width=device-width" /><!--Finding the viewport specs to be used later-->
-    <title>James Hannafin</title><!--Title on the top tap-->
-    <link rel="shortcut icon" type="img/jpg" href="./images/coding_icon.png">
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css"><!--Linking our style sheet-->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../CSS/style_sirensAbyss.css">
 
-</head>
+    <title>Sirens Abyss</title>
 
-<!-- Body -->
+    <style>
+.text1
+{
+    font-style: impact;    
+    color: white;
 
-<body class="bg"> <!--bg = background-->
+
+}
+
+.gray{    background-color: dimgrey;
+
+}
+
+.dkgray{    background-color: rgb(61, 61, 61);
+
+}
+
+.blk{    background-color: rgb(16, 16, 16);
+
+}
+
+
+      
+body {
+
+  background-image: linear-gradient(rgb(70, 172, 240), rgb(21, 33, 88));
+
+
+}
+
+      img{z-index: -1000;}
+.sticky {
+  position: sticky;
+  top: 50%; /* Adjust this value to vertically center the element */
+  left: 10em; /* Stick to the right side of the viewport */
+  transform: translateY(-50%); /* Vertically center the element */
+      z-index: 999; /* Set a high z-index value */
+}
+
+.ad{
+background-color: blue ;
+width: 10em;
+}
+    </style>
+
+
+
+<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+
+
+  
+    
+  </head>
+
+  <body class="bg"> 
+
+
+       <div class="sticky">
+          <div class="ad"><!--A collumn with a picture of the theatre-->
+                  <p > test test test test test test test test test test test test test test test test test test test test test test test </p>
+            </div>
+  </div>
+
+   <div class="col-sm-3 offset-sm-9  style="margin-top: 20em;">
+    <div class="container">
+          <div class="col"><!--A collumn with a picture of the theatre-->
+              
+                <ul class="list-group"> 
+                <li class="list-group-item"><!-- Making a list -->
+                  <p> test 1111 test test test test test test test test test test test test test test test test test test test test test test </p>
+                </li>
+              </ul>
+            </div>
+    </div>
+  </div>
+
+
+    
+    
+    <!-- Many of the following html elements will have classes assigned to them that utilize different bootstrap functions -->
+      <div class="container">        
+        <nav class="   navbar navbar-expand-lg navbar-light  blk "> 
+          <div class=" dkgray container-fluid">
+            <div class=" dkgray collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class=" gray navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link active text-light" aria-current="page" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-light active" href="../allGames.html">More Games</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-light" href="../../index.html#contact">Contact</a>
+                </li>
+              </ul>
+              <!-- <form class="d-flex ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary text-light" type="submit">Search</button>
+              </form> -->
+            </div>
+          </div>
+        </nav>
+
+        <div id="id_home" class="jumbotron jumbotron-fluid bg-info text-center bg">
+          <div class="container">
+            <h1 class="display-4 text-light text1">Sirens Abyss</h1>
+            <p class="lead text-light">"By venturing to the darkness, a new hope has been given."</p>
+            <button id="buy_button">Buy My Game!</button>
+                       <button id="buy_button2">Buy My Game!</button>
+                       <button id="buy_button3">Buy My Game!</button>
+          </div>
+        </div>
+
+
+
+        
+    <div class="container">
+
+
+          <div class="row"><!--This dif makes a new row in which to add collumns-->
+
+
+
+
+            
+            
+            <div class="col-sm"><!--A collumn with a picture of the theatre-->
+              <iframe src="https://giphy.com/embed/4GhXqZWj7rqiEyTOjh" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/4GhXqZWj7rqiEyTOjh">via GIPHY</a></p>
+            </div>
+
+            <div class="col-sm"> <!--A collumn with a desciption of the theatre-->
+              <h3>Description:</h3>
+         <p>"Welcome to Course Plot, the goal of this game is to safely  send your colony ships through the cosmos. Use probes and other advanced technologies to send your rockets on viable travel routes toward a new home. "</p>
+            </div>
+
+            <div class="col-sm"><!--At third collum with showtimes-->
+              <h3>Versions</h3>
+              <ul class="list-group"> 
+                <li class="list-group-item"><!-- Making a list -->
+                  <a class="nav-link" href="#id_showtimes">PC Download</a> <!--Nav link tag so the user is brought to the specified ID tag-->
+                </li>
+                <li class="list-group-item">
+                  <a class="nav-link" href="#id_showtimes">Phone Browser</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="nav-link" href="#id_showtimes">PC Browser</a>
+                </li>
+              </ul>
+            </div>
+
+
+
+            
+          </div>
+
+        <br>
+        <br>
+
+        <!--Showtimes-->
+        <div class="card-group" id="id_showtimes">
+          
+          <div class="card">
+            <img class="card-img-top" src="../../Images/SirensAbyss/sirens_ss1.png" alt="Card image cap"style="width:100%;height:250px;"> <!--Get the image and set its size-->
+            <div class="card-body"><!--Cardss are a nice way to display content vertically like 'cards'-->
+              <h4 class="card-title">Gravity Exists</h5> <!-- Heading and paragraph for the titlte and descript of the movie inside the card-->
+              <p class="card-text">Whether you like it or not, gravity exists and it should always be use to your advantage; it can pull you
+                 right where you want to go, so long as you plot the right course.</p><br>
+            </div>
+          </div>
+
+          <div class="card"><!--Second Card-->
+            <img class="card-img-top" src="../../Images/SirensAbyss/sirens_ss1.png" alt="Card image cap"style="width:100%;height:250px;">
+            <div class="card-body">
+              <h5 class="card-title">Space Money</h5>
+              <p class="card-text">The goal of this game is to find a new home, NOT to lose your colony ships to the void of space. Collecting currency throughout your journey will help you build the 
+                space craft you need find your way through the stars.</p>
+            </div>
+
+          </div><!--/Second Card-->
+
+
+          <div class="card"><!--Third Card-->
+            <img class="card-img-top" src="../../Images/SirensAbyss/sirens_ss1.png" alt="Card image cap"style="width:100%;height:250px;">
+            <div class="card-body">
+              <h5 class="card-title">Beuty and the beast </h5>
+              <p class="card-text">This is a the description to beuty and the beast  card with supporting text below as a natural lead-in to additional content. 
+                This card has even longer content than the first to show that equal height action.</p><br>
+            </div>
+              <div>
+              <span class="badge badge-info">5:00pm</span>
+              <span class="badge badge-info">6:30pm</span>
+              <span class="badge badge-info">8:00pm</span>
+              <span class="badge badge-info">9:30pm</span>
+            </div>
+            <div>
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div><!--/Third Card-->
+
+        </div><!--/Showtimes-->
+
+
+
 
 
     <!-- Section 2: Slideshow-->
