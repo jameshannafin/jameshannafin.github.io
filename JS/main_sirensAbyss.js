@@ -29,3 +29,14 @@ function show_slide(n) {
     slides[slideIndex - 1].style.display = "block"; // This displays the image in the slideshow
     dots[slideIndex - 1].className += " active"; // This adds the active styling to the dot associated with the image
 }
+
+console.log("slideIndex:", slideIndex);
+console.log("slides:", slides);
+
+// Check if slides[slideIndex - 1] exists
+if (slides[slideIndex - 1]) {
+  slides[slideIndex - 1].style.display = "block";
+} else {
+  console.error("Slide element not found.");
+}
+
