@@ -77,9 +77,7 @@ margin: auto;
 }
 
 
-#id_home{
-background-image: url("../../Images/bannerGames.png");
-}
+
 
 #id_gamesList{
 
@@ -129,3 +127,21 @@ td:hover {
   background-color: #f5f5f5; /* Background color when hovering over rows */
 }
 
+
+
+#id_home{
+  background-image: url("../Images/bannerGames.png");
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  size: 5em;
+  
+  text-shadow: 0px 0px  .5em white,0px 0px  .75em white,  0px 0px  1em white;
+
+  }
+
+  strong {
+
+    color: black !important;
+  
+
+  }
