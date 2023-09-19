@@ -1,5 +1,5 @@
 var slideIndex = 1;
-var slides = document.getElementsByClassName("slide"); // Declare slides outside the function
+var slides = document.getElementsByClassName("slide_c"); // Declare slides outside the function
 show_slide(slideIndex);
 
 function slide_change(n) {
