@@ -1,613 +1,622 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .flashcard-container {
+            max-width: 500px;
+            min-height: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .flashcard {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        select {
+            margin-top: 10px;
+            padding: 5px;
+        }
+        p {
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
 
-   <link rel="stylesheet" type="text/css" href="../CSS/game.css">
-    
-    <title>Game Showcase</title>
-<style>
-  .gray{    background-color: dimgrey;
+<h1>Common file name extensions in Windows</h1>
+<br>
 
-}
-
-.dkgray{    background-color: rgb(61, 61, 61);
-
-}
-
-.blk{    background-color: rgb(16, 16, 16);
-
-}
-</style>
-
-  </head>
-
-  <body class="bg"> 
-
-
-    
-
-    
-    <!-- Many of the following html elements will have classes assigned to them that utilize different bootstrap functions -->
-      <div class="container">
-        <nav class="   navbar navbar-expand-lg navbar-dark  blk "> 
-          <div class=" dkgray container-fluid">
-            <div class=" dkgray collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class=" gray navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="../index.html">HOME</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_coursePlot.html">Brave Butterfly</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_coursePlot.html">Course Plot</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="Games/index_cyberField.html">CyberField</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_stillLight">Still Light</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_coursePlot.html">AVP Tactics</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_sirensAbyss.html">Sirens Abyss</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_coursePlot.html">Port Pass</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_voidnaughts.html">Brave Aquanauts</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_coursePlot.html">Solar Defender</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_heloHeros.html">Helo Heroes</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link text-light active" href="./Games/index_dream.html">3:33AM</a>
-                </li>
-              </ul>
-              <!-- <form class="d-flex ml-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary text-light" type="submit">Search</button>
-              </form> -->
-            </div>
-          </div>
-        </nav>
-
-        <br>
-        
-        <div id="id_home" class="jumbotron jumbotron-fluid bg-info text-center bg boxShad  ">
-          <div class="container ">
-            <h1 class="display-4 text-light text1"><strong>GAME SHOWCASE</strong></h1>
-          </div>
-        </div>
+<div class="flashcard-container">
 
 
-        <div class="container">
-          <div class="row"><!--This dif makes a new row in which to add collumns-->
-            <div class="col-sm"><!--A collumn with a picture of the theatre-->
-              <!-- <img class="img-fluid" src="../Images/games.png" alt=""> -->
-              <iframe src="https://giphy.com/embed/pVBpo3kraerrk0qnf9" width="240em" height="240em" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-space-planets-pVBpo3kraerrk0qnf9">via GIPHY</a></p>
-            </div>
 
-            <div class="col-sm txtWht"> <!--A collumn with a desciption of the theatre-->
-              <h3>Description:</h3>
-                <p>"All of these games were made by me with Game Maker. See a FULL LIST <a
-                  href"#fullList">HERE</a>!"</p>
-            </div>
-            
-            <div class="col-sm"><!--At third collum with showtimes-->
-              <h3 class="txtWht">Creators Choice</h3>
-              <ul class="list-group"> 
-                <li class="list-group-item"><!-- Making a list -->
-                  <a class="nav-link" href="#id_showtimes">Sirens Abyss (Adventure Horror)</a> <!--Nav link tag so the user is brought to the specified ID tag-->
-                </li>
-                <li class="list-group-item">
-                  <a class="nav-link" href="./Games/index_braveButterfly.html">Brave Butterfly (Endless Clone)</a>
-                </li>
-                <li class="list-group-item">
-                  <a class="nav-link" href="./Games/index_voidnaughts.html">Brave Aquanauts (Quick High-Score)</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
 
-    <br>
-    <br>
-        
-
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- BEGIN GAMES SHOWCASE -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-  
-
-<!-- FULL WIDTH / SOLO CARD -->
-
-  <!--SOLAR DEFENDER-->
-  <div class="card-group" id="id_showtimes2">
-
-    <div class="card">
-
-      <img class="card-img-top" src="../Images/banner_example.png" alt="Card image cap"
-        style="width:100%;height:250px;">
-
-      <div class="card-body">
-        <h5 class="card-title">Solar Defender</h5>
-        <p class="card-text">Experimenting with my own physics based controls and game play; take control of this solar
-          system captain.</p>
-              <a href="./Games/index_solarDefender.html" class="btn btn-primary stretched-link">See Page</a>
-      </div>
-
-<div class="badges">
-  <span class="badge badge-info">Physics</span>
-  <span class="badge badge-info">SciFi</span>
+<div class="flashcard show" id="flashcard-1">
+    <h1>File Extension: aac, adt, adts</h1>
+    <p>Windows audio file</p>
 </div>
 
-    </div><!--End Card-->
-  </div><!--/End Card Group /Section-->
+<div class="flashcard show" id="flashcard-2">
+    <h1>File Extension: accdb</h1>
+    <p>Microsoft Access database file</p>
+</div>
 
-  <br>
+<div class="flashcard show" id="flashcard-3">
+    <h1>File Extension: accde</h1>
+    <p>Microsoft Access execute-only file</p>
+</div>
 
-  <!-- FULL WIDTH / SOLO CARD -->
+<div class="flashcard show" id="flashcard-4">
+    <h1>File Extension: accdr</h1>
+    <p>Microsoft Access runtime database</p>
+</div>
 
-  <!--Cyberfield-->
-    <div class="card-group" id="id_showtimes2">
+<div class="flashcard show" id="flashcard-5">
+    <h1>File Extension: accdt</h1>
+    <p>Microsoft Access database template</p>
+</div>
 
-      <div class="card">
-        <img class="card-img-top" src="../Images/banner_example.png" alt="Card image cap"
-          style="width:100%;height:250px;">
-  
-        <div class="card-body">
-          <h5 class="card-title">Cyberfield</h5>
-          <p class="card-text">Cyberfield</p><br>
-        </div>
+<div class="flashcard show" id="flashcard-6">
+    <h1>File Extension: aif, aifc, aiff</h1>
+    <p>Audio Interchange File format file</p>
+</div>
 
-              <div class="btn-group mr-2">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-  
-        <div>
-          <span class="badge badge-info">SCIFI</span>
-          <span class="badge badge-info">TOP DOWN</span>
-          <span class="badge badge-info">RTS</span>
-          <span class="badge badge-info">TDS</span>
-        </div>
-        <br>
-      </div>
-  
-    </div><!--/END SECTION-->
+<div class="flashcard show" id="flashcard-7">
+    <h1>File Extension: aspx</h1>
+    <p>ASP.NET Active Server page</p>
+</div>
 
-  <br>
-        
-  <!-- FULL WIDTH / SOLO CARD -->
+<div class="flashcard show" id="flashcard-8">
+    <h1>File Extension: avi</h1>
+    <p>Audio Video Interleave movie or sound file</p>
+</div>
 
-  <!--CYBERFIELD-->
-  <div class="card-group" id="id_showtimes2">
+<div class="flashcard show" id="flashcard-9">
+    <h1>File Extension: bat</h1>
+    <p>PC batch file</p>
+</div>
 
-    <div class="card">
-      <img class="card-img-top" src="../Images/banner_example.png" alt="Card image cap"
-        style="width:100%;height:250px;">
+<div class="flashcard show" id="flashcard-10">
+    <h1>File Extension: bin</h1>
+    <p>Binary compressed file</p>
+</div>
 
-      <div class="card-body">
-        <h5 class="card-title">Cyberfield</h5>
-        <p class="card-text">Cyberfield</p><br>
-      </div>
+<div class="flashcard show" id="flashcard-11">
+    <h1>File Extension: bmp</h1>
+    <p>Bitmap file</p>
+</div>
 
-            <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
+<div class="flashcard show" id="flashcard-12">
+    <h1>File Extension: cab</h1>
+    <p>Windows Cabinet file</p>
+</div>
 
-      <div>
-        <span class="badge badge-info">SCIFI</span>
-        <span class="badge badge-info">TOP DOWN</span>
-        <span class="badge badge-info">RTS</span>
-        <span class="badge badge-info">TDS</span>
-      </div>
-    </div>
-<br>
-  </div><!--/END SECTION-->
+<div class="flashcard show" id="flashcard-13">
+    <h1>File Extension: cda</h1>
+    <p>CD Audio Track</p>
+</div>
 
-    <br>
+<div class="flashcard show" id="flashcard-14">
+    <h1>File Extension: csv</h1>
+    <p>Comma-separated values file</p>
+</div>
 
-  <!--BEGIN SECTION--> <!-- HALF CUT / DOUBLE CARD // COURSEPLOT // 3:33am -->
-  <div class="card-group" id="id_showtimes2">
+<div class="flashcard show" id="flashcard-15">
+    <h1>File Extension: dif</h1>
+    <p>Spreadsheet data interchange format file</p>
+</div>
 
-    <!-- COURSE PLOT -->
-    <div class="card"><!--First Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;"> <!--Get the image and set its size-->
-      <div class="card-body">
-        <h5 class="card-title">Course Plot</h5>
-        <p class="card-text">A quick, physics based, puzzle game.</p>
-      </div>
+<div class="flashcard show" id="flashcard-16">
+    <h1>File Extension: dll</h1>
+    <p>Dynamic Link Library file</p>
+</div>
 
-            <div class="btn-group ml-5">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
+<div class="flashcard show" id="flashcard-17">
+    <h1>File Extension: doc</h1>
+    <p>Microsoft Word document before Word 2007</p>
+</div>
 
-<div class="badges">
-        <span class="badge badge-info">SCIFI</span>
-        <span class="badge badge-info">PUZZLE</span>
-        <span class="badge badge-info">GRAVITY</span>
-      </div>
+<div class="flashcard show" id="flashcard-18">
+    <h1>File Extension: docm</h1>
+    <p>Microsoft Word macro-enabled document</p>
+</div>
 
-    </div><!--End First Card-->
+<div class="flashcard show" id="flashcard-19">
+    <h1>File Extension: docx</h1>
+    <p>Microsoft Word document</p>
+</div>
 
-    <!-- 3:33AM (Dr3:AM) -->
-    <div class="card"><!--Second Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap" style="width:100%;height:250px;">
-      <!--Get the image and set its size-->
-      <div class="card-body">
-        <h5 class="card-title">3:33AM (Dr3:AM)</h5>
-        <p class="card-text">A short survival horror expereince.</p>
-      </div>
+<div class="flashcard show" id="flashcard-20">
+    <h1>File Extension: dot</h1>
+    <p>Microsoft Word template before Word 2007</p>
+</div>
 
-          <div class="btn-group ml-5">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-
-   <div class="badges">
-        <span class="badge badge-info">HORROR</span>
-        <span class="badge badge-info">DARK</span>
-        <span class="badge badge-info">TOP-DOWN</span>
-      </div>
-
-    </div><!--End Second Card-->
-
-  </div><!--END SECTION-->
-
-          <br>
-
-  <!--BEGIN SECTION--> <!--  THREE CARDS // STILL LIGHT // AVP TACTICS // PORTPASS-->
-  <div class="card-group" id="id_showtimes2">
-
-    <!-- STILL LIGHT -->
-    <div class="card"><!--First Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;"> <!--Get the image and set its size-->
-
-      <div class="card-body"><!--Cardss are a nice way to display content vertically like 'cards'-->
-        <h4 class="card-title">Still Light</h5>
-          <!-- Heading and paragraph for the titlte and descript of the movie inside the card-->
-          <p class="card-text">My first real project, way over ambitous, only works with controller.</p><br>
-      </div>
-
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-      
-      <div>
-        <span class="badge badge-info">Controller</span>
-        <span class="badge badge-info">Twin Stick Shooter</span>
-        <span class="badge badge-info">Space Epic</span>
-      </div>
-      <br>
-    </div><!--End First Card-->
-
-    <!--  AVP TACTICS  -->
-    <div class="card"><!--Second Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;">
-
-      <div class="card-body">
-        <h5 class="card-title">AVP Tactics</h5>
-        <p class="card-text">An early project for developing a real time strategy engine. Based on a popular franchise.
-        </p>
-      </div>
-
-            <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <span class="badge badge-info">SCIFI</span>
-        <span class="badge badge-info">RTS</span>
-        <span class="badge badge-info">Tactics</span>
-      </div>
-    <br>
-    </div><!--End Second Card-->
-
-    <!-- PORTPASS-->
-    <div class="card"><!--Third Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;"> <!--Get the image and set its size-->
-      <div class="card-body">
-        <h5 class="card-title">Course Plot</h5>
-        <p class="card-text">A quick, physics based, puzzle game.</p>
-      </div>
-
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-      
-      <div>
-        <span class="badge badge-info">SCIFI</span>
-        <span class="badge badge-info">PUZZLE</span>
-        <span class="badge badge-info">GRAVITY</span>
-      </div>
-          <br>
-    </div><!--End Third Card-->
-
-  </div><!--/END SECTION-->
+<!-- Add more entries following the same pattern -->
 
 
-          <br>
+<!-- ... (Previous code) ... -->
 
-  <!--BEGIN SECTION--> <!--  THREE CARDS // STILL LIGHT // AVP TACTICS // PORTPASS-->
-  <div class="card-deck" id="id_showtimes">
+<div class="flashcard show" id="flashcard-21">
+    <h1>File Extension: dotx</h1>
+    <p>Microsoft Word template</p>
+</div>
 
-    <!-- BRAVE BUTTERFLY -->
-    <div class="card"><!--First Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;">
-      <div class="card-body"><!--Cards are a nice way to display content vertically like 'cards'-->
-        <h4 class="card-title">Brave Butterfly</h5>
-          <!-- Heading and paragraph for the titlte and descript of the movie inside the card-->
-          <p class="card-text">An endless, high-score based, addicting game.</p>
-      </div>
+<div class="flashcard show" id="flashcard-22">
+    <h1>File Extension: eml</h1>
+    <p>Email file created by Outlook Express, Windows Live Mail, and other programs</p>
+</div>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-      
-      <div>
-        <span class="badge badge-info">ADDICTING</span>
-        <span class="badge badge-info">HIGHSCORE</span>
-      </div>
-      <br>
-    </div><!--/First Card-->
+<div class="flashcard show" id="flashcard-23">
+    <h1>File Extension: eps</h1>
+    <p>Encapsulated Postscript file</p>
+</div>
 
-    <!-- BRAVE AQUANAUTS -->
-    <div class="card"><!--Second Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;">
-      <div class="card-body"><!--Cards are a nice way to display content vertically like 'cards'-->
-        <h4 class="card-title">Brave Aquanauts</h5>
-          <!-- Heading and paragraph for the titlte and descript of the movie inside the card-->
-          <p class="card-text">A quick, score based, challenge of a game.</p>
-      </div>
+<div class="flashcard show" id="flashcard-24">
+    <h1>File Extension: exe</h1>
+    <p>Executable program file</p>
+</div>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-      
-      <div>
-        <span class="badge badge-info">Challenge</span>
-        <span class="badge badge-info">HIGHSCORE</span>
-        <span class="badge badge-info">Quck</span>
-      </div>
-      <br>
-    </div><!--/Second Card-->
+<div class="flashcard show" id="flashcard-25">
+    <h1>File Extension: flv</h1>
+    <p>Flash-compatible video file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-26">
+    <h1>File Extension: gif</h1>
+    <p>Graphical Interchange Format file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-27">
+    <h1>File Extension: htm, html</h1>
+    <p>Hypertext markup language page</p>
+</div>
+
+<div class="flashcard show" id="flashcard-28">
+    <h1>File Extension: ini</h1>
+    <p>Windows initialization configuration file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-29">
+    <h1>File Extension: iso</h1>
+    <p>ISO-9660 disc image</p>
+</div>
+
+<div class="flashcard show" id="flashcard-30">
+    <h1>File Extension: jar</h1>
+    <p>Java architecture file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-31">
+    <h1>File Extension: jpg, jpeg</h1>
+    <p>Joint Photographic Experts Group photo file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-32">
+    <h1>File Extension: m4a</h1>
+    <p>MPEG-4 audio file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-33">
+    <h1>File Extension: mdb</h1>
+    <p>Microsoft Access database before Access 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-34">
+    <h1>File Extension: mid, midi</h1>
+    <p>Musical Instrument Digital Interface file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-35">
+    <h1>File Extension: mov</h1>
+    <p>Apple QuickTime movie file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-36">
+    <h1>File Extension: mp3</h1>
+    <p>MPEG layer 3 audio file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-37">
+    <h1>File Extension: mp4</h1>
+    <p>MPEG 4 video</p>
+</div>
+
+<div class="flashcard show" id="flashcard-38">
+    <h1>File Extension: mp4</h1>
+    <p>MPEG 4 video</p>
+</div>
+
+<div class="flashcard show" id="flashcard-39">
+    <h1>File Extension: mpeg</h1>
+    <p>Moving Picture Experts Group movie file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-40">
+    <h1>File Extension: mpg</h1>
+    <p>MPEG 1 system stream</p>
+</div>
+
+<div class="flashcard show" id="flashcard-41">
+    <h1>File Extension: msi</h1>
+    <p>Microsoft installer file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-42">
+    <h1>File Extension: mui</h1>
+    <p>Multilingual User Interface file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-43">
+    <h1>File Extension: pdf</h1>
+    <p>Portable Document Format file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-44">
+    <h1>File Extension: png</h1>
+    <p>Portable Network Graphics file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-45">
+    <h1>File Extension: pot</h1>
+    <p>Microsoft PowerPoint template before PowerPoint 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-46">
+    <h1>File Extension: potm</h1>
+    <p>Microsoft PowerPoint macro-enabled template</p>
+</div>
+
+<div class="flashcard show" id="flashcard-47">
+    <h1>File Extension: potx</h1>
+    <p>Microsoft PowerPoint template</p>
+</div>
+
+<div class="flashcard show" id="flashcard-48">
+    <h1>File Extension: ppam</h1>
+    <p>Microsoft PowerPoint add-in</p>
+</div>
+
+<div class="flashcard show" id="flashcard-49">
+    <h1>File Extension: pps</h1>
+    <p>Microsoft PowerPoint slideshow before PowerPoint 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-50">
+    <h1>File Extension: ppsm</h1>
+    <p>Microsoft PowerPoint macro-enabled slideshow</p>
+</div>
+
+<div class="flashcard show" id="flashcard-51">
+    <h1>File Extension: ppsx</h1>
+    <p>Microsoft PowerPoint slideshow</p>
+</div>
+
+<div class="flashcard show" id="flashcard-52">
+    <h1>File Extension: ppt</h1>
+    <p>Microsoft PowerPoint format before PowerPoint 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-53">
+    <h1>File Extension: pptm</h1>
+    <p>Microsoft PowerPoint macro-enabled presentation</p>
+</div>
+
+<div class="flashcard show" id="flashcard-54">
+    <h1>File Extension: pptx</h1>
+    <p>Microsoft PowerPoint presentation</p>
+</div>
+
+<div class="flashcard show" id="flashcard-55">
+    <h1>File Extension: psd</h1>
+    <p>Adobe Photoshop file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-56">
+    <h1>File Extension: pst</h1>
+    <p>Outlook data store</p>
+</div>
+
+<div class="flashcard show" id="flashcard-57">
+    <h1>File Extension: pub</h1>
+    <p>Microsoft Publisher file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-58">
+    <h1>File Extension: rar</h1>
+    <p>Roshal Archive compressed file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-59">
+    <h1>File Extension: rtf</h1>
+    <p>Rich Text Format file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-60">
+    <h1>File Extension: sldm</h1>
+    <p>Microsoft PowerPoint macro-enabled slide</p>
+</div>
+
+<div class="flashcard show" id="flashcard-61">
+    <h1>File Extension: sldx</h1>
+    <p>Microsoft PowerPoint slide</p>
+</div>
+
+<div class="flashcard show" id="flashcard-62">
+    <h1>File Extension: swf</h1>
+    <p>Shockwave Flash file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-63">
+    <h1>File Extension: sys</h1>
+    <p>Microsoft DOS and Windows system settings and variables file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-64">
+    <h1>File Extension: tif, tiff</h1>
+    <p>Tagged Image Format file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-65">
+    <h1>File Extension: tmp</h1>
+    <p>Temporary data file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-66">
+    <h1>File Extension: txt</h1>
+    <p>Unformatted text file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-67">
+    <h1>File Extension: vob</h1>
+    <p>Video object file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-68">
+    <h1>File Extension: vsd</h1>
+    <p>Microsoft Visio drawing before Visio 2013</p>
+</div>
+
+<div class="flashcard show" id="flashcard-69">
+    <h1>File Extension: vsdm</h1>
+    <p>Microsoft Visio macro-enabled drawing</p>
+</div>
+
+<div class="flashcard show" id="flashcard-70">
+    <h1>File Extension: vsdx</h1>
+    <p>Microsoft Visio drawing file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-71">
+    <h1>File Extension: vss</h1>
+    <p>Microsoft Visio stencil before Visio 2013</p>
+</div>
+
+<div class="flashcard show" id="flashcard-72">
+    <h1>File Extension: vssm</h1>
+    <p>Microsoft Visio macro-enabled stencil</p>
+</div>
+
+<div class="flashcard show" id="flashcard-73">
+    <h1>File Extension: vst</h1>
+    <p>Microsoft Visio template before Visio 2013</p>
+</div>
+
+<div class="flashcard show" id="flashcard-74">
+    <h1>File Extension: vstm</h1>
+    <p>Microsoft Visio macro-enabled template</p>
+</div>
+
+<div class="flashcard show" id="flashcard-75">
+    <h1>File Extension: vstx</h1>
+    <p>Microsoft Visio template</p>
+</div>
+
+<div class="flashcard show" id="flashcard-76">
+    <h1>File Extension: wav</h1>
+    <p>Wave audio file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-77">
+    <h1>File Extension: wbk</h1>
+    <p>Microsoft Word backup document</p>
+</div>
+
+<div class="flashcard show" id="flashcard-78">
+    <h1>File Extension: wks</h1>
+    <p>Microsoft Works file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-79">
+    <h1>File Extension: wma</h1>
+    <p>Windows Media Audio file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-80">
+    <h1>File Extension: wmd</h1>
+    <p>Windows Media Download file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-81">
+    <h1>File Extension: wmv</h1>
+    <p>Windows Media Video file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-82">
+    <h1>File Extension: wmz, wms</h1>
+    <p>Windows Media skins file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-83">
+    <h1>File Extension: wpd, wp5</h1>
+    <p>WordPerfect document</p>
+</div>
+
+<div class="flashcard show" id="flashcard-84">
+    <h1>File Extension: xla</h1>
+    <p>Microsoft Excel add-in or macro file</p>
+</div>
+
+<div class="flashcard show" id="flashcard-85">
+    <h1>File Extension: xlam</h1>
+    <p>Microsoft Excel add-in after Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-86">
+    <h1>File Extension: xll</h1>
+    <p>Microsoft Excel DLL-based add-in</p>
+</div>
+
+<div class="flashcard show" id="flashcard-87">
+    <h1>File Extension: xlm</h1>
+    <p>Microsoft Excel macro before Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-88">
+    <h1>File Extension: xls</h1>
+    <p>Microsoft Excel workbook before Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-89">
+    <h1>File Extension: xlsm</h1>
+    <p>Microsoft Excel macro-enabled workbook after Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-90">
+    <h1>File Extension: xlsx</h1>
+    <p>Microsoft Excel workbook after Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-91">
+    <h1>File Extension: xlt</h1>
+    <p>Microsoft Excel template before Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-92">
+    <h1>File Extension: xltm</h1>
+    <p>Microsoft Excel macro-enabled template after Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-93">
+    <h1>File Extension: xltx</h1>
+    <p>Microsoft Excel template after Excel 2007</p>
+</div>
+
+<div class="flashcard show" id="flashcard-94">
+    <h1>File Extension: xps</h1>
+    <p>XML-based document</p>
+</div>
+
+<div class="flashcard show" id="flashcard-95">
+    <h1>File Extension: zip</h1>
+    <p>Compressed file</p>
+</div>
 
 
-    <!-- HELO HERO -->
-    <div class="card"><!--Third Card-->
-      <img class="card-img-top" src="../Images/card_example.png" alt="Card image cap"
-        style="width:100%;height:250px;">
 
-      <div class="card-body">
-        <h5 class="card-title">Helo Heroes</h5>
-        <p class="card-text">This is an older project of mine, game play loop inspired from an old starwars TV plug and
-          play game.</p><br>
-      </div>
+</div>
 
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary">See Page</button>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-             Play
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Browser</a>
-            <a class="dropdown-item" href="#">Download</a>
-          </div>
-        </div>
-      </div>
-      
-      <div> <!--TAGS-->
-        <span class="badge badge-info">Physics</span>
-        <span class="badge badge-info">MILITARY</span>
-      </div>
-      <br>
-    </div><!--/Third Card-->
+<select id="flashcard-select">
+    <!-- JavaScript will populate options dynamically -->
+</select>
+
+<h3>Press the 'D' key to toggle description.</h3>
+
+<button id="prev-button">Previous</button>
+<button id="next-button">Next</button>
+
+<h5>
+    <a href="https://support.microsoft.com/en-us/windows/common-file-name-extensions-in-windows-da4a4430-8e76-89c5-59f7-1cdbbc75cb01">
+        Microsoft Documentation
+    </a>
+</h5>
+
+<script>
+    const flashcards = document.querySelectorAll('.flashcard');
+    const flashcardSelect = document.getElementById('flashcard-select');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    let currentIndex = 0;
+
+    // Create options for the dropdown based on flashcards
+    flashcards.forEach((card, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = card.querySelector('h1').textContent;
+        flashcardSelect.appendChild(option);
+    });
+
+    function showFlashcard(index) {
+        flashcards.forEach((card, i) => {
+            if (i === index) {
+                card.classList.add('show');
+            } else {
+                card.classList.remove('show');
+            }
+        });
+    }
+
+    flashcardSelect.addEventListener('change', () => {
+        currentIndex = parseInt(flashcardSelect.value);
+        showFlashcard(currentIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            flashcardSelect.value = currentIndex;
+            showFlashcard(currentIndex);
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < flashcards.length - 1) {
+            currentIndex++;
+            flashcardSelect.value = currentIndex;
+            showFlashcard(currentIndex);
+        }
+    });
+
+    // Show the initial flashcard
+    showFlashcard(currentIndex);
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'D' || event.key === 'd') {
+        event.preventDefault(); // Prevent any default browser behavior
+        const description = flashcards[currentIndex].querySelector('p');
+        console.log('Toggle description');
+        description.style.opacity = description.style.opacity === '0' ? '1' : '0';
+    }
+});
+
+// Add this line to focus on the document
+document.addEventListener('keydown', (event) => event.preventDefault());
+
+// Add tabindex to make the description focusable
+const descriptions = document.querySelectorAll('.flashcard p');
+descriptions.forEach((description) => {
+    description.setAttribute('tabindex', '0');
+    description.style.opacity = '0'; // Initially hide descriptions
+    description.addEventListener('click', () => {
+        description.style.opacity = description.style.opacity === '0' ? '1' : '0';
+    });
+});
 
 
-    </div><!--/END SECTION-->
-
-
-    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!-- END GAMES SHOWCASE -->
-    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-  <br>
-        
-    <!-- MAIN SECTION (FULL GAMES LIST) -->
-      <div id="id_gamesList">
-
-   <table>
-  <tr>
-   <th colspan="4" style="text-align: center;">ALL GAMES</th>
-  </tr>
-  <tr>
-    <td><a class="nav-link text-light active tabItem" href="../index.html">HOME</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_coursePlot.html">Brave Butterfly</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_coursePlot.html">Course Plot</a></td>
-    <td><a class="nav-link text-light active tabItem" href="Games/index_cyberField.html">CyberField</a></td>
-  </tr>
-  <tr>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_stillLight">Still Light</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_coursePlot.html">AVP Tactics</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_sirensAbyss.html">Sirens Abyss</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_coursePlot.html">Port Pass</a></td>
-  </tr>
-  <tr>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_voidnaughts.html">Brave Aquanauts</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_coursePlot.html">Solar Defender</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_coursePlot.html">Helo Heroes</a></td>
-    <td><a class="nav-link text-light active tabItem" href="./Games/index_dream.html">3:33AM</a></td>
-  </tr>
-</table>
-
-
-      </div>
-
-
-
-        <!-- JumboTron Heading -->
-        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center boxShad"><!--Jumbotron displays across the screen-->
-          <div class="container">
-            <h1 class="display-4 hidden-sm-down" style="color: #fff; font-family:roboto; font-weight:900; text-transform:uppercase;">Where to Play</h1><!--Used inner CSS to style this text -->
-            <p class="lead">Most of my games are hosted either, here, on Itch.io, or on GX Games.</p>
-            <!-- Movie Deals when clicked this text will open the modal, when hovered over it will show a tool tip-->
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"  data-toggle="tooltip" data-placement="top" title="Click to sign up" >Go to Full Showcase</button>
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"  data-toggle="tooltip" data-placement="top" title="Click to sign up" >Go to to my GX Games page</button>
-            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"  data-toggle="tooltip" data-placement="top" title="Click to sign up" >Go to to my Itch.io page</button>
-            <!-- End Movie Deals -->
-          </div>
-        </div>
-        <!-- End Jumbotron Heading -->
-        
-        <!-- Begin Sign Up -->
-        <div id="id_signup" class="text-center my-5 ">
-          <form>
-            <h1 class="text-primary txtShadWht"> Sign up for updates today!</h1>
-            <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-            <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Sumbit your email for great movie rewards!">
-              Sign Up
-            </button>
-          </form>
-        </div>
-      </div>
-      <!-- End Sign up-->
-
-      <!--Footer-->
-      <div class="container my-5">
-        <ul class="=list-inline ">
-          <li class="list-inline-item">
-            <small><a class="nav-link active" href="/index.html">Home</a></small>
-          </li>
-          <li class="list-inline-item">
-            <small><a class="nav-link" href="/pages/allGames.html">All Games</a></small>
-          </li>
-          <li class="list-inline-item">
-            <small><a class="nav-link" href="/index.html#contact">Contact</a></small>
-          </li>
-          <li class="list-inline-item">
-            <small><a class="nav-link"> &copy; 2021 Kid Flid&reg;</a></small>
-          </li>
-        </ul>
-      </div>
-      <!--/Footer-->
-
-      
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-      <!-- Retrieving the libraries -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <script>
-            $('.popover-dismiss').popover({//This is using jQuery to make hide the popover when it loses focus
-                trigger:'focus'
-                })
-      </script>
-  </body>
+</script>
+</body>
 </html>
