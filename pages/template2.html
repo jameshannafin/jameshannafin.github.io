@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <title>Asset Browser</title>
@@ -63,20 +62,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
 
-
-
-      <div class="w3-section w3-bottombar w3-padding-16">
-    <span class="w3-margin-right">Filter:</span> 
-    <button class="w3-button w3-black" onclick="filterItems('all')">ALL</button>
-    <button onclick="filterItems('games')" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Games</button>
-    <button onclick="filterItems('files')" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Product Files</button>
-    <button onclick="filterItems('sprites')" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Sprites</button>
-    <button onclick="filterItems('models')" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>3D Models</button>
-    <button onclick="filterItems('sounds')" class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Sounds</button>
-</div>
-
-
       
+      <span class="w3-margin-right">Filter:</span> 
+      <button class="w3-button w3-black">ALL</button>
+      <button  onclick="filterItems('games')"  class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Games</button>
+      <button onclick="filterItems('files')" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Product Files</button>
+      <button onclick="filterItems('sprites')" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Sprites</button>
+      <button onclick="filterItems('models')" class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>3D Models</button>
+      <button onclick="filterItems('sounds')" class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>SoundS</button>
 
       <!--
 <div class="w3-section w3-bottombar w3-padding-16">
@@ -144,7 +137,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-third w3-container w3-margin-bottom sprites">
       <img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
-        <p><b>Sprite Set 2</b></p>
+        <p><b>Sprite Set 2/b></p>
         <p>A decent quality, classic picture of the boys.</p>
         <button class="snipcart-add-item"
         data-item-id="boys-pic"
@@ -494,8 +487,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 
 <script>
-
-  /*
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -506,6 +497,7 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
+
 
 
 
@@ -557,115 +549,16 @@ function w3_close() {
 
 //////////////////////// filtering
 
-// Add a function to toggle the active state of filter buttons
-function toggleActiveState(button) {
-    var buttons = document.querySelectorAll('.w3-button');
-    buttons.forEach(function (btn) {
-        btn.classList.remove('w3-black');
-    });
-    button.classList.add('w3-black');
-}
-
-// Update the filterItems function to toggle active state
-function filterItems(category) {
-    var items = document.querySelectorAll('.w3-third');
-    items.forEach(function (item) {
-        if (category === 'all' || item.classList.contains(category)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    }
-
-    // Toggle the active state of the clicked button
-    var button = document.querySelector(`button[data-category="${category}"]`);
-    toggleActiveState(button);
-}
-
-
-
-*/
-
-
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-// Pagination and filtering functions
-var currentPage = 1; // The current page
-
-function showPage(page) {
-    // Hide all items
+    function filterItems(category) {
         var items = document.querySelectorAll('.w3-third');
         items.forEach(function (item) {
-            item.style.display = 'none';
-        });
-
-        // Calculate the range of items to show on the current page
-        var itemsPerPage = 6; // Change this number based on your desired items per page
-        var startIndex = (page - 1) * itemsPerPage;
-        var endIndex = startIndex + itemsPerPage;
-
-        // Show the items for the current page
-        for (var i = startIndex; i < endIndex; i++) {
-            if (items[i]) {
-                items[i].style.display = 'block';
+            if (category === 'all' || item.classList.contains(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
             }
-        }
-
-        // Update the active page button
-        document.getElementById('page' + currentPage).classList.remove('w3-black');
-        currentPage = page;
-        document.getElementById('page' + currentPage).classList.add('w3-black');
-}
-
-    function previousPage() {
-        if (currentPage > 1) {
-            showPage(currentPage - 1);
-        }
+        });
     }
-
-    function nextPage() {
-        // Change the number 2 to the total number of pages you have
-        if (currentPage < 2) {
-            showPage(currentPage + 1);
-        }
-    }
-
-    // Show the first page by default
-    showPage(1);
-
-// Add a function to toggle the active state of filter buttons
-function toggleActiveState(button) {
-    var buttons = document.querySelectorAll('.w3-button');
-    buttons.forEach(function (btn) {
-        btn.classList.remove('w3-black');
-    });
-    button.classList.add('w3-black');
-}
-
-// Update the filterItems function to toggle active state
-function filterItems(category) {
-    var items = document.querySelectorAll('.w3-third');
-    items.forEach(function (item) {
-        if (category === 'all' || item.classList.contains(category)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    }
-
-    // Toggle the active state of the clicked button
-    var button = document.querySelector(`button[data-category="${category}"]`);
-    toggleActiveState(button);
-}
 
 
   
