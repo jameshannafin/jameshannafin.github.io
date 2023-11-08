@@ -73,7 +73,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </header>
   
   <!-- First Photo Grid-->
-  <div class="w3-row-padding">
+  <div id="itemContainer"  class="w3-row-padding">
+
    
    
     <div class="w3-third w3-container w3-margin-bottom sprites">
@@ -212,8 +213,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
 
   </div>
-
   <!-- Pagination -->
+<!--
+  
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
       <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
@@ -224,7 +226,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
     </div>
   </div>
-
+-->
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="previousPage()">«</a>
+        <a href="#" class="w3-bar-item w3-black w3-button" id="page1" onclick="showPage(1)">1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black" id="page2" onclick="showPage(2)">2</a>
+        <!-- Add more page buttons as needed -->
+        <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="nextPage()">»</a>
+    </div>
+</div>
 
   
   <!-- Contact Section -->
@@ -317,6 +329,59 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
+
+
+
+
+//PAGIFICATION BUTTON FUNCTIONS 
+
+
+    var currentPage = 1; // The current page
+
+    function showPage(page) {
+        // Hide all items
+        var items = document.querySelectorAll('.w3-third');
+        items.forEach(function (item) {
+            item.style.display = 'none';
+        });
+
+        // Calculate the range of items to show on the current page
+        var itemsPerPage = 3; // Change this number based on your desired items per page
+        var startIndex = (page - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+
+        // Show the items for the current page
+        for (var i = startIndex; i < endIndex; i++) {
+            if (items[i]) {
+                items[i].style.display = 'block';
+            }
+        }
+
+        // Update the active page button
+        document.getElementById('page' + currentPage).classList.remove('w3-black');
+        currentPage = page;
+        document.getElementById('page' + currentPage).classList.add('w3-black');
+    }
+
+    function previousPage() {
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
+        }
+    }
+
+    function nextPage() {
+        // Change the number 2 to the total number of pages you have
+        if (currentPage < 2) {
+            showPage(currentPage + 1);
+        }
+    }
+
+    // Show the first page by default
+    showPage(1);
+
+
+
+  
 </script>
 
 </body>
