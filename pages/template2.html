@@ -602,24 +602,45 @@ function w3_close() {
 var currentPage = 1; // The current page
 
 function showPage(page) {
-    // Your showPage logic here
-    // ...
+    // Hide all items
+        var items = document.querySelectorAll('.w3-third');
+        items.forEach(function (item) {
+            item.style.display = 'none';
+        });
 
-    // Update the active page button
-    document.getElementById('page' + currentPage).classList.remove('w3-black');
-    currentPage = page;
-    document.getElementById('page' + currentPage).classList.add('w3-black');
+        // Calculate the range of items to show on the current page
+        var itemsPerPage = 6; // Change this number based on your desired items per page
+        var startIndex = (page - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+
+        // Show the items for the current page
+        for (var i = startIndex; i < endIndex; i++) {
+            if (items[i]) {
+                items[i].style.display = 'block';
+            }
+        }
+
+        // Update the active page button
+        document.getElementById('page' + currentPage).classList.remove('w3-black');
+        currentPage = page;
+        document.getElementById('page' + currentPage).classList.add('w3-black');
 }
 
-function previousPage() {
-    // Your previousPage logic here
-    // ...
-}
+    function previousPage() {
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
+        }
+    }
 
-function nextPage() {
-    // Your nextPage logic here
-    // ...
-}
+    function nextPage() {
+        // Change the number 2 to the total number of pages you have
+        if (currentPage < 2) {
+            showPage(currentPage + 1);
+        }
+    }
+
+    // Show the first page by default
+    showPage(1);
 
 // Add a function to toggle the active state of filter buttons
 function toggleActiveState(button) {
