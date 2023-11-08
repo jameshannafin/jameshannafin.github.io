@@ -642,14 +642,18 @@ function showPage(page) {
     // Show the first page by default
     showPage(1);
 
-// Add a function to toggle the active state of filter buttons
+// Function to toggle the active state of a button
 function toggleActiveState(button) {
-    var buttons = document.querySelectorAll('.w3-button');
+    // First, remove the "active" class from all buttons
+    var buttons = document.querySelectorAll('.filter-button');
     buttons.forEach(function (btn) {
-        btn.classList.remove('w3-black');
+        btn.classList.remove('active');
     });
-    button.classList.add('w3-black');
+
+    // Next, add the "active" class to the clicked button
+    button.classList.add('active');
 }
+
 
 // Update the filterItems function to toggle active state
 function filterItems(category) {
