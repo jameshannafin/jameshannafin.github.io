@@ -550,17 +550,30 @@ function w3_close() {
 
 //////////////////////// filtering
 
-    function filterItems(category) {
-        var items = document.querySelectorAll('.w3-third');
-        items.forEach(function (item) {
-            if (category === 'all' || item.classList.contains(category)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+// Add a function to toggle the active state of filter buttons
+function toggleActiveState(button) {
+    var buttons = document.querySelectorAll('.w3-button');
+    buttons.forEach(function (btn) {
+        btn.classList.remove('w3-black');
+    });
+    button.classList.add('w3-black');
+}
+
+// Update the filterItems function to toggle active state
+function filterItems(category) {
+    var items = document.querySelectorAll('.w3-third');
+    items.forEach(function (item) {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
     }
 
+    // Toggle the active state of the clicked button
+    var button = document.querySelector(`button[data-category="${category}"]`);
+    toggleActiveState(button);
+}
 
   
 </script>
