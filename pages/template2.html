@@ -494,6 +494,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 
 <script>
+
+  /*
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -504,7 +506,6 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
-
 
 
 
@@ -580,6 +581,72 @@ function filterItems(category) {
     var button = document.querySelector(`button[data-category="${category}"]`);
     toggleActiveState(button);
 }
+
+
+
+*/
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Pagination and filtering functions
+var currentPage = 1; // The current page
+
+function showPage(page) {
+    // Your showPage logic here
+    // ...
+
+    // Update the active page button
+    document.getElementById('page' + currentPage).classList.remove('w3-black');
+    currentPage = page;
+    document.getElementById('page' + currentPage).classList.add('w3-black');
+}
+
+function previousPage() {
+    // Your previousPage logic here
+    // ...
+}
+
+function nextPage() {
+    // Your nextPage logic here
+    // ...
+}
+
+// Add a function to toggle the active state of filter buttons
+function toggleActiveState(button) {
+    var buttons = document.querySelectorAll('.w3-button');
+    buttons.forEach(function (btn) {
+        btn.classList.remove('w3-black');
+    });
+    button.classList.add('w3-black');
+}
+
+// Update the filterItems function to toggle active state
+function filterItems(category) {
+    var items = document.querySelectorAll('.w3-third');
+    items.forEach(function (item) {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    }
+
+    // Toggle the active state of the clicked button
+    var button = document.querySelector(`button[data-category="${category}"]`);
+    toggleActiveState(button);
+}
+
+
 
   
 </script>
