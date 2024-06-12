@@ -3,10 +3,19 @@
     box-shadow: inset 0px 0px .5em .5em black, inset 0px 0px 1em .5em black;
 	}
 
+p, h2,h3,h4,h5, li {
 
+	color: lawngreen;
+}
       
+h1 {
+
+text-shadow: 0px 0px 10px lawngreen;
+text-shadow: 0px 0px 30px lawngreen;
+}
+
 body {
-background-image: url("../../Images/bgDream.png");
+background-image: url("../Images/bgDream.png");
 background-repeat: repeat;
 
 }
@@ -15,4 +24,20 @@ background-repeat: repeat;
 
 	color: white;
 
+}
+
+.link {
+
+	text-decoration-line: underline;
+}
+
+.card {
+
+	background-color: black;
+}
+
+.footer{
+
+	text-align: center;
+	position: relative;
 }

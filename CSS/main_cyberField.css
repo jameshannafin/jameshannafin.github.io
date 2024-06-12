@@ -2,31 +2,58 @@
 {
     font-style: impact;    
     color: white;
-}
+};
 
 .gray{    
     
     background-color: dimgrey;
 
-}
+};
 
 .dkgray{    
     
     background-color: rgb(61, 61, 61);
 
-}
+};
 
 .blk{    
     
     background-color: rgb(16, 16, 16);
 
-}
+};
 
 
-      
+/*       
 body {
     
 background-image: url("../Images/bgCyberField.png");
 background-repeat: repeat;
 
-}
+} */
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+/* Style the video: 100% width and height to cover the entire window */
+.video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    position: relative;
+  
+    width: 400px;
+    height: 200px;
+  
+    /* Will not allow the video to overflow the 
+    container */
+    overflow: hidden;
+  
+    /* Centering the container's content vertically 
+    and horizontally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
