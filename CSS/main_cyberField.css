@@ -14,16 +14,56 @@
     
     background-color: rgb(61, 61, 61);
 
-};
+}
 
 .blk{    
     
     background-color: rgb(16, 16, 16);
 
-};
+}
+
+body{    
+    
+    background-color: rgb(16, 16, 16);
+
+}
 
 
-/*       
+.card{    
+    
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+h1 {
+    color: red;
+}
+
+p {
+    color: rgb(139, 138, 138);
+    text-shadow: 0px 0px 0px  red;
+}
+
+.card-title {
+    color: rgb(204, 198, 198);
+    text-shadow: 0px 0px 0px  red;
+}
+
+.cardSection{
+
+    box-shadow: 0px 0px 10px 12px rgb(0, 0, 0);
+
+}
+
+.footer{
+
+   text-align: center;
+   color: red;
+
+}
+
+/*   
 body {
     
 background-image: url("../Images/bgCyberField.png");
