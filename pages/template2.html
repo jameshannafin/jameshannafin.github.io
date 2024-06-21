@@ -1,489 +1,507 @@
 <html>
 
 <head>
-  <title>Asset Browser</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Raleway", sans-serif
-    }
-
-
-  </style>
+	<title>Asset Browser</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Raleway", sans-serif
+		}
+	</style>
 
 
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-  <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
-
-    <br>
-
-    <div class="w3-container">
-
-      <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu"> 
-        <i class="fa fa-remove"></i>
-      </a>
-      <img src="/Images/Cards/dreamCard2.png" style="width:45%;" class="w3-round">
-
-      <h4><b>Store Information</b></h4>
-      <p class="w3-text-grey">Programmed by James Hannafin</p>
-    
-    </div> 
-
-    <div class="w3-bar-block">
-      <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
-          class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a>
-
-      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
-          class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
-          class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-
-          <div class="w3-panel w3-large">
-            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-            <i class="fa fa-instagram w3-hover-opacity"></i>
-            <i class="fa fa-snapchat w3-hover-opacity"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-            <i class="fa fa-twitter w3-hover-opacity"></i>
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
-          </div>
-
-      <br>
-      <br>
-      <br>
-
-
-
-
-    </div>
-
-
-  </nav>
-
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
-    title="close side menu" id="myOverlay"></div>
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:300px">
-
-    <!-- Header -->
-    <header id="portfolio">
-      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
-          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-          class="fa fa-bars"></i></span>
-      <div class="w3-container">
-        <h1><b>Asset Browser :
-          </b></h1>
-        <div class="w3-section w3-bottombar w3-padding-16">
-
-
-          <span class="w3-margin-right">Filter:</span>
-          <button class="w3-button w3-black">ALL</button>
-          <button onclick="filterItems('games')" class="w3-button w3-white"><i
-              class="fa fa-diamond w3-margin-right"></i>Games</button>
-          <button onclick="filterItems('files')" class="w3-button w3-white"><i
-              class="fa fa-diamond w3-margin-right"></i>Product Files</button>
-          <button onclick="filterItems('sprites')" class="w3-button w3-white w3-hide-small"><i
-              class="fa fa-photo w3-margin-right"></i>Sprites</button>
-          <button onclick="filterItems('models')" class="w3-button w3-white w3-hide-small"><i
-              class="fa fa-photo w3-margin-right"></i>3D Models</button>
-          <button onclick="filterItems('sounds')" class="w3-button w3-white w3-hide-small"><i
-              class="fa fa-map-pin w3-margin-right"></i>SoundS</button>
-
-
-
-        </div>
-      </div>
-    </header>
-
-    <!-- First Photo Grid-->
-    <div id="itemContainer" class="w3-row-padding">
-
-
-      <!--   STORE ITEM  -->
-      <div class="w3-third w3-container w3-margin-bottom sprites">
-        <a href="template1.html">
-          <div class="column_2 bg_black sketchfab-embed-wrapper ">
-            <div style="position: relative; padding-bottom: 50%; height: 0; ">
-                <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-            </div>
-            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
-                <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-                <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-            </p>
-        </div>
-        </a> 
-        <div class="w3-container w3-white">
-          <p><b>Sprite Set 1</b></p>
-          <p>A decent quality, classic picture of the boys.</p>
-          <button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-            data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-            data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
-            data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
-
-            Add to cart
-          </button>
-          <br>
-          <br>
-        </div>
-      </div>
-
-      <!--   STORE ITEM  -->
-      <div class="w3-third w3-container w3-margin-bottom sounds">
-        <div class="column_2 bg_black sketchfab-embed-wrapper ">
-          <div style="position: relative; padding-bottom: 50%; height: 0; ">
-              <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-          </div>
-          <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-              <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
-              <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-              <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-          </p>
-      </div>
-        <div class="w3-container w3-white">
-          <p><b>Sound Set 1 </b></p>
-          <p>A decent quality, classic picture of the boys.</p>
-          <button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-            data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-            data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
-            data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
-
-            Add to cart
-          </button>
-          <br>
-          <br>
-        </div>
-      </div>
-
-            <!--   STORE ITEM  -->
-      <div class="w3-third w3-container w3-margin-bottom sprites">
-        <div class="column_2 bg_black sketchfab-embed-wrapper ">
-          <div style="position: relative; padding-bottom: 50%; height: 0; ">
-              <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-          </div>
-          <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-              <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
-              <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-              <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-          </p>
-      </div>
-        <div class="w3-container w3-white">
-          <p><b>Sprite Set 2</b></p>
-          <p>A decent quality, classic picture of the boys.</p>
-          <button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-            data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-            data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
-            data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
-
-            Add to cart
-          </button>
-          <br>
-          <br>
-        </div>
-      </div>
-
-            <!--   STORE ITEM  -->
-      <div class="w3-third w3-container w3-margin-bottom sounds">
-        <div class="column_2 bg_black sketchfab-embed-wrapper ">
-          <div style="position: relative; padding-bottom: 50%; height: 0; ">
-              <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-          </div>
-          <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-              <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
-              <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-              <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-          </p>
-      </div>
-        <div class="w3-container w3-white">
-          <p><b>Sound Set 2</b></p>
-          <p>A decent quality, classic picture of the boys.</p>
-          <button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-            data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-            data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
-            data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
-
-            Add to cart
-          </button>
-          <br>
-          <br>
-        </div>
-      </div>
-
-
-      <div class="w3-third w3-container w3-margin-bottom models">
-        <div class="column_2 bg_black sketchfab-embed-wrapper ">
-          <div style="position: relative; padding-bottom: 50%; height: 0; ">
-              <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-          </div>
-          <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-              <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
-              <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-              <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-          </p>
-      </div>
-        <div class="w3-container w3-white">
-          <p><b>3D Model 2</b></p>
-          <p>A decent quality, classic picture of the boys.</p>
-          <button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-            data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-            data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
-            data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
-
-            Add to cart
-          </button>
-          <br>
-          <br>
-        </div>
-      </div>
-
-      <div class="w3-third w3-container w3-margin-bottom models">
-        <div class="column_2 bg_black sketchfab-embed-wrapper ">
-          <div style="position: relative; padding-bottom: 50%; height: 0; ">
-              <iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-          </div>
-          <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-              <a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a> by
-              <a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-              <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-          </p>
-      </div>
-        <div class="w3-container w3-white">
-          <p><b>3D Model 2</b></p>
-          <p>A decent quality, classic picture of the boys.</p>
-          <button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-            data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-            data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
-            data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
-
-            Add to cart
-          </button>
-          <br>
-          <br>
-        </div>
-      </div>
-
-    </div>
-    <!-- Pagination -->
-    <!--
-  
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
--->
-    <!-- Pagination -->
-    <div class="w3-center w3-padding-32">
-      <div class="w3-bar">
-        <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="previousPage()">«</a>
-        <a href="#" class="w3-bar-item w3-black w3-button" id="page1" onclick="showPage(1)">1</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-black" id="page2" onclick="showPage(2)">2</a>
-        <!-- Add more page buttons as needed -->
-        <a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="nextPage()">»</a>
-      </div>
-    </div>
-
-
-    <!-- Contact Section -->
-    <div class="w3-container w3-padding-large w3-grey">
-      <h4 id="contact"><b>Contact Me</b></h4>
-      <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-        <div class="w3-third w3-dark-grey">
-          <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-          <p>email@email.com</p>
-        </div>
-        <div class="w3-third w3-teal">
-          <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-          <p>Chicago, US</p>
-        </div>
-        <div class="w3-third w3-dark-grey">
-          <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-          <p>512312311</p>
-        </div>
-      </div>
-      <hr class="w3-opacity">
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input w3-border" type="text" name="Name" required>
-        </div>
-        <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input w3-border" type="text" name="Email" required>
-        </div>
-        <div class="w3-section">
-          <label>Message</label>
-          <input class="w3-input w3-border" type="text" name="Message" required>
-        </div>
-        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
-            class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-      </form>
-    </div>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-32 w3-dark-grey">
-      <div class="w3-row-padding">
-        <div class="w3-third">
-          <h3>FOOTER</h3>
-          <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue
-            gravida diam non fringilla.</p>
-          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-        </div>
-
-        <div class="w3-third">
-          <h3>BLOG POSTS</h3>
-          <ul class="w3-ul w3-hoverable">
-            <li class="w3-padding-16">
-              <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-              <span class="w3-large">Lorem</span><br>
-              <span>Sed mattis nunc</span>
-            </li>
-            <li class="w3-padding-16">
-              <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-              <span class="w3-large">Ipsum</span><br>
-              <span>Praes tinci sed</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="w3-third">
-          <h3>POPULAR TAGS</h3>
-          <p>
-            <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-            <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-            <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-            <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-            <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span
-              class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-          </p>
-        </div>
-
-      </div>
-    </footer>
-
-    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
-        title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-
-    <!-- End page content -->
-  </div>
-
-  <script>
-    // Script to open and close sidebar
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    }
-
-
-
-
-    //PAGIFICATION BUTTON FUNCTIONS 
-
-
-    var currentPage = 1; // The current page
-
-    function showPage(page) {
-      // Hide all items
-      var items = document.querySelectorAll('.w3-third');
-      items.forEach(function (item) {
-        item.style.display = 'none';
-      });
-
-      // Calculate the range of items to show on the current page
-      var itemsPerPage = 6; // Change this number based on your desired items per page
-      var startIndex = (page - 1) * itemsPerPage;
-      var endIndex = startIndex + itemsPerPage;
-
-      // Show the items for the current page
-      for (var i = startIndex; i < endIndex; i++) {
-        if (items[i]) {
-          items[i].style.display = 'block';
-        }
-      }
-
-      // Update the active page button
-      document.getElementById('page' + currentPage).classList.remove('w3-black');
-      currentPage = page;
-      document.getElementById('page' + currentPage).classList.add('w3-black');
-    }
-
-    function previousPage() {
-      if (currentPage > 1) {
-        showPage(currentPage - 1);
-      }
-    }
-
-    function nextPage() {
-      // Change the number 2 to the total number of pages you have
-      if (currentPage < 2) {
-        showPage(currentPage + 1);
-      }
-    }
-
-    // Show the first page by default
-    showPage(1);
-
-    //////////////////////// filtering
-
-    function filterItems(category) {
-      var items = document.querySelectorAll('.w3-third');
-      items.forEach(function (item) {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-
-
-  </script>
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+
+		<br>
+
+		<div class="w3-container">
+
+			<a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+				title="close menu">
+				<i class="fa fa-remove"></i>
+			</a>
+			<img src="/Images/Cards/dreamCard2.png" style="width:45%;" class="w3-round">
+
+			<h4><b>Store Information</b></h4>
+			<p class="w3-text-grey">Programmed by James Hannafin</p>
+
+		</div>
+
+		<div class="w3-bar-block">
+			<a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+					class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a>
+
+			<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+					class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+
+			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+					class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+
+			<div class="w3-panel w3-large">
+
+				<a href="https://www.instagram.com/kidflid/">
+					<i class="fa fa-instagram w3-hover-opacity"></i>
+				</a>
+
+				<a href="https://x.com/kidflid">
+					<i class="fa fa-twitter w3-hover-opacity"></i>
+				</a>
+
+				<a href="https://www.linkedin.com/feed/">			
+					<i class="fa fa-linkedin w3-hover-opacity"></i>
+				</a>
+
+				<a href="https://www.youtube.com/channel/UCtI4fO6e9QgIu1XYbZbukuw">			
+					<i class="fa fa-youtube w3-hover-opacity"></i>
+				</a>
+
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+		</div>
+
+
+	</nav>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+		title="close side menu" id="myOverlay">
+	</div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left:300px">
+
+		<!-- Header -->
+		<header id="portfolio">
+			<a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+					class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+			<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+					class="fa fa-bars"></i></span>
+			<div class="w3-container">
+				<h1><b>Asset Browser :
+					</b></h1>
+				<div class="w3-section w3-bottombar w3-padding-16">
+				</div>
+			</div>
+		</header>
+
+		<!-- First Photo Grid (Store Items Inside)-->
+		<div id="itemContainer" class="w3-row-padding">
+
+			<!--   STORE ITEM  -->
+			<div class="w3-third w3-container w3-margin-bottom sprites">
+				<a href="template1.html">
+					<div class="column_2 bg_black sketchfab-embed-wrapper ">
+						<div style="position: relative; padding-bottom: 50%; height: 0; ">
+							<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
+								webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+								xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+								web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+						</div>
+						<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+							<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+								target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife
+								Bayonet</a> by
+							<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+								target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+							<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+								target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+						</p>
+					</div>
+				</a>
+				<div class="w3-container w3-white">
+					<p><b>Sprite Set 1</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<!--   STORE ITEM  -->
+			<div class="w3-third w3-container w3-margin-bottom sounds">
+				<div class="column_2 bg_black sketchfab-embed-wrapper ">
+					<div style="position: relative; padding-bottom: 50%; height: 0; ">
+						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
+							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div>
+					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
+						by
+						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+					</p>
+				</div>
+				<div class="w3-container w3-white">
+					<p><b>Sound Set 1 </b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<!--   STORE ITEM  -->
+			<div class="w3-third w3-container w3-margin-bottom sprites">
+				<div class="column_2 bg_black sketchfab-embed-wrapper ">
+					<div style="position: relative; padding-bottom: 50%; height: 0; ">
+						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
+							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div>
+					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
+						by
+						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+					</p>
+				</div>
+				<div class="w3-container w3-white">
+					<p><b>Sprite Set 2</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<!--   STORE ITEM  -->
+			<div class="w3-third w3-container w3-margin-bottom sounds">
+				<div class="column_2 bg_black sketchfab-embed-wrapper ">
+					<div style="position: relative; padding-bottom: 50%; height: 0; ">
+						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
+							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div>
+					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
+						by
+						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+					</p>
+				</div>
+				<div class="w3-container w3-white">
+					<p><b>Sound Set 2</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<!--   STORE ITEM  -->
+			<div class="w3-third w3-container w3-margin-bottom models">
+				<div class="column_2 bg_black sketchfab-embed-wrapper ">
+					<div style="position: relative; padding-bottom: 50%; height: 0; ">
+						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
+							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div>
+					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
+						by
+						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+					</p>
+				</div>
+				<div class="w3-container w3-white">
+					<p><b>3D Model 2</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<!--   STORE ITEM  -->
+			<div class="w3-third w3-container w3-margin-bottom models">
+				<div class="column_2 bg_black sketchfab-embed-wrapper ">
+					<div style="position: relative; padding-bottom: 50%; height: 0; ">
+						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
+							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div>
+					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
+						by
+						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
+						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
+							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+					</p>
+				</div>
+				<div class="w3-container w3-white">
+					<p><b>3D Model 2</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<!-- Pagination -->
+		<div class="w3-center w3-padding-32">
+			<div class="w3-bar">
+				<a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="previousPage()">«</a>
+				<a href="#" class="w3-bar-item w3-black w3-button" id="page1" onclick="showPage(1)">1</a>
+				<a href="#" class="w3-bar-item w3-button w3-hover-black" id="page2" onclick="showPage(2)">2</a>
+				<!-- Add more page buttons as needed -->
+				<a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="nextPage()">»</a>
+			</div>
+		</div>
+
+		<!-- Contact Section -->
+		<div class="w3-container w3-padding-large w3-grey">
+			<h4 id="contact"><b>Contact Me</b></h4>
+			<div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+				<div class="w3-third w3-dark-grey">
+					<p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+					<p>email@email.com</p>
+				</div>
+				<div class="w3-third w3-teal">
+					<p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+					<p>Chicago, US</p>
+				</div>
+				<div class="w3-third w3-dark-grey">
+					<p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+					<p>512312311</p>
+				</div>
+			</div>
+			<hr class="w3-opacity">
+			<form action="/action_page.php" target="_blank">
+				<div class="w3-section">
+					<label>Name</label>
+					<input class="w3-input w3-border" type="text" name="Name" required>
+				</div>
+				<div class="w3-section">
+					<label>Email</label>
+					<input class="w3-input w3-border" type="text" name="Email" required>
+				</div>
+				<div class="w3-section">
+					<label>Message</label>
+					<input class="w3-input w3-border" type="text" name="Message" required>
+				</div>
+				<button type="submit" class="w3-button w3-black w3-margin-bottom"><i
+						class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+			</form>
+		</div>
+
+
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-32 w3-dark-grey">
+
+		<div class="w3-row-padding">
+
+			<div >
+				<h3>FOOTER</h3>
+				<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+					congue
+					gravida diam non fringilla.</p>
+				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+			</div>
+
+
+		</div>
+
+		<div class="w3-third">
+			<h3>POPULAR TAGS</h3>
+			<p>
+				<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+				<span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+				<span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+				<span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+				<span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span
+					class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+			</p>
+		</div>
+
+
+
+	</footer>
+
+	<div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+		title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+</div>
+
+</div><!--Page Cotnent-->
+	<script>
+		// Script to open and close sidebar
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("myOverlay").style.display = "block";
+		}
+
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("myOverlay").style.display = "none";
+		}
+
+
+
+
+		//PAGIFICATION BUTTON FUNCTIONS 
+
+
+		var currentPage = 1; // The current page
+
+		function showPage(page) {
+			// Hide all items
+			var items = document.querySelectorAll('.w3-third');
+			items.forEach(function (item) {
+				item.style.display = 'none';
+			});
+
+			// Calculate the range of items to show on the current page
+			var itemsPerPage = 6; // Change this number based on your desired items per page
+			var startIndex = (page - 1) * itemsPerPage;
+			var endIndex = startIndex + itemsPerPage;
+
+			// Show the items for the current page
+			for (var i = startIndex; i < endIndex; i++) {
+				if (items[i]) {
+					items[i].style.display = 'block';
+				}
+			}
+
+			// Update the active page button
+			document.getElementById('page' + currentPage).classList.remove('w3-black');
+			currentPage = page;
+			document.getElementById('page' + currentPage).classList.add('w3-black');
+		}
+
+		function previousPage() {
+			if (currentPage > 1) {
+				showPage(currentPage - 1);
+			}
+		}
+
+		function nextPage() {
+			// Change the number 2 to the total number of pages you have
+			if (currentPage < 2) {
+				showPage(currentPage + 1);
+			}
+		}
+
+		// Show the first page by default
+		showPage(1);
+
+		//////////////////////// filtering
+
+		function filterItems(category) {
+			var items = document.querySelectorAll('.w3-third');
+			items.forEach(function (item) {
+				if (category === 'all' || item.classList.contains(category)) {
+					item.style.display = 'block';
+				} else {
+					item.style.display = 'none';
+				}
+			});
+		}
+
+
+
+	</script>
 
 </body>
 
 <script>
-  window.SnipcartSettings = {
-    publicApiKey: 'YTU1NGE0MTYtOTEyYy00MjU4LWIwMzQtMjMyMDU1YzA2NjM5NjM4MzQ5ODM2MDgzNjAwMjE2',
-    loadStrategy: 'on-user-interaction',
-  };
+	window.SnipcartSettings = {
+		publicApiKey: 'YTU1NGE0MTYtOTEyYy00MjU4LWIwMzQtMjMyMDU1YzA2NjM5NjM4MzQ5ODM2MDgzNjAwMjE2',
+		loadStrategy: 'on-user-interaction',
+	};
 
-  (() => { var c, d; (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0"); var s, S; (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750); var l, p; (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com"); var w, u; (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https"); var f = window.SnipcartSettings.version.includes("v3.0.0-ci") || window.SnipcartSettings.version != "3.0" && window.SnipcartSettings.version.localeCompare("3.4.0", void 0, { numeric: !0, sensitivity: "base" }) === -1, m = ["focus", "mouseover", "touchmove", "scroll", "keydown"]; window.LoadSnipcart = o; document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", r) : r(); function r() { window.SnipcartSettings.loadStrategy ? window.SnipcartSettings.loadStrategy === "on-user-interaction" && (m.forEach(t => document.addEventListener(t, o)), setTimeout(o, window.SnipcartSettings.timeoutDuration)) : o() } var a = !1; function o() { if (a) return; a = !0; let t = document.getElementsByTagName("head")[0], e = document.querySelector("#snipcart"), i = document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`), n = document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`); e || (e = document.createElement("div"), e.id = "snipcart", e.setAttribute("hidden", "true"), document.body.appendChild(e)), v(e), i || (i = document.createElement("script"), i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`, i.async = !0, t.appendChild(i)), n || (n = document.createElement("link"), n.rel = "stylesheet", n.type = "text/css", n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`, t.prepend(n)), m.forEach(g => document.removeEventListener(g, o)) } function v(t) { !f || (t.dataset.apiKey = window.SnipcartSettings.publicApiKey, window.SnipcartSettings.addProductBehavior && (t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior), window.SnipcartSettings.modalStyle && (t.dataset.configModalStyle = window.SnipcartSettings.modalStyle), window.SnipcartSettings.currency && (t.dataset.currency = window.SnipcartSettings.currency), window.SnipcartSettings.templatesUrl && (t.dataset.templatesUrl = window.SnipcartSettings.templatesUrl)) } })();
+	(() => { var c, d; (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0"); var s, S; (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750); var l, p; (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com"); var w, u; (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https"); var f = window.SnipcartSettings.version.includes("v3.0.0-ci") || window.SnipcartSettings.version != "3.0" && window.SnipcartSettings.version.localeCompare("3.4.0", void 0, { numeric: !0, sensitivity: "base" }) === -1, m = ["focus", "mouseover", "touchmove", "scroll", "keydown"]; window.LoadSnipcart = o; document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", r) : r(); function r() { window.SnipcartSettings.loadStrategy ? window.SnipcartSettings.loadStrategy === "on-user-interaction" && (m.forEach(t => document.addEventListener(t, o)), setTimeout(o, window.SnipcartSettings.timeoutDuration)) : o() } var a = !1; function o() { if (a) return; a = !0; let t = document.getElementsByTagName("head")[0], e = document.querySelector("#snipcart"), i = document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`), n = document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`); e || (e = document.createElement("div"), e.id = "snipcart", e.setAttribute("hidden", "true"), document.body.appendChild(e)), v(e), i || (i = document.createElement("script"), i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`, i.async = !0, t.appendChild(i)), n || (n = document.createElement("link"), n.rel = "stylesheet", n.type = "text/css", n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`, t.prepend(n)), m.forEach(g => document.removeEventListener(g, o)) } function v(t) { !f || (t.dataset.apiKey = window.SnipcartSettings.publicApiKey, window.SnipcartSettings.addProductBehavior && (t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior), window.SnipcartSettings.modalStyle && (t.dataset.configModalStyle = window.SnipcartSettings.modalStyle), window.SnipcartSettings.currency && (t.dataset.currency = window.SnipcartSettings.currency), window.SnipcartSettings.templatesUrl && (t.dataset.templatesUrl = window.SnipcartSettings.templatesUrl)) } })();
 </script>
 
 </html>
