@@ -1,3 +1,94 @@
+
+
+.text1 {
+    font-style: impact;
+    color: white;
+
+
+}
+
+.gray {
+    background-color: dimgrey;
+
+}
+
+.dkgray {
+    background-color: rgb(61, 61, 61);
+
+}
+
+.blk {
+    background-color: rgb(16, 16, 16);
+
+}
+#play
+{
+    border: 2px solid black;
+
+}
+
+#play h3{
+    margin-left: 2em;
+    color: aqua;
+    text-shadow: 0 0 4px rgb(0, 0, 0); /* Apply text shadow */
+}
+
+
+
+.list-group {
+
+    background-color: #746b6b; /* Ensure background allows text shadow to be visible */
+  }
+.nav-link.shad {
+
+    text-shadow: 0 0 4px rgb(0, 0, 0); /* Apply text shadow */
+    color: white; /* Ensure text color is appropriate */
+  }
+  
+  .list-group-item.shad {
+
+    background-color: #746b6b; /* Ensure background allows text shadow to be visible */
+  }
+  
+
+
+body {
+
+    background-image: linear-gradient(rgb(70, 172, 240), rgb(21, 33, 88));
+
+
+}
+
+img {
+    z-index: -1000;
+}
+
+.sticky {
+    position: sticky;
+    top: 50%;
+    /* Adjust this value to vertically center the element */
+    left: 10em;
+    /* Stick to the right side of the viewport */
+    transform: translateY(-50%);
+    /* Vertically center the element */
+    z-index: 999;
+    /* Set a high z-index value */
+}
+
+.ad {
+    background-color: blue;
+    width: 10em;
+}
+
+
+
+
+
+
+
+
+
+
 /***** Slideshow Styling *****/
 #Slideshow_Background {
     background: rgba(255, 255, 255, 0.35); /* This creates a slightly transparent white background that's palced over the video in the background */    
@@ -98,6 +189,15 @@
     -webkit-animation-duration: 1s;
 }
 
+footer {
+	text-align: center;
+	position: relative;
+    font-size: 1.5em;
+    color: orange;
+    text-shadow: 0 0 4 black;
+    content: center;
+}
+
 @-webkit-keyframes fade {
     from {opacity: .4;} /* Image starts transparent */
     to {opacity: 1;} /* Image ends opaque */
@@ -132,3 +232,11 @@
         width: 1100px; /* Set desired width */
         height: auto; /* Maintain aspect ratio */
 }
+
+/* CARD GIFS */
+.gif-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
