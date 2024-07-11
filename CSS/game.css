@@ -128,16 +128,31 @@ td:hover {
 }
 
 
-
-#id_home{
+#id_home {
   background-image: url("../Images/bannerGames.png");
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-  size: 5em;
   
-  text-shadow: 0px 0px  .5em white,0px 0px  .75em white,  0px 0px  1em white;
+  /* Stretch the background image to cover full width and height */
+  background-size: 100% 100%;
+  
+  /* Center the image */
+  background-position: center;
+  
+  /* Ensure the image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Ensure the element expands to the full width */
+  width: 100%;
+  height: auto; /* Adjust height as needed */
 
-  }
+  /* Padding or other styling */
+  padding: 20px;
+
+  /* Text styling */
+  font-size: 5em;
+  text-shadow: 0px 0px 0.5em rgb(0, 0, 0), 0px 0px 0.75em rgb(0, 0, 0), 0px 0px 1em rgb(0, 0, 0);
+}
+
 
   strong {
 

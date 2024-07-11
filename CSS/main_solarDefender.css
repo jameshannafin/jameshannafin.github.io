@@ -1,0 +1,43 @@
+
+.boxShad1 {
+    box-shadow: inset 0px 0px .5em .5em black, inset 0px 0px 1em .5em black;
+	}
+
+p, h2,h3,h4,h5, li {
+
+	color: rgb(252, 248, 0);
+}
+      
+h1 {
+
+text-shadow: 0px 0px 10px rgb(246, 255, 0);
+text-shadow: 0px 0px 30px rgb(255, 255, 255);
+}
+
+body {
+background-image: url("../Images/SolarDef/stars.png");
+background-repeat: repeat;
+
+}
+
+.class_description {
+
+	color: white;
+
+}
+
+.link {
+
+	text-decoration-line: underline;
+}
+
+.card {
+
+	background-color: black;
+}
+
+.footer{
+
+	text-align: center;
+	position: relative;
+}
