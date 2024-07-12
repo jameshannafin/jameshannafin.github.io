@@ -10,6 +10,7 @@
 
    <link rel="stylesheet" type="text/css" href="../CSS/game.css">
     
+
     <title>Game Showcase</title>
 <style>
   .gray{    background-color: dimgrey;
@@ -60,18 +61,18 @@
                 <li class="nav-item active">
                   <a class="nav-link text-light active" href="./Games/index_sirensAbyss.html">Sirens Abyss</a>
                 </li>
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                   <a class="nav-link text-light active" href="./Games/index_coursePlot.html">Port Pass</a>
-                </li>
+                </li> -->
                 <li class="nav-item active">
                   <a class="nav-link text-light active" href="./Games/index_voidnaughts.html">Brave Aquanauts</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link text-light active" href="./Games/index_solarDefender.html">Solar Defender</a>
                 </li>
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                   <a class="nav-link text-light active" href="./Games/index_heloHeros.html">Helo Heroes</a>
-                </li>
+                </li> -->
                 <li class="nav-item active">
                   <a class="nav-link text-light active" href="./Games/index_dream.html">3:33AM</a>
                 </li>
@@ -88,7 +89,7 @@
         
         <div id="id_home" class="jumbotron jumbotron-fluid bg-info text-center bg boxShad  ">
           <div class="container ">
-            <br>
+            <br>    
             <h1 class="display-4 text-light text1">Games</h1>
             <p class="lead text-light">by James Hannafin</p>
             <br>
@@ -98,8 +99,15 @@
 
         <div class="container">
           <div class="row"><!--This dif makes a new row in which to add collumns-->
+
             <div class="col-sm"><!--A collumn with a picture of the theatre-->
-              <img class="img-fluid" src="../Images/games.png" alt="">
+				
+				<div id="slideShow">
+					<img class="slide" src="../Images/Cards/abyssCard1.png" alt="Slide 1">
+					<img class="slide" src="../Images/Cards/abyssCard2.png" alt="Slide 2">
+					<img class="slide" src="../Images/Cards/dreamCard2.png" alt="Slide 3">
+				</div>
+
             </div>
 
             <div class="col-sm txtWht"> <!--A collumn with a desciption of the theatre-->
@@ -635,7 +643,10 @@
       </div>
       <!--/Footer-->
 
-      
+
+      	  <!-- MY CUSTOM JS -->
+	  <script src="../JS/main_games.js"></script>
+   
       <!-- Option 1: Bootstrap Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

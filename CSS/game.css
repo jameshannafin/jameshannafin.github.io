@@ -129,7 +129,7 @@ td:hover {
 
 
 #id_home {
-  background-image: url("../Images/bannerGames.png");
+  background-image: url("../Images/Banners/bannerGames.png");
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   
   /* Stretch the background image to cover full width and height */
@@ -160,3 +160,33 @@ td:hover {
   
 
   }
+
+
+  /*  */
+  #slideShow {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+
+
+
+ #slider {
+  opacity:1;
+  transition: opacity 1s; 
+}
+
+#slider.fadeOut {
+  opacity:0;
+}
