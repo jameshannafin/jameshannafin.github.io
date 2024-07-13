@@ -1,0 +1,35 @@
+p, h3{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 4 rgb(138, 231, 245);
+  }
+  
+  .blk{    
+    background-color: rgb(16, 16, 16);
+  
+  }
+  
+  footer {
+      text-align: center;
+      position: relative;
+      font-size: 1.5em;
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 4 rgb(138, 231, 245);
+      content: center;
+  }
+  
+  .bg{    background-color: rgba(0, 255, 242, 0.43);
+    backdrop-filter: blur(6px);
+  }
+  
+  body {
+  background-image: url("../Images/BRAVEAQUANAUGHTS/braveAquanauts1.png");
+  background-repeat: repeat;
+  }
+  
+  .game-info {
+      margin: 2px 0; /* Adjust the top and bottom margin as needed */
+      padding: 0; /* Remove any padding if necessary */
+      text-align: left;
+     margin-left: 12em;
+  }
+  
