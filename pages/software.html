@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #333333, #1a1a1a);
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-header {
+            font-size: 3em;
+            margin: 40px 0 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            padding: 20px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .section-header {
+            font-size: 2em;
+            margin: 30px 0 10px;
+            text-align: center;
+            color: #00bfff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #00bfff;
+            font-size: 1.2em;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+        a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 5px #ffffff;
+        }
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer-button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+            background-color: #00bfff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .footer-button:hover {
+            background-color: #008fbf;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header -->
+    <h1 class="main-header">Software Development</h1>
+
+    <div class="container">
+        <!-- Domains Section -->
+        <div class="section-header">
+            <h2>Domains</h2>
+        </div>
+        <ul>
+            <li><a href="#">Anomolous Games (Functional Ecommerce Site, coded with snipcart)</a></li>
+            <li><a href="#">Firms Index (Open Source of Freight Information)</a></li>
+        </ul>
+
+        <!-- Web Pages Section -->
+        <div class="section-header">
+            <h2>Web Pages</h2>
+        </div>
+        <ul>
+            <li><a href="#">Full Portfolio</a></li>
+            <li><a href="#">Videos Page</a></li>
+            <li><a href="#">3d Designs Page</a></li>
+            <li><a href="#">Web Page Link 4</a></li>
+            <li><a href="#">Web Page Link 5</a></li>
+        </ul>
+
+        <!-- Programs Section -->
+        <div class="section-header">
+            <h2>Programs</h2>
+        </div>
+        <ul>
+            <li><a href="#">Sound Synthesizer</a></li>
+            <li><a href="#">Freight Managament</a></li>
+            <li><a href="#">Vocabulary Memorization</a></li>
+            <li><a href="#">More Programs</a></li>
+        </ul>
+
+        <!-- Games Section -->
+        <div class="section-header">
+            <h2>Games</h2>
+        </div>
+        <ul>
+            <li><a href="#">Solar Defender</a></li>
+            <li><a href="#">Sirens Abyss</a></li>
+            <li><a href="#">Dr3:AM</a></li>
+            <li><a href="#">More Games</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Buttons -->
+    <div class="footer-buttons">
+        <button class="footer-button" onclick="history.back()">Portfolio</button>
+        <button class="footer-button" onclick="window.location.href='mailto:contact@example.com'">Contact</button>
+    </div>
+
+    <br>
+    <br>
+
+</body>
+</html>
