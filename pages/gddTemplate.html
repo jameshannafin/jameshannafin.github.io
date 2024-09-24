@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Design Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .toggle-button {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle-button::before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background-color: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+        .toggle-button.dark-mode {
+            background-color: #007bff;
+        }
+        .toggle-button.dark-mode::before {
+            transform: translateX(30px);
+        }
+        h1, h2, h3, p {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 1s forwards;
+        }
+        h1 {
+            animation-delay: 0.2s;
+        }
+        h2 {
+            animation-delay: 0.4s;
+        }
+        h3 {
+            animation-delay: 0.6s;
+        }
+        p {
+            animation-delay: 0.8s;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #007bff;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+        .arrow {
+            font-size: 1.5em;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="https://www.youtube.com" class="arrow">←</a>
+        </nav>
+
+        <h1>Game Design Document</h1>
+
+        <div class="navbar">
+
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#gameplay">Gameplay Mechanics</a>
+                <a href="#story">Story</a>
+                <a href="#characters">Characters</a>
+            </nav>
+            <div class="toggle-button" onclick="toggleDarkMode()"></div>
+        </div>
+
+        <h2>Game Title: Awesome Game</h2>
+        <h3 id="overview">Overview</h3>
+        <p>This document outlines the design for the game "Awesome Game". It includes details on gameplay mechanics, story, characters, and more.</p>
+        <h3 id="gameplay">Gameplay Mechanics</h3>
+        <p>The game will feature a mix of action and puzzle-solving elements. Players will navigate through various levels, each with unique challenges and enemies.</p>
+        <h3 id="story">Story</h3>
+        <p>The story follows the protagonist on a quest to save their world from an impending threat. Along the way, they will encounter allies and adversaries, each with their own backstory.</p>
+        <h3 id="characters">Characters</h3>
+        <p>Key characters include the protagonist, their mentor, and the main antagonist. Each character will have distinct abilities and personalities.</p>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.toggle-button').classList.toggle('dark-mode');
+        }
+
+        window.onload = function() {
+            setTimeout(toggleDarkMode, 2000);
+        }
+    </script>
+</body>
+</html>

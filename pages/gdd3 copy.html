@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Design Overview</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #b3aeae;
+            color: #361616;
+            padding: 0;
+            margin: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #813131;
+        }
+
+        .container {
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #252525;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-weight: 600;
+            margin-right: 30px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff5555;
+        }
+
+        .toggle-button {
+            width: 50px;
+            height: 25px;
+            background-color: #ff5555;
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button::before {
+            content: '';
+            width: 22px;
+            height: 22px;
+            background-color: #1b1b1b;
+            border-radius: 50%;
+            position: absolute;
+            top: 1.5px;
+            left: 1.5px;
+            transition: transform 0.3s;
+        }
+
+        .toggle-button.dark-mode {
+            background-color: #ff3333;
+        }
+
+        .toggle-button.dark-mode::before {
+            transform: translateX(24px);
+        }
+
+        /* Main content */
+        .content {
+            padding: 100px 30px 30px 30px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        h1 {
+            animation-delay: 0.2s;
+        }
+
+        h2 {
+            animation-delay: 0.4s;
+        }
+
+        h3 {
+            animation-delay: 0.6s;
+        }
+
+        p {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Links and hover animations */
+        .navbar .arrow {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar .arrow:hover {
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html">🏠 Home</a>
+        <a href="gallery.html">🖼 Gallery</a>
+        <a href="contact.html">📞 Contact</a>
+        <a href="gdd.html">📜 Game Design</a>
+        <a href="https://www.youtube.com" class="arrow">←</a>
+        <div class="toggle-button" onclick="toggleDarkMode()"></div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="content">
+        <h1>Game Design Overview</h1>
+
+        <h2>Game Title: The Epic Quest</h2>
+        <h3 id="overview">Overview</h3>
+        <p>This document outlines the core design principles for the game "The Epic Quest". Explore mechanics, storylines,
+            and character development within this dynamic RPG universe.</p>
+        <h3 id="gameplay">Gameplay Mechanics</h3>
+        <p>Engage in a strategic combat system where tactical decisions will impact your progress through each stage.
+            Levels are designed to challenge players with puzzle-like encounters.</p>
+        <h3 id="story">Story</h3>
+        <p>Follow the hero’s journey to rescue their homeland from an ancient evil. Along the way, meet allies, battle
+            enemies, and make critical choices that will alter the game’s outcome.</p>
+        <h3 id="characters">Characters</h3>
+        <p>The protagonist, a fearless knight, will be joined by a mystical mage and a cunning rogue. Each has unique
+            abilities that can be leveraged in combat and exploration.</p>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.toggle-button').classList.toggle('dark-mode');
+        }
+
+        window.onload = function () {
+            setTimeout(toggleDarkMode, 1000);
+        }
+    </script>
+</body>
+
+</html>
