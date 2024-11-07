@@ -1,0 +1,47 @@
+
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  
+  }
+  
+  .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/coffeehouse.jpg");
+    min-height: 75%;
+  }
+  
+  
+  .menu {
+    display: none;
+  }
+  
+  /* Additional styles for the table */
+  .kf_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+  }
+  
+  .kf_table th, .kf_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  
+  }
+  
+  .kf_table th {
+  
+    cursor: pointer;
+  }
+  
+  .kf_table a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .kf_table a:hover {
+    color: #ff572f;
+  }

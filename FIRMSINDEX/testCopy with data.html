@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firms Index</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Inconsolata', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .w3-button {
+      font-size: 1.2em;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #444;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #444;
+      color: white;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Button styling */
+    .button {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00509d;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Firms Index</h1>
+    <p>Your global logistics partner</p>
+  </header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#vessels">Vessels</a>
+    <a href="#ports">Ports</a>
+    <a href="#lines">Steamship Lines</a>
+    <a href="#rail">Rail Tracking</a>
+  </div>
+
+  <!-- Vessels Section -->
+  <section id="vessels" class="w3-padding-large">
+    <h2>Vessel Tracking</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Website</th>
+      </tr>
+      <tr>
+        <td>Marine Traffic</td>
+        <td><a href="https://www.marinetraffic.com" target="_blank">marinetraffic.com</a></td>
+      </tr>
+      <tr>
+        <td>Vessel Finder</td>
+        <td><a href="https://www.vesselfinder.com" target="_blank">vesselfinder.com</a></td>
+      </tr>
+      <tr>
+        <td>My Ship Tracking</td>
+        <td><a href="https://www.myshiptracking.com" target="_blank">myshiptracking.com</a></td>
+      </tr>
+      <tr>
+        <td>Fleet Mon</td>
+        <td><a href="https://www.fleetmon.com" target="_blank">fleetmon.com</a></td>
+      </tr>
+      <tr>
+        <td>Ship Spotting</td>
+        <td><a href="https://www.shipspotting.com" target="_blank">shipspotting.com</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Ports Section -->
+  <section id="ports" class="w3-padding-large">
+    <h2>Ports and Terminals</h2>
+    <table>
+      <tr>
+        <th>Terminal</th>
+        <th>FIRMS Code</th>
+        <th>Website</th>
+        <th>Region</th>
+      </tr>
+      <tr>
+        <td class="shadows">APM PORT ELIZABETH</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E425</td>
+        <td><a class="boxText" target="_blank" href="https://www.apmterminals.com/en/port-elizabeth"> APM </a>
+        </td>
+        <td>New York / EWR</td>
+
+      </tr>
+
+      <tr>
+        <td>Ben E. Nutter Terminal</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y738</td>
+        <td><a class="boxText" target="_blank" href="https://www.etslink.com/"> Ben E. Nutter </a></td>
+        <td>Oakland</td>
+
+      </tr>
+
+      <tr>
+        <td>Garden City Terminal (Savannah)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">L737</td>
+        <td><a class="boxText" target="_blank" href="http://webaccess.gaports.com/express/index.jsp"> GCT
+            SAVANNAH </a></td>
+        <td> Georgia</td>
+
+      </tr>
+
+      <tr>
+        <td>GCT Bayonne</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E364</td>
+        <td><a class="boxText" target="_blank"
+            href="https://payments.gcterminals.com/GlobalTerminal/globalSearch.do"> GCT Bayonne </a></td>
+        <td>New York / EWR</td>
+
+      </tr>
+
+      <tr>
+        <td>GCT New York</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E005</td>
+        <td><a class="boxText" target="_blank" href="https://globalterminalsnewyork.com/"> GCT NY </a></td>
+        <td>New York</td>
+
+      </tr>
+
+      <tr>
+        <td>ETS Link LAX OAK </td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y738 </td>
+        <td><a class="boxText" target="_blank" href="https://www.etslink.com/"> ETS Link </a> </td>
+        <td>Los Angelos / San Pedro</td>
+
+      </tr>
+
+      <tr>
+        <td>Evergreen America - Terminal Island Berth 233</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">1515</td>
+        <td><a class="boxText" target="_blank" href="https://www.evergreenforestproductsinc.com/terminals">
+            Evergreen </a> </td>
+        <td>Los Angelos / San Pedro</td>
+
+      </tr>
+
+      <tr>
+        <td>Fenix Eagle Marine Services</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y257</td>
+        <td><a class="boxText" target="_blank" href="https://fenixmarine.voyagecontrol.com/dashboard/welcome/">
+            Fenix Eagle </a> </td>
+        <td>Los Angelos / San Pedro</td>
+
+
+      </tr>
+
+      <tr>
+        <td>ITS</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y309</td>
+        <td><a class="boxText" target="_blank" href="https://tms.itslb.com/tms2/Import/ContainerAvailability">
+            International </a> </td>
+        <td>Los Angelos / San Pedro</td>
+
+      </tr>
+
+      <tr>
+        <td>Long Beach Container Terminal</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">**W183**</td>
+        <td><a class="boxText" target="_blank" href="https://www.lbct.com/Home/Default"> Long Beach CT </a>
+        </td>
+        <td>Los Angelos / San Pedro</td>
+
+      </tr>
+
+      <tr>
+        <td>Evergreen America - Tacoma</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">X215</td>
+        <td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=EGA_PCT">
+            Evergreen </a> </td>
+        <td>New York</td>
+    
+
+      </tr>
+
+      <tr>
+        <td>Maher NY 6</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E416</td>
+        <td><a class="boxText" target="_blank" href="https://www.maherterminals.com/"> Maher </a> </td>
+        <td>New York / EWR</td>
+    
+      </tr>
+
+      <tr>
+        <td>New Orleans Terminal</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Q795</td>
+        <td><a class="boxText" target="_blank" href="https://nol.tideworks.com/fc-NOL/default.do"> New Orleans
+          </a> </td>
+        <td>New Orleans</td>
+
+      </tr>
+
+
+      <tr>
+        <td>NIT</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">N195</td>
+        <td><a class="boxText" target="_blank" href="https://www.propassva.com/Account/Register.aspx"> NIT </a>
+        </td>
+        <td>Norfolk</td>
+
+      </tr>
+
+
+
+      <tr>
+        <td>Pacific Container Terminal Pier J</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">W182</td>
+        <td><a class="boxText" target="_blank" href="http://pct.tideworks.com/fc/default.do"> Pacific Container
+            Terminal </a></td>
+        <td>New York</td>
+    
+      </tr>
+
+      <tr>
+        <td>Ports of America - Oakland </td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">W297</td>
+        <td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=PAO_OAK"> PORTS
+            AMERICA </a></td>
+        <td>Oakland</td>
+  
+      </tr>
+
+      <tr>
+        <td>Port Newark CT</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">F577</td>
+        <td><a class="boxText" target="_blank" href="https://www.pnct.net/">PNCT</a> </td>
+        <td>New Jersey / NYC</td>
+  
+      </tr>
+
+
+
+      <tr>
+        <td>Port of Portland - Terminal 6</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">X005</td>
+        <td><a class="boxText" target="_blank" href="https://pop.tideworks.com/fc-POP/default.do"> Portland </a>
+        </td>
+        <td>Portland</td>
+
+      </tr>
+
+
+      <tr>
+        <td>SSA TERMINAL 18</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">X117</td>
+        <td><a class="boxText" target="_blank" href="https://t18.tideworks.com/fc-T18/default.do"> SSA </a>
+        </td>
+        <td>Oakland</td>
+    
+      </tr>
+
+      <tr>
+        <td>Total Terminals Hanjin - Oakland </td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Z855</td>
+        <td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=TTI_OAK"> Hanjin
+          </a></td>
+        <td>Oakland</td>
+  
+      </tr>
+
+      <tr>
+        <td>TRAPAC (OAKLAND)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y549
+        <td><a class="boxText" target="_blank" href="http://www.trapac.com/"> Trapac OAK</a></td>
+        <td>Oakland</td>
+  
+      </tr>
+
+
+      <tr>
+        <td>TRAPAC (LOS ANGELES)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y258</td>
+        <td><a class="boxText" target="_blank" href="http://www.trapac.com/ "> Trapac LA </a></td>
+        <td>Los Angelos / San Pedro</td>
+  
+      </tr>
+
+      <tr>
+        <td>Total Terminals</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Z952</td>
+        <td><a class="boxText" target="_blank" href="https://www.totalterminals.com/"> Total Terminals </a>
+        </td>
+        <td>Los Angelos / San Pedro </td>
+
+      </tr>
+
+      <tr>
+        <td>OCT - Tacoma</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y316</td>
+        <td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=OCT_TAC"> OCT
+          </a> </td>
+        <td>OAKLAND</td>
+  
+      </tr>
+
+      <tr>
+        <td>OAKLAND INTERNATIONAL</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y773</td>
+        <td><a class="boxText" target="_blank"
+            href="https://b58.tideworks.com/fc-OICT/import/default.do">OICT</a> </td>
+        <td>OAKLAND</td>
+
+      </tr>
+
+      <tr>
+        <td>Virginia Int'l Terminal</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">N195</td>
+        <td><a class="boxText" target="_blank" href="http://www.vit.org/WebReports/ACT_Console.aspx "> Virginia
+            Int'l Terminal </a> </td>
+        <td>Virginia</td>
+  
+      </tr>
+
+
+      <tr>
+        <td>WANDA WELCH</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">N598</td>
+        <td><a class="boxText" target="_blank" href="https://goport.scspa.com/scspa/"> Wanda (SOUTH CARALINA
+            PORTS) </a> </td>
+        <td>Oakland</td>
+  
+      </tr>
+
+
+      <tr>
+        <td>West Basin</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y773</td>
+        <td><a class="boxText" target="_blank"
+            href="https://voyagertrack.portsamerica.com/?_=637951051920667123"> West Basin </a> </td>
+        <td>Oakland</td>
+  
+      </tr>
+
+      <tr>
+        <td>WEST BASIN CONTAINER TERMINAL</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y773</td>
+        <td><a class="boxText" target="_blank"
+            href="https://voyagertrack.portsamerica.com/logon?siteId=WBCT_LA&_=637981525682400447"> West
+            Basin </a></td>
+        <td> Oakland </td>
+
+      </tr>
+
+      <tr>
+        <td>Yusen</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y790</td>
+        <td><a class="boxText" target="_blank" href="https://yti.com/">Yusen</a></td>
+        <td> Oakland </td>
+
+      </tr>
+
+      <tr>
+        <td>More Terminals</td>
+        <td class="firmsCode">More Terminals</td>
+        <td><a href="index_terminals.html">More Terminals</a></td>
+        <td> </td>
+    
+      </tr>
+    </table>
+  </section>
+
+  <!-- Lines Section -->
+  <section id="lines" class="w3-padding-large">
+    <h2>Steamship Lines</h2>
+    <table>
+      <tr>
+        <th>Line</th>
+        <th>SCAC Code</th>
+        <th>Website</th>
+        <th>Phone</th>
+      </tr>
+      <tr>
+	
+        <td>America President Line</td>
+        <td class="scac">APLU</td>
+        <td><a target="_blank" href="http://www.apl.com/tracking/"> New Orleans </a> </td>
+        <td> 9-1-(787)-749-0399 </td>
+
+  
+
+      </tr>
+
+
+
+      <tr>
+        <td>China Shipping</td>
+        <td class="scac">CHHK</td>
+        <td><a target="_blank" href="http://222.66.158.204/module/csp/index.jsp?userside=WAN&do&mod=CSP"> China
+            Shipping </a> </td>
+        <td> 9-1-(201)-505-6900 </td>
+  
+    
+      </tr>
+
+      <tr>
+        <td>CMA-CGM</td>
+        <td class="scac">CMDU</td>
+        <td><a target="_blank" href="http://www.cma-cgm.com/eBusiness/Tracking/Default.aspx">CMA-CGM</a> </td>
+        <td> 9-1-(877)-556-6308 </td>
+
+  
+      </tr>
+
+
+      <tr>
+        <td>Evergreen</td>
+        <td class="scac">EGLV</td>
+        <td><a target="_blank" href="http://www.shipmentlink.com/servlet/TDB1_CargoTracking.do">Evergreen</a>
+        </td>
+        <td> 9-1-(972)-764-1350 </td>
+  
+
+      </tr>
+
+
+      <tr>
+        <td>Hanjin Shipping</td>
+        <td class="scac">HJSC</td>
+        <td><a target="_blank" href="http://www.hanjin.com/en/main.jsp">Hanjin Shipping </a> </td>
+
+
+      </tr>
+
+
+      <tr>
+        <td>Hapag Lloyd</td>
+        <td class="scac">HLCU</td>
+        <td><a target="_blank" href="http://www.hapag-lloyd.com/en/index.html">Hapag Lloyd </a> </td>
+        <td> 9-1-(877)-818-1019 </td>
+
+  
+      </tr>
+
+
+      <tr>
+        <td>K-Line</td>
+        <td class="scac">KKLU</td>
+        <td><a target="_blank" href="http://app2.kline.com/GctApp/search?id=tracker">K-Line</a> </td>
+        <td> 9-1-(718)-807-3200 </td>
+      
+
+      </tr>
+
+
+      <tr>
+        <td>Maersk Line</td>
+        <td class="scac">MAEU</td>
+        <td><a target="_blank" href="http://www.maerskline.com/appmanager/">Maersk Line</a> </td>
+        <td> 9-1-(800)-321-8807 </td>
+    
+  
+      </tr>
+
+      <tr>
+        <td>Mediteranean Shipping Co.</td>
+        <td class="scac">MSCU</td>
+        <td><a target="_blank" href="http://www.mscgva.ch/tracking/tracking_login.html">Mediteranean Shipping
+            Co.</a> </td>
+        <td> 9-1-847-376-5718 </td>
+    
+      
+      </tr>
+
+      <tr>
+        <td>United Arab</td>
+        <td class="scac">UASU</td>
+        <td><a target="_blank" href="http://www.uasc.com.kw/index.asp">United Arab</a> </td>
+        <td> 9-1-447-234-5678-910 </td>
+  
+      </tr>
+
+      <tr>
+        <td>Yang Ming</td>
+        <td class="scac">YMLU</td>
+        <td><a target="_blank"
+            href="https://www.yangming.com/e-service/track_trace/track_trace_cargo_tracking.aspx">Yang
+            Ming</a> </td>
+        <td> 9-1-(201)-420-5800 </td>
+
+
+      </tr>
+
+      <tr>
+        <td>Zim Line</td>
+        <td class="scac">ZIMU SSPH</td>
+        <td><a target="_blank" href="http://www.zim.com/Default.aspx?l=4">Zim Line </a> </td>
+        <td> 9-1-(866)-744-7036 </td>
+  
+      
+      </tr>
+
+      <tr>
+        <td>Wan Hai</td>
+        <td class="scac">WHLC</td>
+        <td><a target="_blank" href="https://www.wanhai.com/views/Main.xhtml"> Wan Hai</a> </td>
+        <td> 9-1-(866)-492-6984 </td>
+  
+    
+      </tr>
+
+      <tr>
+        <td>One Line</td>
+        <td class="scac">ONEY</td>
+        <td><a target="_blank" href="https://ecomm.one-line.com/one-ecom/manage-shipment/cargo-tracking">One
+            Line </a> </td>
+        <td> 9-1-(844)-413-6029 </td>
+  
+    
+      </tr>
+
+      <tr>
+        <td>MSC</td>
+        <td class="scac">MEDU</td>
+        <td><a target="_blank" href="https://www.msc.com/en/track-a-shipment">MSC </a> </td>
+        <td> 9-1-(847)-376-5718 </td>
+  
+  
+      </tr>
+
+      <tr>
+        <td>Hyundai Marine Traffic </td>
+        <td class="scac">HDMU</td>
+        <td><a target="_blank" href=" http://www.hmm21.com/cms/company/engn/index.jsp ">Hyundai</a> </td>
+        <td> 9-1-(877)-749-8632 </td>
+    
+      </tr>
+
+      <tr>
+        <td>COSCO</td>
+        <td class="scac">COSU</td>
+        <td><a target="_blank" href="https://world.lines.coscoshipping.com/">COSCO</a> </td>
+        <td> 9-1-(866)-502-6726 </td>
+
+  
+      </tr>
+
+
+
+      <tr>
+        <td>TRANSFAR / NORTON LILLY </td>
+        <td class="scac">TJFH</td>
+        <td><a target="_blank" href="http://www.transfarshipping.com/#/tracking"> Transfar </a> </td>
+        <td> 9-1-(251)-219-3272 </td>
+  
+    
+      </tr>
+
+
+      <tr>
+        <td>OOCL</td>
+        <td class="scac">OOLU</td>
+        <td><a target="_blank"
+            href="https://www.oocl.com/eng/ourservices/eservices/cargotracking/Pages/cargotracking.aspx">
+            Oreent Oversees </a> </td>
+        <td> 9-1-(888)-388-6625 </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Rail Section -->
+  <section id="rail" class="w3-padding-large">
+    <h2>Rail Tracking</h2>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>FIRMS Code</th>
+        <th>Website</th>
+      </tr>
+      <tr>
+        <td>BNSF</td>
+        <td>T926</td>
+        <td><a href="https://www.bnsf.com" target="_blank">bnsf.com</a></td>
+      </tr>
+      <tr>
+        <td>Union Pacific</td>
+        <td>E425</td>
+        <td><a href="https://www.up.com" target="_blank">unionpacific.com</a></td>
+      </tr>
+      <tr>
+        <td>Norfolk Southern</td>
+        <td>----</td>
+        <td><a href="https://www.norfolksouthern.com" target="_blank">norfolksouthern.com</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Firms Index. All Rights Reserved.</p>
+  </footer>
+
+
+  
+
+
+</body>
+
+
+
+</html>

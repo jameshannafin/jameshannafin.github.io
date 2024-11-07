@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firms Index</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Inconsolata', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .w3-button {
+      font-size: 1.2em;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #444;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #444;
+      color: white;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Button styling */
+    .button {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00509d;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Firms Index</h1>
+    <p>Your global logistics partner</p>
+  </header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#vessels">Vessels</a>
+    <a href="#ports">Ports</a>
+    <a href="#lines">Steamship Lines</a>
+    <a href="#rail">Rail Tracking</a>
+  </div>
+
+  <!-- Vessels Section -->
+  <section id="vessels" class="w3-padding-large">
+    <h2>Vessel Tracking</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Website</th>
+      </tr>
+      <tr>
+        <td>Marine Traffic</td>
+        <td><a href="https://www.marinetraffic.com" target="_blank">marinetraffic.com</a></td>
+      </tr>
+
+    </table>
+  </section>
+
+  <!-- Ports Section -->
+  <section id="ports" class="w3-padding-large">
+    <h2>Ports and Terminals</h2>
+    <table>
+      <tr>
+        <th>Terminal</th>
+        <th>FIRMS Code</th>
+        <th>Website</th>
+        <th>Region</th>
+      </tr>
+      <tr>
+        <td class="shadows">APM PORT ELIZABETH</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E425</td>
+        <td><a class="boxText" target="_blank" href="https://www.apmterminals.com/en/port-elizabeth"> APM </a>
+        </td>
+        <td>New York / EWR</td>
+
+      </tr>
+
+
+    </table>
+  </section>
+
+  <!-- Rail Section -->
+  <section id="rail" class="w3-padding-large">
+    <h2>Rail Tracking</h2>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>FIRMS Code</th>
+        <th>Website</th>
+      </tr>
+      <tr>
+        <td>BNSF</td>
+        <td>T926</td>
+        <td><a href="https://www.bnsf.com" target="_blank">bnsf.com</a></td>
+      </tr>
+
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Firms Index. All Rights Reserved.</p>
+  </footer>
+
+
+  
+
+
+</body>
+
+
+
+</html>

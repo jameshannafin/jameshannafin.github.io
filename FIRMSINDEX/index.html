@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Firms Index</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+span{
+font-size: small;
+}
+
+th{
+  font-weight: 600;
+  font-size: 1.3em;
+  background-color:#666666;
+    color: #000000;
+}
+
+td.a{
+ color:#0000FF;   
+}
+html, body, table,div {
+    background-color:#666666;
+    color: #FFFFFF;
+}
+
+.fade{
+	box-shadow: 0px 10px 20px 10px rgb(0, 0, 0);}
+
+	.stick{
+		position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  height: auto;
+	}
+
+	.bg_black{
+		background-color:#000000;
+	}
+</style>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDVBDFMZ4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SDVBDFMZ4N');
+</script>
+
+</head>
+
+
+
+<body>
+    
+
+
+
+
+
+<!-- Header with image -->
+<header class="bg_black  w3-display-container " id="home">
+
+		<div class=" bg_black">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div class="bg_black w3-display-center w3-center w3-padding-large w3-hide-small">
+				<h1><b>firmsindex.com</b> </h1>
+				<br id="vessels">
+			</div>
+
+		</div>
+
+		
+
+	
+
+
+</header>
+
+
+
+  
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-large "><!-- w3-grayscale-->
+
+	
+	<!-- Links (sit on top) -->
+<div class="stick bg_black fade">
+	<!-- <div class=" w3-row w3-padding w3-black">
+		<div class="w3-col  w3-center">
+			<a href="#home" class="w3-button w3-block w3-black">HOME</a>
+		</div>
+	</div> -->
+	<div class="w3-row w3-padding w3-black">
+		<div class="w3-col s3">
+			<a href="#vessels" class="w3-button w3-block w3-black">Vessels</a>
+		</div>
+		<div class="w3-col s3">
+			<a href="#ports" class="w3-button w3-block w3-black">Ports</a>
+		</div>
+		<div class="w3-col s3">
+			<a href="#lines" class="w3-button w3-block w3-black">Lines</a>
+		</div>
+		<div class="w3-col s3">
+			<a href="#rail" class="w3-button w3-block w3-black">Rail</a>
+		</div>
+	</div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+ <div class="w3-cell-row">
+     
+     <div class="w3-container w3-red w3-cell">
+  <p>Your ad here!</p>
+</div>
+
+
+  <!-- Table: Vessels -->
+  <div class="w3-padding w3-cell-middle">
+    <h2><b>Vessel Tracking</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table id="tbl_vessels" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      <tr>
+        <th onclick="ft_sort(0,'tbl_vessels')">Name</th>
+        <th onclick="ft_sort(2,'tbl_vessels')">Website</th>
+
+      </tr>
+      
+      <tr>
+        <td class="shadows">Marine Traffic</td>
+        <td><a class="" target="_blank" href="https://www.marinetraffic.com/en/ais/home/centerx:-73.7/centery:39.8/zoom:10">marinetraffic.com</a></td>
+      </tr>
+      
+      <tr>
+        <td class="shadows">Vessel Finder</td>
+        <td><a class="" target="_blank" href="https://www.marinetraffic.com/en/ais/home/centerx:-73.7/centery:39.8/zoom:10">vesselfinder.com</a></td>
+      </tr>
+      
+            <tr>
+        <td class="shadows">My Ship Tracking</td>
+        <td><a class="" target="_blank" href="https://www.myshiptracking.com/">myshiptrackibg.com</a></td>
+      </tr>
+      
+            <tr>
+        <td class="shadows">Fleet Mon</td>
+        <td><a class="boxText" target="_blank" href="https://www.fleetmon.com/">fleetmon.com</a></td>
+      </tr>
+      
+            <tr>
+        <td class="shadows">Ship Spotting</td>
+        <td><a class="boxText" target="_blank" href="https://www.shipspotting.com/">shipspotting.com</a></td>
+      </tr>
+      
+
+      
+    </table>
+  </div>
+
+     <div class="w3-container w3-red w3-cell">
+  <p>Your ad here!</p>
+</div>
+
+
+</div>
+<!--end row-->
+
+  <br id="ports" >
+  <br>
+  <br>
+    <br>
+
+
+ <!-- Table: Ports -->
+ <div class="w3-cell-row">
+
+
+  <div class="w3-padding w3-cell-middle">
+    <h2><b>Ports and Terminals</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table  id="tbl_ports" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      <tr>
+        <th onclick="ft_sort(0,'tbl_ports')">Terminal</th>
+        <th onclick="ft_sort(1,'tbl_ports')">Firms Code</th>
+        <th onclick="ft_sort(2,'tbl_ports')">Website</th>
+        <th onclick="ft_sort(3,'tbl_ports')">Region</th>
+      </tr>
+      
+
+	
+				<tr>
+					<td class="shadows">APM PORT ELIZABETH</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E425</td>
+					<td><a class="boxText" target="_blank" href="https://www.apmterminals.com/en/port-elizabeth"> APM </a>
+					</td>
+					<td>New York / EWR</td>
+
+				</tr>
+	
+				<tr>
+					<td>Ben E. Nutter Terminal</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y738</td>
+					<td><a class="boxText" target="_blank" href="https://www.etslink.com/"> Ben E. Nutter </a></td>
+					<td>Oakland</td>
+	
+				</tr>
+	
+				<tr>
+					<td>Garden City Terminal (Savannah)</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">L737</td>
+					<td><a class="boxText" target="_blank" href="http://webaccess.gaports.com/express/index.jsp"> GCT
+							SAVANNAH </a></td>
+					<td> Georgia</td>
+
+				</tr>
+	
+				<tr>
+					<td>GCT Bayonne</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E364</td>
+					<td><a class="boxText" target="_blank"
+							href="https://payments.gcterminals.com/GlobalTerminal/globalSearch.do"> GCT Bayonne </a></td>
+					<td>New York / EWR</td>
+
+				</tr>
+	
+				<tr>
+					<td>GCT New York</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E005</td>
+					<td><a class="boxText" target="_blank" href="https://globalterminalsnewyork.com/"> GCT NY </a></td>
+					<td>New York</td>
+
+				</tr>
+	
+				<tr>
+					<td>ETS Link LAX OAK </td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y738 </td>
+					<td><a class="boxText" target="_blank" href="https://www.etslink.com/"> ETS Link </a> </td>
+					<td>Los Angelos / San Pedro</td>
+
+				</tr>
+	
+				<tr>
+					<td>Evergreen America - Terminal Island Berth 233</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">1515</td>
+					<td><a class="boxText" target="_blank" href="https://www.evergreenforestproductsinc.com/terminals">
+							Evergreen </a> </td>
+					<td>Los Angelos / San Pedro</td>
+
+				</tr>
+	
+				<tr>
+					<td>Fenix Eagle Marine Services</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y257</td>
+					<td><a class="boxText" target="_blank" href="https://fenixmarine.voyagecontrol.com/dashboard/welcome/">
+							Fenix Eagle </a> </td>
+					<td>Los Angelos / San Pedro</td>
+
+	
+				</tr>
+	
+				<tr>
+					<td>ITS</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y309</td>
+					<td><a class="boxText" target="_blank" href="https://tms.itslb.com/tms2/Import/ContainerAvailability">
+							International </a> </td>
+					<td>Los Angelos / San Pedro</td>
+	
+				</tr>
+	
+				<tr>
+					<td>Long Beach Container Terminal</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">**W183**</td>
+					<td><a class="boxText" target="_blank" href="https://www.lbct.com/Home/Default"> Long Beach CT </a>
+					</td>
+					<td>Los Angelos / San Pedro</td>
+
+				</tr>
+
+				<tr>
+					<td>Evergreen America - Tacoma</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">X215</td>
+					<td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=EGA_PCT">
+							Evergreen </a> </td>
+					<td>New York</td>
+			
+	
+				</tr>
+	
+				<tr>
+					<td>Maher NY 6</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E416</td>
+					<td><a class="boxText" target="_blank" href="https://www.maherterminals.com/"> Maher </a> </td>
+					<td>New York / EWR</td>
+			
+				</tr>
+	
+				<tr>
+					<td>New Orleans Terminal</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Q795</td>
+					<td><a class="boxText" target="_blank" href="https://nol.tideworks.com/fc-NOL/default.do"> New Orleans
+						</a> </td>
+					<td>New Orleans</td>
+	
+				</tr>
+	
+	
+				<tr>
+					<td>NIT</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">N195</td>
+					<td><a class="boxText" target="_blank" href="https://www.propassva.com/Account/Register.aspx"> NIT </a>
+					</td>
+					<td>Norfolk</td>
+	
+				</tr>
+	
+	
+	
+				<tr>
+					<td>Pacific Container Terminal Pier J</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">W182</td>
+					<td><a class="boxText" target="_blank" href="http://pct.tideworks.com/fc/default.do"> Pacific Container
+							Terminal </a></td>
+					<td>New York</td>
+			
+				</tr>
+	
+				<tr>
+					<td>Ports of America - Oakland </td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">W297</td>
+					<td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=PAO_OAK"> PORTS
+							AMERICA </a></td>
+					<td>Oakland</td>
+		
+				</tr>
+	
+				<tr>
+					<td>Port Newark CT</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">F577</td>
+					<td><a class="boxText" target="_blank" href="https://www.pnct.net/">PNCT</a> </td>
+					<td>New Jersey / NYC</td>
+		
+				</tr>
+	
+	
+	
+				<tr>
+					<td>Port of Portland - Terminal 6</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">X005</td>
+					<td><a class="boxText" target="_blank" href="https://pop.tideworks.com/fc-POP/default.do"> Portland </a>
+					</td>
+					<td>Portland</td>
+	
+				</tr>
+	
+	
+				<tr>
+					<td>SSA TERMINAL 18</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">X117</td>
+					<td><a class="boxText" target="_blank" href="https://t18.tideworks.com/fc-T18/default.do"> SSA </a>
+					</td>
+					<td>Oakland</td>
+			
+				</tr>
+	
+				<tr>
+					<td>Total Terminals Hanjin - Oakland </td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Z855</td>
+					<td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=TTI_OAK"> Hanjin
+						</a></td>
+					<td>Oakland</td>
+		
+				</tr>
+	
+				<tr>
+					<td>TRAPAC (OAKLAND)</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y549
+					<td><a class="boxText" target="_blank" href="http://www.trapac.com/"> Trapac OAK</a></td>
+					<td>Oakland</td>
+		
+				</tr>
+	
+	
+				<tr>
+					<td>TRAPAC (LOS ANGELES)</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y258</td>
+					<td><a class="boxText" target="_blank" href="http://www.trapac.com/ "> Trapac LA </a></td>
+					<td>Los Angelos / San Pedro</td>
+		
+				</tr>
+	
+				<tr>
+					<td>Total Terminals</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Z952</td>
+					<td><a class="boxText" target="_blank" href="https://www.totalterminals.com/"> Total Terminals </a>
+					</td>
+					<td>Los Angelos / San Pedro </td>
+	
+				</tr>
+	
+				<tr>
+					<td>OCT - Tacoma</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y316</td>
+					<td><a class="boxText" target="_blank" href="http://www.vtnocal.com/default.asp?SiteID=OCT_TAC"> OCT
+						</a> </td>
+					<td>OAKLAND</td>
+		
+				</tr>
+	
+				<tr>
+					<td>OAKLAND INTERNATIONAL</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y773</td>
+					<td><a class="boxText" target="_blank"
+							href="https://b58.tideworks.com/fc-OICT/import/default.do">OICT</a> </td>
+					<td>OAKLAND</td>
+	
+				</tr>
+	
+				<tr>
+					<td>Virginia Int'l Terminal</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">N195</td>
+					<td><a class="boxText" target="_blank" href="http://www.vit.org/WebReports/ACT_Console.aspx "> Virginia
+							Int'l Terminal </a> </td>
+					<td>Virginia</td>
+		
+				</tr>
+	
+	
+				<tr>
+					<td>WANDA WELCH</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">N598</td>
+					<td><a class="boxText" target="_blank" href="https://goport.scspa.com/scspa/"> Wanda (SOUTH CARALINA
+							PORTS) </a> </td>
+					<td>Oakland</td>
+		
+				</tr>
+	
+	
+				<tr>
+					<td>West Basin</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y773</td>
+					<td><a class="boxText" target="_blank"
+							href="https://voyagertrack.portsamerica.com/?_=637951051920667123"> West Basin </a> </td>
+					<td>Oakland</td>
+		
+				</tr>
+	
+				<tr>
+					<td>WEST BASIN CONTAINER TERMINAL</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y773</td>
+					<td><a class="boxText" target="_blank"
+							href="https://voyagertrack.portsamerica.com/logon?siteId=WBCT_LA&_=637981525682400447"> West
+							Basin </a></td>
+					<td> Oakland </td>
+	
+				</tr>
+	
+				<tr>
+					<td>Yusen</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y790</td>
+					<td><a class="boxText" target="_blank" href="https://yti.com/">Yusen</a></td>
+					<td> Oakland </td>
+	
+				</tr>
+	
+				<tr>
+					<td>More Terminals</td>
+					<td class="firmsCode">More Terminals</td>
+					<td><a href="index_terminals.html">More Terminals</a></td>
+					<td> </td>
+			
+				</tr>
+	
+      
+    </table>
+  </div>
+
+     <div class="w3-container w3-red w3-cell">
+  <p>Your ad here!</p>
+</div>
+
+</div>
+
+
+  <br  id="lines" >
+  <br>
+  <br>
+    <br>
+
+ <!-- Table: Lines/Terminals -->
+  <div class="w3-padding"> 
+    <h2><b>Steamship Lines</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table  id="tbl_lines" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      <tr>
+        <th onclick="ft_sort(0,'tbl_lines')">Line</th>
+        <th onclick="ft_sort(1,'tbl_lines')">SCAC Code</th>
+        <th onclick="ft_sort(2,'tbl_lines')">Website</th>
+        <th onclick="ft_sort(3,'tbl_lines')">Phone</th>
+      </tr>
+      
+	<tr>
+	
+					<td>America President Line</td>
+					<td class="scac">APLU</td>
+					<td><a target="_blank" href="http://www.apl.com/tracking/"> New Orleans </a> </td>
+					<td> 9-1-(787)-749-0399 </td>
+
+		
+	
+				</tr>
+	
+	
+	
+				<tr>
+					<td>China Shipping</td>
+					<td class="scac">CHHK</td>
+					<td><a target="_blank" href="http://222.66.158.204/module/csp/index.jsp?userside=WAN&do&mod=CSP"> China
+							Shipping </a> </td>
+					<td> 9-1-(201)-505-6900 </td>
+		
+			
+				</tr>
+	
+				<tr>
+					<td>CMA-CGM</td>
+					<td class="scac">CMDU</td>
+					<td><a target="_blank" href="http://www.cma-cgm.com/eBusiness/Tracking/Default.aspx">CMA-CGM</a> </td>
+					<td> 9-1-(877)-556-6308 </td>
+	
+		
+				</tr>
+	
+	
+				<tr>
+					<td>Evergreen</td>
+					<td class="scac">EGLV</td>
+					<td><a target="_blank" href="http://www.shipmentlink.com/servlet/TDB1_CargoTracking.do">Evergreen</a>
+					</td>
+					<td> 9-1-(972)-764-1350 </td>
+		
+	
+				</tr>
+	
+	
+				<tr>
+					<td>Hanjin Shipping</td>
+					<td class="scac">HJSC</td>
+					<td><a target="_blank" href="http://www.hanjin.com/en/main.jsp">Hanjin Shipping </a> </td>
+	
+
+				</tr>
+	
+	
+				<tr>
+					<td>Hapag Lloyd</td>
+					<td class="scac">HLCU</td>
+					<td><a target="_blank" href="http://www.hapag-lloyd.com/en/index.html">Hapag Lloyd </a> </td>
+					<td> 9-1-(877)-818-1019 </td>
+
+		
+				</tr>
+	
+	
+				<tr>
+					<td>K-Line</td>
+					<td class="scac">KKLU</td>
+					<td><a target="_blank" href="http://app2.kline.com/GctApp/search?id=tracker">K-Line</a> </td>
+					<td> 9-1-(718)-807-3200 </td>
+				
+
+				</tr>
+	
+	
+				<tr>
+					<td>Maersk Line</td>
+					<td class="scac">MAEU</td>
+					<td><a target="_blank" href="http://www.maerskline.com/appmanager/">Maersk Line</a> </td>
+					<td> 9-1-(800)-321-8807 </td>
+			
+		
+				</tr>
+	
+				<tr>
+					<td>Mediteranean Shipping Co.</td>
+					<td class="scac">MSCU</td>
+					<td><a target="_blank" href="http://www.mscgva.ch/tracking/tracking_login.html">Mediteranean Shipping
+							Co.</a> </td>
+					<td> 9-1-847-376-5718 </td>
+			
+				
+				</tr>
+	
+				<tr>
+					<td>United Arab</td>
+					<td class="scac">UASU</td>
+					<td><a target="_blank" href="http://www.uasc.com.kw/index.asp">United Arab</a> </td>
+					<td> 9-1-447-234-5678-910 </td>
+		
+				</tr>
+	
+				<tr>
+					<td>Yang Ming</td>
+					<td class="scac">YMLU</td>
+					<td><a target="_blank"
+							href="https://www.yangming.com/e-service/track_trace/track_trace_cargo_tracking.aspx">Yang
+							Ming</a> </td>
+					<td> 9-1-(201)-420-5800 </td>
+	
+	
+				</tr>
+	
+				<tr>
+					<td>Zim Line</td>
+					<td class="scac">ZIMU SSPH</td>
+					<td><a target="_blank" href="http://www.zim.com/Default.aspx?l=4">Zim Line </a> </td>
+					<td> 9-1-(866)-744-7036 </td>
+		
+				
+				</tr>
+	
+				<tr>
+					<td>Wan Hai</td>
+					<td class="scac">WHLC</td>
+					<td><a target="_blank" href="https://www.wanhai.com/views/Main.xhtml"> Wan Hai</a> </td>
+					<td> 9-1-(866)-492-6984 </td>
+		
+			
+				</tr>
+	
+				<tr>
+					<td>One Line</td>
+					<td class="scac">ONEY</td>
+					<td><a target="_blank" href="https://ecomm.one-line.com/one-ecom/manage-shipment/cargo-tracking">One
+							Line </a> </td>
+					<td> 9-1-(844)-413-6029 </td>
+		
+			
+				</tr>
+	
+				<tr>
+					<td>MSC</td>
+					<td class="scac">MEDU</td>
+					<td><a target="_blank" href="https://www.msc.com/en/track-a-shipment">MSC </a> </td>
+					<td> 9-1-(847)-376-5718 </td>
+		
+		
+				</tr>
+	
+				<tr>
+					<td>Hyundai Marine Traffic </td>
+					<td class="scac">HDMU</td>
+					<td><a target="_blank" href=" http://www.hmm21.com/cms/company/engn/index.jsp ">Hyundai</a> </td>
+					<td> 9-1-(877)-749-8632 </td>
+			
+				</tr>
+	
+				<tr>
+					<td>COSCO</td>
+					<td class="scac">COSU</td>
+					<td><a target="_blank" href="https://world.lines.coscoshipping.com/">COSCO</a> </td>
+					<td> 9-1-(866)-502-6726 </td>
+	
+		
+				</tr>
+	
+	
+	
+				<tr>
+					<td>TRANSFAR / NORTON LILLY </td>
+					<td class="scac">TJFH</td>
+					<td><a target="_blank" href="http://www.transfarshipping.com/#/tracking"> Transfar </a> </td>
+					<td> 9-1-(251)-219-3272 </td>
+		
+			
+				</tr>
+	
+	
+				<tr>
+					<td>OOCL</td>
+					<td class="scac">OOLU</td>
+					<td><a target="_blank"
+							href="https://www.oocl.com/eng/ourservices/eservices/cargotracking/Pages/cargotracking.aspx">
+							Oreent Oversees </a> </td>
+					<td> 9-1-(888)-388-6625 </td>
+		
+
+				</tr>
+	
+      
+    </table>
+  </div>
+
+  <br id="rail">
+  <br>
+  <br>
+  <br>
+  
+ <!-- Table: Rails/Terminals -->
+  <div class="w3-padding"> 
+    <h2><b>Rail Tracking</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table  id="tbl_rails" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      
+      <tr>
+        <th onclick="ft_sort(0,'tbl_rails')">Company</th>
+        <th onclick="ft_sort(1,'tbl_rails')">Firms Code</th>
+        <th onclick="ft_sort(2,'tbl_rails')">Website</th>
+      </tr>
+      
+      <tr>
+        <td class="shadows">BNSF</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">T926</td>
+        <td><a class="boxText" target="_blank" href="https://bnsf.com/">BNSF</a></td>
+  
+      </tr>
+      
+            <tr>
+        <td class="shadows">Union Pacific (UP)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E425</td>
+        <td><a class="boxText" target="_blank" href="https://www.up.com/index.htm">unionpacific.com</a></td>
+  
+      </tr>
+      
+            <tr>
+        <td class="shadows">Norfolk Southern (NS)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">----</td>
+        <td><a class="boxText" target="_blank" href="https://www.norfolksouthern.com/">norfolksouthern.com</a></td>
+
+      </tr>
+      
+    </table>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+  <label for="shipIdInput">Enter Ship ID (IMO or MMSI): </label>
+  <input type="text" id="shipIdInput" placeholder="Enter Ship ID">
+  <button onclick="searchShip()">Search</button>
+
+  <div id="shipInfoArea">
+    <h2>Ship Information</h2>
+    <p id="shipName">Ship Name: </p>
+    <p id="currentPort">Current Port: </p>
+    <p id="eta">ETA: </p>
+  </div>
+
+
+
+
+
+  <!-- End page content -->
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</body>
+
+<script src="main.js"></script>
+<script>
+    
+      async function getShipInfo(apiKey, shipId) {
+      const apiUrl = `https://services.marinetraffic.com/api/ship/v:6?api_key=${apiKey}&v=6&shipid=${shipId}&protocol=jsono`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const shipData = await response.json();
+
+        if (response.ok) {
+          return shipData;
+        } else {
+          console.error(`Error: ${shipData.error}`);
+          return null;
+        }
+      } catch (error) {
+        console.error('Network error:', error);
+        return null;
+      }
+    }
+
+    function displayShipInfo(shipInfo) {
+      const shipNameElement = document.getElementById('shipName');
+      const currentPortElement = document.getElementById('currentPort');
+      const etaElement = document.getElementById('eta');
+
+      shipNameElement.textContent = `Ship Name: ${shipInfo[0].SHIPNAME || 'N/A'}`;
+      currentPortElement.textContent = `Current Port: ${shipInfo[0].CURRENT_PORT || 'N/A'}`;
+      etaElement.textContent = `ETA: ${shipInfo[0].ETA || 'N/A'}`;
+    }
+
+    function searchShip() {
+      const apiKey = 'cf5a6732f02c79bf300484a4a3a00692db0e7c7b'; // Replace with your actual API key
+      const shipIdInput = document.getElementById('shipIdInput');
+      const shipInfoArea = document.getElementById('shipInfoArea');
+
+      const shipId = shipIdInput.value.trim();
+
+      if (shipId === '') {
+        alert('Please enter a Ship ID.');
+        return;
+      }
+
+      getShipInfo(apiKey, shipId)
+        .then(shipInfo => {
+          if (shipInfo) {
+            displayShipInfo(shipInfo);
+            shipInfoArea.style.display = 'block';
+          } else {
+            alert('Error fetching ship information.');
+          }
+        });
+    }
+    
+    
+</script>
+
+
+
+</html>

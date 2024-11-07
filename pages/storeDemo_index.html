@@ -17,74 +17,141 @@
 		h6 {
 			font-family: "Raleway", sans-serif
 		}
+
+		div.sticky {
+			position: sticky;
+			top: 0;
+		}
+
+
+
+		.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+
+
+
+
 	</style>
-
-
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 	<!-- Sidebar/menu -->
-	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
-
-		<br>
-
+	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
 		<div class="w3-container">
-
 			<a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
 				title="close menu">
 				<i class="fa fa-remove"></i>
 			</a>
-			<img src="/Images/Cards/dreamCard2.png" style="width:45%;" class="w3-round">
-
-			<h4><b>Store Information</b></h4>
+			<img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br>
+			<h4><b>PORTFOLIO</b></h4>
 			<p class="w3-text-grey">Programmed by James Hannafin</p>
-
 		</div>
-
 		<div class="w3-bar-block">
 			<a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
-					class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a>
-
+					class="fa fa-th-large fa-fw w3-margin-right"></i>Asset Browser</a>
 			<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
 					class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-
 			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
 					class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-
-			<div class="w3-panel w3-large">
-
-				<a href="https://www.instagram.com/kidflid/">
-					<i class="fa fa-instagram w3-hover-opacity"></i>
-				</a>
-
-				<a href="https://x.com/kidflid">
-					<i class="fa fa-twitter w3-hover-opacity"></i>
-				</a>
-
-				<a href="https://www.linkedin.com/feed/">			
-					<i class="fa fa-linkedin w3-hover-opacity"></i>
-				</a>
-
-				<a href="https://www.youtube.com/channel/UCtI4fO6e9QgIu1XYbZbukuw">			
-					<i class="fa fa-youtube w3-hover-opacity"></i>
-				</a>
-
+			<h4><b>My Profile</b></h4>
+			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+					class="fa fa-envelope fa-fw w3-margin-right"></i><button class="snipcart-customer-signin">My
+					account</button></a>
+			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+					class="fa fa-envelope fa-fw w3-margin-right"></i><button
+					class="snipcart-checkout">Checkout</button></a>
+			<a onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+					class="fa fa-envelope fa-fw w3-margin-right"></i><button class="snipcart-user-profile">User
+					profile</button></a>
+			<!-- <a href="#" class="snipcart-user-profile">User profile</a> -->
+			<div class="w3-container">
+				<p>Items in Cart: <span class="snipcart-items-count"></span> </p>
+				<p>Sub-Total: <span class="snipcart-total-price"></span></p>
 			</div>
-
-			<br>
-			<br>
-			<br>
-
 		</div>
 
-
+		<div class="w3-panel w3-large">
+			<i class="fa fa-facebook-official w3-hover-opacity"></i>
+			<i class="fa fa-instagram w3-hover-opacity"></i>
+			<i class="fa fa-snapchat w3-hover-opacity"></i>
+			<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+			<i class="fa fa-twitter w3-hover-opacity"></i>
+			<i class="fa fa-linkedin w3-hover-opacity"></i>
+		</div>
 	</nav>
 
 	<!-- Overlay effect when opening sidebar on small screens -->
 	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
-		title="close side menu" id="myOverlay">
-	</div>
+		title="close side menu" id="myOverlay"></div>
 
 	<!-- !PAGE CONTENT! -->
 	<div class="w3-main" style="margin-left:300px">
@@ -95,45 +162,55 @@
 					class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
 			<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
 					class="fa fa-bars"></i></span>
-			<div class="w3-container">
+			<div class="w3-container sticky">
 				<h1><b>Asset Browser :
 					</b></h1>
 				<div class="w3-section w3-bottombar w3-padding-16">
+
+
+					<span class="w3-margin-right">Filter:</span>
+					<button class="w3-button w3-black">ALL</button>
+					<button onclick="filterItems('games')" class="w3-button w3-white"><i
+							class="fa fa-diamond w3-margin-right"></i>Games</button>
+					<button onclick="filterItems('files')" class="w3-button w3-white"><i
+							class="fa fa-diamond w3-margin-right"></i>Product Files</button>
+					<button onclick="filterItems('sprites')" class="w3-button w3-white w3-hide-small"><i
+							class="fa fa-photo w3-margin-right"></i>Sprites</button>
+					<button onclick="filterItems('models')" class="w3-button w3-white w3-hide-small"><i
+							class="fa fa-photo w3-margin-right"></i>3D Models</button>
+					<button onclick="filterItems('sounds')" class="w3-button w3-white w3-hide-small"><i
+							class="fa fa-map-pin w3-margin-right"></i>SoundS</button>
+
+					<!--
+									<div class="w3-section w3-bottombar w3-padding-16">
+										<span class="w3-margin-right">Filter:</span> 
+										<button class="w3-button w3-black" onclick="filterItems('all')">ALL</button>
+										<button class="w3-button w3-white" onclick="filterItems('files')">Projects</button>
+										<button class="w3-button w3-white w3-hide-small" onclick="filterItems('sprites')">Sprites</button>
+										<button class="w3-button w3-white w3-hide-small" onclick="filterItems('sounds')">Sound</button>
+									</div>
+									-->
+
+
 				</div>
 			</div>
 		</header>
 
-		<!-- First Photo Grid (Store Items Inside)-->
+		<!-- First Photo Grid-->
 		<div id="itemContainer" class="w3-row-padding">
+
 
 			<!--   STORE ITEM  -->
 			<div class="w3-third w3-container w3-margin-bottom sprites">
-				<a href="template1.html">
-					<div class="column_2 bg_black sketchfab-embed-wrapper ">
-						<div style="position: relative; padding-bottom: 50%; height: 0; ">
-							<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
-								webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-								xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-								web-share src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
-								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-						</div>
-						<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-							<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-								target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife
-								Bayonet</a> by
-							<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-								target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-							<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-								target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-						</p>
-					</div>
-				</a>
+
 				<div class="w3-container w3-white">
+					<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:100%"
+						class="w3-hover-opacity">
 					<p><b>Sprite Set 1</b></p>
-					<p>A decent quality, classic picture of the boys.</p>
-					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
-						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
-						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+					<p>Download the 3D model for print.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="$5.00"
+						data-item-description="Download the 3D model for print."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Webtooth Shellholder [DIGITAL ITEM]"
 						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
 
 						Add to cart
@@ -143,27 +220,12 @@
 				</div>
 			</div>
 
-			<!--   STORE ITEM  -->
+
 			<div class="w3-third w3-container w3-margin-bottom sounds">
-				<div class="column_2 bg_black sketchfab-embed-wrapper ">
-					<div style="position: relative; padding-bottom: 50%; height: 0; ">
-						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
-							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
-							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-					</div>
-					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
-						by
-						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-					</p>
-				</div>
+
 				<div class="w3-container w3-white">
+					<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:100%"
+						class="w3-hover-opacity">
 					<p><b>Sound Set 1 </b></p>
 					<p>A decent quality, classic picture of the boys.</p>
 					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
@@ -178,28 +240,52 @@
 				</div>
 			</div>
 
-			<!--   STORE ITEM  -->
+
+			<!-- Store Item With PNG Slideshow // OCEAN ABYSS SPRTIES-->
 			<div class="w3-third w3-container w3-margin-bottom sprites">
-				<div class="column_2 bg_black sketchfab-embed-wrapper ">
-					<div style="position: relative; padding-bottom: 50%; height: 0; ">
-						<iframe title="Knife Bayonet" frameborder="0" allowfullscreen mozallowfullscreen="true"
-							webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-							xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-							src="https://sketchfab.com/models/8abb9cbdcd774fc88154023eceee8e97/embed"
-							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-					</div>
-					<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-						<a href="https://sketchfab.com/3d-models/knife-bayonet-8abb9cbdcd774fc88154023eceee8e97?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Knife Bayonet</a>
-						by
-						<a href="https://sketchfab.com/kidflid?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">kidflid</a> on
-						<a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=8abb9cbdcd774fc88154023eceee8e97"
-							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-					</p>
-				</div>
 				<div class="w3-container w3-white">
-					<p><b>Sprite Set 2</b></p>
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<img src="../Images/Cards/abyssCard1.png" alt="The Boys" style="width:100%; height:100%" class="w3-hover-opacity">
+							<div class="text">Sprite Set 2</div>
+						</div>
+						<div class="mySlides fade">
+							<img src="../Images/Cards/dreamCard1.png" alt="Another Image" style="width:100%; height:100%" class="w3-hover-opacity">
+							<div class="text">Another Image</div>
+						</div>
+						<div class="mySlides fade">
+							<img src="../Images/Cards/dreamCard3.png" alt="Another Image" style="width:100%; height:100%" class="w3-hover-opacity">
+							<div class="text">Another Image</div>
+						</div>
+						<!-- Add more slides as needed -->
+						<a class="prev" onclick="plusSlides(-1)">❮</a>
+						<a class="next" onclick="plusSlides(1)">❯</a>
+					</div>
+					<br>
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span>
+						<span class="dot" onclick="currentSlide(2)"></span>
+						<!-- Add more dots as needed -->
+					</div>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+			
+
+
+			<div class="w3-third w3-container w3-margin-bottom sounds">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Sound Set 2</b></p>
 					<p>A decent quality, classic picture of the boys.</p>
 					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
 						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
@@ -212,6 +298,93 @@
 					<br>
 				</div>
 			</div>
+
+			<div class="w3-third w3-container w3-margin-bottom models">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>3D Model 1</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<!-- seperation between rows-->
+			<!--    
+		  </div>
+		
+		
+		
+		  <div class="w3-row-padding">
+			 -->
+			<!-- Second Photo Grid-->
+
+
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Boys Pic666</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Boys Pic777</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Boys Pic888</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+
 
 			<!--   STORE ITEM  -->
 			<div class="w3-third w3-container w3-margin-bottom sounds">
@@ -303,6 +476,158 @@
 							target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
 					</p>
 				</div>
+
+				<div class="w3-container w3-white">
+					<p><b>3D Model 2</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg"
+						 data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Boys Pic9</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Boys Pic 10</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Boys Pic 11</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<div class="w3-third w3-container w3-margin-bottom sounds">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Sound Set 4 </b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+			<div class="w3-third w3-container w3-margin-bottom games">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Game 1</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom games">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b>Game 2</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom models">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
+				<div class="w3-container w3-white">
+					<p><b> 3d Model 1</b></p>
+					<p>A decent quality, classic picture of the boys.</p>
+					<button class="snipcart-add-item" data-item-id="boys-pic" data-item-price="1.99"
+						data-item-description="High-quality replica of The Boys Pic from Shea Lounge."
+						data-item-image="/Images/store_boysPic.jpg" data-item-name="Boys Pic [DIGITAL ITEM]"
+						data-item-shippable="false" data-item-file-guid="4e4b0e9a-11c7-49ee-a47b-6e0a30762aaf">
+
+						Add to cart
+					</button>
+					<br>
+					<br>
+				</div>
+			</div>
+
+
+			<div class="w3-third w3-container w3-margin-bottom models">
+				<img src="/Images/Store/store_theBoys.jpg" alt="The Boys" style="width:100%; height:60%"
+					class="w3-hover-opacity">
 				<div class="w3-container w3-white">
 					<p><b>3D Model 2</b></p>
 					<p>A decent quality, classic picture of the boys.</p>
@@ -318,10 +643,22 @@
 				</div>
 			</div>
 
+
 		</div>
-
-
-
+		<!-- Pagination -->
+		<!--
+		  
+		  <div class="w3-center w3-padding-32">
+			<div class="w3-bar">
+			  <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+			  <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+			  <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+			  <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+			  <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+			  <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+			</div>
+		  </div>
+		-->
 		<!-- Pagination -->
 		<div class="w3-center w3-padding-32">
 			<div class="w3-bar">
@@ -332,6 +669,7 @@
 				<a href="#" class="w3-bar-item w3-button w3-hover-black" onclick="nextPage()">»</a>
 			</div>
 		</div>
+
 
 		<!-- Contact Section -->
 		<div class="w3-container w3-padding-large w3-grey">
@@ -369,52 +707,62 @@
 			</form>
 		</div>
 
+		<!-- Footer -->
+		<footer class="w3-container w3-padding-32 w3-dark-grey">
+			<div class="w3-row-padding">
+				<div class="w3-third">
+					<h3>FOOTER</h3>
+					<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+						ultricies congue
+						gravida diam non fringilla.</p>
+					<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+				</div>
 
-	<!-- Footer -->
-	<footer class="w3-container w3-padding-32 w3-dark-grey">
+				<div class="w3-third">
+					<h3>BLOG POSTS</h3>
+					<ul class="w3-ul w3-hoverable">
+						<li class="w3-padding-16">
+							<img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+							<span class="w3-large">Lorem</span><br>
+							<span>Sed mattis nunc</span>
+						</li>
+						<li class="w3-padding-16">
+							<img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+							<span class="w3-large">Ipsum</span><br>
+							<span>Praes tinci sed</span>
+						</li>
+					</ul>
+				</div>
 
-		<div class="w3-row-padding">
+				<div class="w3-third">
+					<h3>POPULAR TAGS</h3>
+					<p>
+						<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+						<span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+						<span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+						<span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+						<span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span
+							class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+					</p>
+				</div>
 
-			<div >
-				<h3>FOOTER</h3>
-				<p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
-					congue
-					gravida diam non fringilla.</p>
-				<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 			</div>
+		</footer>
 
+		<div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+				title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
 
-		</div>
+		<!-- End page content -->
+	</div>
 
-		<div class="w3-third">
-			<h3>POPULAR TAGS</h3>
-			<p>
-				<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-				<span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-				<span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-				<span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-				<span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span
-					class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-			</p>
-		</div>
-
-
-
-	</footer>
-
-	<div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
-		title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
-</div>
-
-</div><!--Page Cotnent-->
 	<script>
 		// Script to open and close sidebar
 		function w3_open() {
@@ -488,6 +836,48 @@
 				}
 			});
 		}
+
+
+
+
+
+
+
+/////////////////////// SLIDE SHOW
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+
+
+
+
+
+
 
 
 

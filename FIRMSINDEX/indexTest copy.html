@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firms Index</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Inconsolata', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .w3-button {
+      font-size: 1.2em;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #444;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #444;
+      color: white;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Button styling */
+    .button {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00509d;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Firms Index</h1>
+    <p>Your global logistics partner</p>
+  </header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#vessels">Vessels</a>
+    <a href="#ports">Ports</a>
+    <a href="#lines">Steamship Lines</a>
+    <a href="#rail">Rail Tracking</a>
+  </div>
+
+  <!-- Vessels Section -->
+  <section id="vessels" class="w3-padding-large">
+    <h2>Vessel Tracking</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Website</th>
+      </tr>
+      <tr>
+        <td>Marine Traffic</td>
+        <td><a href="https://www.marinetraffic.com" target="_blank">marinetraffic.com</a></td>
+      </tr>
+      <tr>
+        <td>Vessel Finder</td>
+        <td><a href="https://www.vesselfinder.com" target="_blank">vesselfinder.com</a></td>
+      </tr>
+      <tr>
+        <td>My Ship Tracking</td>
+        <td><a href="https://www.myshiptracking.com" target="_blank">myshiptracking.com</a></td>
+      </tr>
+      <tr>
+        <td>Fleet Mon</td>
+        <td><a href="https://www.fleetmon.com" target="_blank">fleetmon.com</a></td>
+      </tr>
+      <tr>
+        <td>Ship Spotting</td>
+        <td><a href="https://www.shipspotting.com" target="_blank">shipspotting.com</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Ports Section -->
+  <section id="ports" class="w3-padding-large">
+    <h2>Ports and Terminals</h2>
+    <table>
+      <tr>
+        <th>Terminal</th>
+        <th>FIRMS Code</th>
+        <th>Website</th>
+        <th>Region</th>
+      </tr>
+      <tr>
+        <td>APM Port Elizabeth</td>
+        <td>E425</td>
+        <td><a href="https://www.apmterminals.com" target="_blank">APM</a></td>
+        <td>New York / EWR</td>
+      </tr>
+      <tr>
+        <td>Ben E. Nutter Terminal</td>
+        <td>Y738</td>
+        <td><a href="https://www.etslink.com" target="_blank">Ben E. Nutter</a></td>
+        <td>Oakland</td>
+      </tr>
+      <tr>
+        <td>Garden City Terminal</td>
+        <td>L737</td>
+        <td><a href="http://webaccess.gaports.com" target="_blank">GCT Savannah</a></td>
+        <td>Georgia</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Lines Section -->
+  <section id="lines" class="w3-padding-large">
+    <h2>Steamship Lines</h2>
+    <table>
+      <tr>
+        <th>Line</th>
+        <th>SCAC Code</th>
+        <th>Website</th>
+        <th>Phone</th>
+      </tr>
+      <tr>
+        <td>America President Line</td>
+        <td>APLU</td>
+        <td><a href="http://www.apl.com/tracking" target="_blank">APL</a></td>
+        <td>(787) 749-0399</td>
+      </tr>
+      <tr>
+        <td>China Shipping</td>
+        <td>CHHK</td>
+        <td><a href="http://222.66.158.204" target="_blank">China Shipping</a></td>
+        <td>(201) 505-6900</td>
+      </tr>
+      <tr>
+        <td>CMA-CGM</td>
+        <td>CMDU</td>
+        <td><a href="http://www.cma-cgm.com" target="_blank">CMA-CGM</a></td>
+        <td>(877) 556-6308</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Rail Section -->
+  <section id="rail" class="w3-padding-large">
+    <h2>Rail Tracking</h2>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>FIRMS Code</th>
+        <th>Website</th>
+      </tr>
+      <tr>
+        <td>BNSF</td>
+        <td>T926</td>
+        <td><a href="https://www.bnsf.com" target="_blank">bnsf.com</a></td>
+      </tr>
+      <tr>
+        <td>Union Pacific</td>
+        <td>E425</td>
+        <td><a href="https://www.up.com" target="_blank">unionpacific.com</a></td>
+      </tr>
+      <tr>
+        <td>Norfolk Southern</td>
+        <td>----</td>
+        <td><a href="https://www.norfolksouthern.com" target="_blank">norfolksouthern.com</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Firms Index. All Rights Reserved.</p>
+  </footer>
+
+
+  
+
+
+</body>
+
+
+
+</html>

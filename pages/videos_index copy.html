@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Videos</title>
+    <link rel="stylesheet" href="styles.css">
+
+	<style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #ff4081;
+    text-shadow: 2px 2px #005cbf;
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter {
+    background-color: #005cbf;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.filter:hover {
+    background-color: #ff4081;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #005cbf;
+    border-radius: 5px;
+}
+
+	</style>
+
+</head>
+
+
+<body>
+    <h1>CyberField Video Gallery</h1>
+    <div class="filter-buttons">
+        <button class="filter" data-filter="all">All</button>
+        <button class="filter" data-filter="music">Music</button>
+        <button class="filter" data-filter="devlog">Devlog</button>
+        <button class="filter" data-filter="longplay">Longplay</button>
+        <button class="filter" data-filter="other">Other</button>
+    </div>
+    <div class="video-grid">
+        <!-- MUSIC -->
+        <div class="video-item" data-category="music">
+			<iframe width="1280" height="720" src="https://www.youtube.com/embed/0WkT0Q53uT4" title="[FREE BEAT] - BOOM BAP SYNTH LOOP (Prod. - Kid Flid)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+		<div class="video-item" data-category="music">
+			<iframe width="853" height="480" src="https://www.youtube.com/embed/HlizoRemx_0" title="[FREE BEAT] - Prayer Not Recieved - Baby Keem Type Beat? (Prod. Kid Flid)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+		<div class="video-item" data-category="music">
+		<iframe width="853" height="480" src="https://www.youtube.com/embed/ZgbAMFGSR1M" title="[Free Beat} Happy Punk Rock Hip Hop Type Beat (Prod. Kid Flid)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+		<div class="video-item" data-category="music">
+			<iframe width="853" height="480" src="https://www.youtube.com/embed/GIKlNp80Ea0" title="[FREE BEAT] - CHILL CHANCE THE RAPPER TYPE BEAT &quot;NIGHT PRINCESS&quot; (PROD. KID FLID)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+		<div class="video-item" data-category="music">
+
+		</div>
+
+
+
+
+        <div class="video-item" data-category="devlog">
+            <iframe src="https://www.youtube.com/embed/example2" allowfullscreen></iframe>
+        </div>
+        <div class="video-item" data-category="longplay">
+            <iframe src="https://www.youtube.com/embed/example3" allowfullscreen></iframe>
+        </div>
+        <div class="video-item" data-category="other">
+            <iframe src="https://www.youtube.com/embed/example4" allowfullscreen></iframe>
+        </div>
+    </div>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+    const filters = document.querySelectorAll('.filter');
+    const videos = document.querySelectorAll('.video-item');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            const category = filter.getAttribute('data-filter');
+            
+            videos.forEach(video => {
+                if (category === 'all' || video.getAttribute('data-category') === category) {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            });
+
+            filters.forEach(btn => btn.classList.remove('active'));
+            filter.classList.add('active');
+        });
+    });
+});
+
+</script>
+</body>
+</html>

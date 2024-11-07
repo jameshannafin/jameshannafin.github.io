@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Firms Index</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+span{
+font-size: small;
+}
+
+th{
+  font-weight: 600;
+  font-size: 1.3em;
+  background-color:#666666;
+    color: #000000;
+}
+
+td.a{
+ color:#0000FF;   
+}
+html, body, table,div {
+    background-color:#666666;
+    color: #FFFFFF;
+}
+
+.fade{
+	box-shadow: 0px 10px 20px 10px rgb(0, 0, 0);}
+
+	.stick{
+		position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  height: auto;
+	}
+
+	.bg_black{
+		background-color:#000000;
+	}
+</style>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDVBDFMZ4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SDVBDFMZ4N');
+</script>
+
+</head>
+
+
+
+<body>
+    
+
+
+
+
+
+<!-- Header with image -->
+<header class="bg_black  w3-display-container " id="home">
+
+		<div class=" bg_black">
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<div class="bg_black w3-display-center w3-center w3-padding-large w3-hide-small">
+				<h1><b>firmsindex.com</b> </h1>
+				<br id="vessels">
+			</div>
+
+		</div>
+
+		
+
+	
+
+
+</header>
+
+
+
+  
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-large "><!-- w3-grayscale-->
+
+	
+	<!-- Links (sit on top) -->
+<div class="stick bg_black fade">
+	<!-- <div class=" w3-row w3-padding w3-black">
+		<div class="w3-col  w3-center">
+			<a href="#home" class="w3-button w3-block w3-black">HOME</a>
+		</div>
+	</div> -->
+	<div class="w3-row w3-padding w3-black">
+		<div class="w3-col s3">
+			<a href="#vessels" class="w3-button w3-block w3-black">Vessels</a>
+		</div>
+		<div class="w3-col s3">
+			<a href="#ports" class="w3-button w3-block w3-black">Ports</a>
+		</div>
+		<div class="w3-col s3">
+			<a href="#lines" class="w3-button w3-block w3-black">Lines</a>
+		</div>
+		<div class="w3-col s3">
+			<a href="#rail" class="w3-button w3-block w3-black">Rail</a>
+		</div>
+	</div>
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+ <div class="w3-cell-row">
+     
+     <div class="w3-container w3-red w3-cell">
+  <p>Your ad here!</p>
+</div>
+
+
+  <!-- Table: Vessels -->
+  <div class="w3-padding w3-cell-middle">
+    <h2><b>Vessel Tracking</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table id="tbl_vessels" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      <tr>
+        <th onclick="ft_sort(0,'tbl_vessels')">Name</th>
+        <th onclick="ft_sort(2,'tbl_vessels')">Website</th>
+
+      </tr>
+      
+      <tr>
+        <td class="shadows">Marine Traffic</td>
+        <td><a class="" target="_blank" href="https://www.marinetraffic.com/en/ais/home/centerx:-73.7/centery:39.8/zoom:10">marinetraffic.com</a></td>
+      </tr>
+      
+      <tr>
+        <td class="shadows">Vessel Finder</td>
+        <td><a class="" target="_blank" href="https://www.marinetraffic.com/en/ais/home/centerx:-73.7/centery:39.8/zoom:10">vesselfinder.com</a></td>
+      </tr>
+      
+            <tr>
+        <td class="shadows">My Ship Tracking</td>
+        <td><a class="" target="_blank" href="https://www.myshiptracking.com/">myshiptrackibg.com</a></td>
+      </tr>
+      
+            <tr>
+        <td class="shadows">Fleet Mon</td>
+        <td><a class="boxText" target="_blank" href="https://www.fleetmon.com/">fleetmon.com</a></td>
+      </tr>
+      
+            <tr>
+        <td class="shadows">Ship Spotting</td>
+        <td><a class="boxText" target="_blank" href="https://www.shipspotting.com/">shipspotting.com</a></td>
+      </tr>
+      
+
+      
+    </table>
+  </div>
+
+     <div class="w3-container w3-red w3-cell">
+  <p>Your ad here!</p>
+</div>
+
+
+</div>
+<!--end row-->
+
+  <br id="ports" >
+  <br>
+  <br>
+    <br>
+
+
+ <!-- Table: Ports -->
+ <div class="w3-cell-row">
+
+
+  <div class="w3-padding w3-cell-middle">
+    <h2><b>Ports and Terminals</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table  id="tbl_ports" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      <tr>
+        <th onclick="ft_sort(0,'tbl_ports')">Terminal</th>
+        <th onclick="ft_sort(1,'tbl_ports')">Firms Code</th>
+        <th onclick="ft_sort(2,'tbl_ports')">Website</th>
+        <th onclick="ft_sort(3,'tbl_ports')">Region</th>
+      </tr>
+      
+
+	
+				<tr>
+					<td class="shadows">APM PORT ELIZABETH</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E425</td>
+					<td><a class="boxText" target="_blank" href="https://www.apmterminals.com/en/port-elizabeth"> APM </a>
+					</td>
+					<td>New York / EWR</td>
+
+				</tr>
+	
+				<tr>
+					<td>Ben E. Nutter Terminal</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">Y738</td>
+					<td><a class="boxText" target="_blank" href="https://www.etslink.com/"> Ben E. Nutter </a></td>
+					<td>Oakland</td>
+	
+				</tr>
+	
+				<tr>
+					<td>Garden City Terminal (Savannah)</td>
+					<td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">L737</td>
+					<td><a class="boxText" target="_blank" href="http://webaccess.gaports.com/express/index.jsp"> GCT
+							SAVANNAH </a></td>
+					<td> Georgia</td>
+
+				</tr>
+	
+			
+	
+
+      
+    </table>
+  </div>
+
+     <div class="w3-container w3-red w3-cell">
+  <p>Your ad here!</p>
+</div>
+
+</div>
+
+
+  <br  id="lines" >
+  <br>
+  <br>
+    <br>
+
+ <!-- Table: Lines/Terminals -->
+  <div class="w3-padding"> 
+    <h2><b>Steamship Lines</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table  id="tbl_lines" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      <tr>
+        <th onclick="ft_sort(0,'tbl_lines')">Line</th>
+        <th onclick="ft_sort(1,'tbl_lines')">SCAC Code</th>
+        <th onclick="ft_sort(2,'tbl_lines')">Website</th>
+        <th onclick="ft_sort(3,'tbl_lines')">Phone</th>
+      </tr>
+      
+	<tr>
+	
+					<td>America President Line</td>
+					<td class="scac">APLU</td>
+					<td><a target="_blank" href="http://www.apl.com/tracking/"> New Orleans </a> </td>
+					<td> 9-1-(787)-749-0399 </td>
+
+		
+	
+				</tr>
+	
+	
+	
+				<tr>
+					<td>China Shipping</td>
+					<td class="scac">CHHK</td>
+					<td><a target="_blank" href="http://222.66.158.204/module/csp/index.jsp?userside=WAN&do&mod=CSP"> China
+							Shipping </a> </td>
+					<td> 9-1-(201)-505-6900 </td>
+		
+			
+				</tr>
+	
+				<tr>
+					<td>CMA-CGM</td>
+					<td class="scac">CMDU</td>
+					<td><a target="_blank" href="http://www.cma-cgm.com/eBusiness/Tracking/Default.aspx">CMA-CGM</a> </td>
+					<td> 9-1-(877)-556-6308 </td>
+	
+		
+				</tr>
+	
+	
+				<tr>
+					<td>Evergreen</td>
+					<td class="scac">EGLV</td>
+					<td><a target="_blank" href="http://www.shipmentlink.com/servlet/TDB1_CargoTracking.do">Evergreen</a>
+					</td>
+					<td> 9-1-(972)-764-1350 </td>
+		
+	
+				</tr>
+	
+	
+				<tr>
+					<td>Hanjin Shipping</td>
+					<td class="scac">HJSC</td>
+					<td><a target="_blank" href="http://www.hanjin.com/en/main.jsp">Hanjin Shipping </a> </td>
+	
+
+				</tr>
+	
+	
+				<tr>
+					<td>Hapag Lloyd</td>
+					<td class="scac">HLCU</td>
+					<td><a target="_blank" href="http://www.hapag-lloyd.com/en/index.html">Hapag Lloyd </a> </td>
+					<td> 9-1-(877)-818-1019 </td>
+
+		
+				</tr>
+	
+	
+				<tr>
+					<td>K-Line</td>
+					<td class="scac">KKLU</td>
+					<td><a target="_blank" href="http://app2.kline.com/GctApp/search?id=tracker">K-Line</a> </td>
+					<td> 9-1-(718)-807-3200 </td>
+				
+
+				</tr>
+	
+	
+			
+      
+    </table>
+  </div>
+
+  <br id="rail">
+  <br>
+  <br>
+  <br>
+  
+ <!-- Table: Rails/Terminals -->
+  <div class="w3-padding"> 
+    <h2><b>Rail Tracking</b> <span class="w3-tag">Click a collumn header to sort.</span> </h2>
+    <table  id="tbl_rails" class='kf_table boxBor text-center table boxFill table-hover table-bordered table-centered'>
+      
+      <tr>
+        <th onclick="ft_sort(0,'tbl_rails')">Company</th>
+        <th onclick="ft_sort(1,'tbl_rails')">Firms Code</th>
+        <th onclick="ft_sort(2,'tbl_rails')">Website</th>
+      </tr>
+      
+      <tr>
+        <td class="shadows">BNSF</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">T926</td>
+        <td><a class="boxText" target="_blank" href="https://bnsf.com/">BNSF</a></td>
+  
+      </tr>
+      
+            <tr>
+        <td class="shadows">Union Pacific (UP)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">E425</td>
+        <td><a class="boxText" target="_blank" href="https://www.up.com/index.htm">unionpacific.com</a></td>
+  
+      </tr>
+      
+            <tr>
+        <td class="shadows">Norfolk Southern (NS)</td>
+        <td title="CLICK TO COPY" class="firmsCode" onclick="copySelf(event)">----</td>
+        <td><a class="boxText" target="_blank" href="https://www.norfolksouthern.com/">norfolksouthern.com</a></td>
+
+      </tr>
+      
+    </table>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+  <label for="shipIdInput">Enter Ship ID (IMO or MMSI): </label>
+  <input type="text" id="shipIdInput" placeholder="Enter Ship ID">
+  <button onclick="searchShip()">Search</button>
+
+  <div id="shipInfoArea">
+    <h2>Ship Information</h2>
+    <p id="shipName">Ship Name: </p>
+    <p id="currentPort">Current Port: </p>
+    <p id="eta">ETA: </p>
+  </div>
+
+
+
+
+
+  <!-- End page content -->
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</body>
+
+<script src="main.js"></script>
+<script>
+    
+      async function getShipInfo(apiKey, shipId) {
+      const apiUrl = `https://services.marinetraffic.com/api/ship/v:6?api_key=${apiKey}&v=6&shipid=${shipId}&protocol=jsono`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const shipData = await response.json();
+
+        if (response.ok) {
+          return shipData;
+        } else {
+          console.error(`Error: ${shipData.error}`);
+          return null;
+        }
+      } catch (error) {
+        console.error('Network error:', error);
+        return null;
+      }
+    }
+
+    function displayShipInfo(shipInfo) {
+      const shipNameElement = document.getElementById('shipName');
+      const currentPortElement = document.getElementById('currentPort');
+      const etaElement = document.getElementById('eta');
+
+      shipNameElement.textContent = `Ship Name: ${shipInfo[0].SHIPNAME || 'N/A'}`;
+      currentPortElement.textContent = `Current Port: ${shipInfo[0].CURRENT_PORT || 'N/A'}`;
+      etaElement.textContent = `ETA: ${shipInfo[0].ETA || 'N/A'}`;
+    }
+
+    function searchShip() {
+      const apiKey = 'cf5a6732f02c79bf300484a4a3a00692db0e7c7b'; // Replace with your actual API key
+      const shipIdInput = document.getElementById('shipIdInput');
+      const shipInfoArea = document.getElementById('shipInfoArea');
+
+      const shipId = shipIdInput.value.trim();
+
+      if (shipId === '') {
+        alert('Please enter a Ship ID.');
+        return;
+      }
+
+      getShipInfo(apiKey, shipId)
+        .then(shipInfo => {
+          if (shipInfo) {
+            displayShipInfo(shipInfo);
+            shipInfoArea.style.display = 'block';
+          } else {
+            alert('Error fetching ship information.');
+          }
+        });
+    }
+    
+    
+</script>
+
+
+
+</html>
