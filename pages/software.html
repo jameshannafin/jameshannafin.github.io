@@ -77,6 +77,33 @@
             background-color: #008fbf;
             transform: translateY(-3px);
         }
+
+        .preview {
+            position: fixed;
+            top: 20%;
+            right: 10%;
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+        }
+        .preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .preview h3 {
+            margin: 10px 0 5px;
+            font-size: 1.5em;
+        }
+        .preview p {
+            font-size: 1em;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -86,23 +113,23 @@
     <div class="container">
         <!-- Domains Section -->
         <div class="section-header">
-            <h2>Domains</h2>
+            <h2>Full Domains</h2>
         </div>
         <ul>
-            <li><a href="https://anomalousgames.com/">Anomolous Games (Functional Ecommerce Site, coded with snipcart)</a></li>
-            <li><a href="https://firmsindex.com/">Firms Index (Open Source of Freight Information)</a></li>
+            <li><a href="https://anomalousgames.com/" data-preview="anomalous">Anomolous Games (Functional Ecommerce Site, coded with snipcart)</a></li>
+            <li><a href="https://firmsindex.com/" data-preview="firms">Firms Index (Open Source of Freight Information)</a></li>
         </ul>
 
         <!-- Web Pages Section -->
         <div class="section-header">
-            <h2>Web Pages</h2>
+            <h2>Other Web Pages</h2>
         </div>
         <ul>
-            <li><a href="../index.html">Full Portfolio</a></li>
-            <li><a href="./videos_index.html">Videos Page</a></li>
-            <li><a href="../index.html">3d Designs Page</a></li>
-            <li><a href="#">Web Page Link 4</a></li>
-            <li><a href="#">Web Page Link 5</a></li>
+            <li><a href="../index.html" data-preview="portfolio">Full Portfolio</a></li>
+            <li><a href="./videos_index.html" data-preview="videos">Videos Page</a></li>
+            <li><a href="../index.html" data-preview="designs">3d Designs Page</a></li>
+            <li><a href="#" data-preview="games">Games</a></li>
+            <!-- <li><a href="#" data-preview="web5">Web Page Link 5</a></li> -->
         </ul>
 
         <!-- Programs Section -->
@@ -110,40 +137,128 @@
             <h2>Web Programs</h2>
         </div>
         <ul>
-            <li><a href="./WEB PROGRAMS/flashCards1.html">Flash Cards (File Extensions)</a></li>
+            <li><a href="./WEB PROGRAMS/flashCards1.html" data-preview="flashcards">Flash Cards (File Extensions)</a></li>
+            <li><a href="./WEB PROGRAMS/index_span.htmlhtml" data-preview="spanish">Memorization Table (Spanish Vocab)</a></li>
         </ul>
 
-                <!-- Programs Section -->
-                <div class="section-header">
-                    <h2>PC Programs</h2>
-                </div>
-                <ul>
-                    <li><a href="https://github.com/jameshannafin/Python-Projects-2025-">Sound Synthesizer</a></li>
-                    <li><a href="https://github.com/jameshannafin/Python-Projects-2025-">Freight Managament</a></li>
-                    <li><a href="https://github.com/jameshannafin/Python-Projects-2025-">Vocabulary Memorization</a></li>
-                    <li><a href="https://github.com/jameshannafin/Python-Projects-2025-">More Programs</a></li>
-                </ul>
+        <!-- Programs Section -->
+        <div class="section-header">
+            <h2>PC Programs</h2>
+        </div>
+        <ul>
+            <li><a href="https://github.com/jameshannafin/Python-Projects-2025-" data-preview="synth">Sound Synthesizer</a></li>
+            <li><a href="https://github.com/jameshannafin/Python-Projects-2025-" data-preview="freight">Freight Management (Lite Demo App)</a></li>
+            <li><a href="https://github.com/jameshannafin/Python-Projects-2025-" data-preview="more">More Programs</a></li>
+        </ul>
 
         <!-- Games Section -->
         <div class="section-header">
             <h2>Games</h2>
         </div>
         <ul>
-            <li><a href="../pages/Games/index_solarDefender.html">Solar Defender</a></li>
-            <li><a href="../pages/Games/index_sirensAbyss.html">Sirens Abyss</a></li>
-            <li><a href="../pages/Games/index_dream.html">Dr3:AM</a></li>
-            <li><a href="../pages/allGames.html">More Games</a></li>
+            <!-- <li><a href="../pages/Games/index_solarDefender.html" data-preview="solar">Solar Defender</a></li> -->
+            <li><a href="../pages/Games/index_sirensAbyss.html" data-preview="sirens">Sirens Abyss</a></li>
+            <li><a href="../pages/Games/index_dream.html" data-preview="dream">Dr3:AM</a></li>
+            <li><a href="../pages/allGames.html" data-preview="moregames">More Games</a></li>
         </ul>
     </div>
 
     <!-- Footer Buttons -->
     <div class="footer-buttons">
-        <button class="footer-button" onclick="history.back()">Portfolio</button>
         <button class="footer-button" onclick="window.location.href='mailto:contact@example.com'">Contact</button>
     </div>
 
     <br>
     <br>
+    <br>
 
+    <!-- Preview Box -->
+    <div class="preview" id="preview">
+        <img id="preview-image" src="" alt="Preview Image">
+        <h3 id="preview-title"></h3>
+        <p id="preview-description"></p>
+    </div>
+
+    <script>
+        // Preview content
+        const previewData = {
+            anomalous: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Anomalous Games",
+                description: "A functional eCommerce site built with Snipcart."
+            },
+            firms: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Firms Index",
+                description: "An open source platform for freight information."
+            },
+            videos: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "This page is just an alterantive reperesentation of my YouTube channel created by me.."
+            },
+            portfolio: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "View all projects in the portfolio."
+            },
+
+            keychords: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "This is Pyhon program that will ; for this program I do not have an excec file and you will need the required files ."
+            },
+
+            designs: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "I have designed a few 3d models; some of them are meant to be 3d printed, some are just for other tech projects."
+            },
+
+            spanish: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "This is a simple memorization application I made to help my self learn some simple spanish."
+            },
+            vocab: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "This is a simple application I made to help my self learn all of the common file extensions ( necasarry for the CompTIA )."
+            },
+            sirens: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "Sirens Abyss is a bit of a passion project for me; it's a 2d submarine horror exploration game I started for a small competition in 2023. I have steadily continued work since then and hope to turn it into a professional project some day"
+            },
+            dream: {
+                image: "https://via.placeholder.com/300x200",
+                title: "Full Portfolio",
+                description: "My first \"complete\" game that was made for a jam in October 2023. This link will bring you to a webpage with some CSS and functionality with the itch.io API."
+            },
+            // Add more preview data as needed
+        };
+
+        const preview = document.getElementById("preview");
+        const previewImage = document.getElementById("preview-image");
+        const previewTitle = document.getElementById("preview-title");
+        const previewDescription = document.getElementById("preview-description");
+
+        document.querySelectorAll("a[data-preview]").forEach(link => {
+            link.addEventListener("mouseenter", event => {
+                const key = event.target.getAttribute("data-preview");
+                const data = previewData[key];
+                if (data) {
+                    previewImage.src = data.image;
+                    previewTitle.textContent = data.title;
+                    previewDescription.textContent = data.description;
+                    preview.style.display = "block";
+                }
+            });
+
+            link.addEventListener("mouseleave", () => {
+                preview.style.display = "none";
+            });
+        });
+    </script>
 </body>
 </html>

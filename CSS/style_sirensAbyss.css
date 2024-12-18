@@ -56,7 +56,12 @@ body {
 
     background-image: linear-gradient(rgb(70, 172, 240), rgb(21, 33, 88));
 
-
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+    
 }
 
 img {
@@ -240,3 +245,53 @@ footer {
     height: auto;
     margin: 0 auto;
   }
+
+
+
+
+  /* TRANSPARENT BACKGROUNDSSS */
+
+
+
+
+.API_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures columns are the same height */
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+}
+
+.bubble {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures equal spacing */
+    min-height: 100%; /* Ensures bubbles stretch to the same height */
+}
+
+.hidden-sm-down {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
